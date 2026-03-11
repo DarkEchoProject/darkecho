@@ -448,16 +448,15 @@
   </div>
 </div>
 
-  <section id="videos">
-    <div class="container">
-      <h2 class="section-title">Latest Shorts</h2>
-      <p class="section-subtitle">Watch the newest horror shorts from Dark Echo.</p>
+ <section id="videos">
+  <div class="container">
+    <h2 class="section-title">Latest Shorts</h2>
+    <p class="section-subtitle">Watch the newest horror shorts from Dark Echo.</p>
 
-      <div class="slider-wrapper">
-</div>
-<button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
-</div>
-<div class="videos-grid">
+    <div class="slider-wrapper">
+      <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
+
+      <div class="videos-grid">
         <article class="card">
           <div class="thumb">
             <a href="javascript:void(0)" onclick="playVideo('-LZY6crClR0')">
@@ -500,19 +499,20 @@
           </div>
         </article>
       </div>
-    </div>
-  </section>
 
-  <section>
-    <div class="container">
-      <h2 class="section-title">Most Watched</h2>
-      <p class="section-subtitle">The most popular horror shorts on Dark Echo.</p>
+      <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
+    </div>
+  </div>
+</section>
+ <section>
+  <div class="container">
+    <h2 class="section-title">Most Watched</h2>
+    <p class="section-subtitle">The most popular horror shorts on Dark Echo.</p>
 
     <div class="slider-wrapper">
-   </div>
-<button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
-   </div>
-<div class="videos-grid">
+      <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
+
+      <div class="videos-grid">
         <article class="card">
           <div class="thumb">
             <a href="javascript:void(0)" onclick="playVideo('8qQxgZ0_axw')">
@@ -539,19 +539,20 @@
           </div>
         </article>
       </div>
+
+      <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
     </div>
-  </section>
-
+  </div>
+</section>
   <section>
-    <div class="container">
-      <h2 class="section-title">Creepy Stories</h2>
-      <p class="section-subtitle">Short horror stories with dark and mysterious endings.</p>
+  <div class="container">
+    <h2 class="section-title">Creepy Stories</h2>
+    <p class="section-subtitle">Short horror stories with dark and mysterious endings.</p>
 
-      <div class="slider-wrapper">
-   </div>
-<button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
-   </div>
-<div class="videos-grid">
+    <div class="slider-wrapper">
+      <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
+
+      <div class="videos-grid">
         <article class="card">
           <div class="thumb">
             <a href="javascript:void(0)" onclick="playVideo('WIAZRtMuYDQ')">
@@ -578,8 +579,11 @@
           </div>
         </article>
       </div>
+
+      <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
     </div>
-  </section>
+  </div>
+</section>
 
   <section id="about">
   <div class="container">
@@ -653,15 +657,31 @@
     </div>
   </footer>
 
-  <script>
-    function playVideo(videoId) {
-      const playerSection = document.getElementById("video-player");
-      const mainVideo = document.getElementById("main-video");
+ <script>
+  function playVideo(videoId) {
+    const playerSection = document.getElementById("video-player");
+    const mainVideo = document.getElementById("main-video");
 
-      mainVideo.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
-      playerSection.style.display = "block";
-      playerSection.scrollIntoView({ behavior: "smooth" });
-    }
-  </script>
+    mainVideo.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+    playerSection.style.display = "block";
+    playerSection.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function closeVideo() {
+    const playerSection = document.getElementById("video-player");
+    const mainVideo = document.getElementById("main-video");
+
+    mainVideo.src = "";
+    playerSection.style.display = "none";
+  }
+
+  function scrollVideos(button, amount) {
+    const container = button.parentElement.querySelector(".videos-grid");
+    container.scrollBy({
+      left: amount,
+      behavior: "smooth"
+    });
+  }
+</script>
 </body>
 </html>
