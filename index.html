@@ -340,6 +340,36 @@
 .close-video:hover {
   background: #e50914;
 }
+    .slider-wrapper{
+  position: relative;
+}
+
+.scroll-btn{
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.7);
+  border: none;
+  color: white;
+  font-size: 26px;
+  width: 45px;
+  height: 70px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.scroll-btn:hover{
+  background:#e50914;
+}
+
+.scroll-left{
+  left:-10px;
+}
+
+.scroll-right{
+  right:-10px;
+}
   </style>
 </head>
 
@@ -396,7 +426,11 @@
       <h2 class="section-title">Latest Shorts</h2>
       <p class="section-subtitle">Watch the newest horror shorts from Dark Echo.</p>
 
-      <div class="videos-grid">
+      <div class="slider-wrapper">
+</div>
+<button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
+</div>
+<div class="videos-grid">
         <article class="card">
           <div class="thumb">
             <a href="javascript:void(0)" onclick="playVideo('-LZY6crClR0')">
@@ -447,7 +481,11 @@
       <h2 class="section-title">Most Watched</h2>
       <p class="section-subtitle">The most popular horror shorts on Dark Echo.</p>
 
-      <div class="videos-grid">
+    <div class="slider-wrapper">
+   </div>
+<button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
+   </div>
+<div class="videos-grid">
         <article class="card">
           <div class="thumb">
             <a href="javascript:void(0)" onclick="playVideo('8qQxgZ0_axw')">
@@ -482,7 +520,11 @@
       <h2 class="section-title">Creepy Stories</h2>
       <p class="section-subtitle">Short horror stories with dark and mysterious endings.</p>
 
-      <div class="videos-grid">
+      <div class="slider-wrapper">
+   </div>
+<button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
+   </div>
+<div class="videos-grid">
         <article class="card">
           <div class="thumb">
             <a href="javascript:void(0)" onclick="playVideo('WIAZRtMuYDQ')">
