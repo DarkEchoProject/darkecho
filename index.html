@@ -582,35 +582,61 @@
   </section>
 
   <section id="about">
-    <div class="container about-box">
-      <div class="panel">
-        <h2 class="section-title">About the page</h2>
-        <p>
-          This page is dedicated to short horror videos from the Dark Echo channel.
-          Here you can watch quick terrifying moments, mysterious encounters, and
-          creepy stories captured in YouTube Shorts.
-        </p>
+  <div class="container">
+    <h2 class="section-title">About the channel</h2>
+    <p class="section-subtitle">A collection of dark shorts, creepy moments, and disturbing horror stories from Dark Echo.</p>
 
-        <div class="shorts-container">
-          <iframe width="360" height="640" src="https://www.youtube.com/embed/9-eUUTSE-5w" title="Short 1" allowfullscreen></iframe>
-          <iframe width="360" height="640" src="https://www.youtube.com/embed/Vf_pYevF5ps" title="Short 2" allowfullscreen></iframe>
-          <iframe width="360" height="640" src="https://www.youtube.com/embed/VrWjIg1w3aA" title="Short 3" allowfullscreen></iframe>
-        </div>
+    <div class="slider-wrapper">
+      <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
+
+      <div class="videos-grid">
+        <article class="card">
+          <div class="thumb">
+            <a href="javascript:void(0)" onclick="playVideo('9-eUUTSE-5w')">
+              <img src="about1.jpg" alt="Dark Echo Short 1">
+              <div class="play">▶</div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3>Terrifying short story</h3>
+            <p>A dark and mysterious horror short from Dark Echo.</p>
+            <a class="mini-btn" href="https://youtu.be/9-eUUTSE-5w" target="_blank">Watch now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <a href="javascript:void(0)" onclick="playVideo('Vf_pYevF5ps')">
+              <img src="about2.jpg" alt="Dark Echo Short 2">
+              <div class="play">▶</div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3>Creepy encounter</h3>
+            <p>A quick horror moment with a chilling ending.</p>
+            <a class="mini-btn" href="https://youtu.be/Vf_pYevF5ps" target="_blank">Watch now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <a href="javascript:void(0)" onclick="playVideo('VrWjIg1w3aA')">
+              <img src="about3.jpg" alt="Dark Echo Short 3">
+              <div class="play">▶</div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3>Disturbing final scene</h3>
+            <p>A creepy short with a shocking horror twist.</p>
+            <a class="mini-btn" href="https://youtu.be/VrWjIg1w3aA" target="_blank">Watch now</a>
+          </div>
+        </article>
       </div>
 
-      <div class="panel">
-        <h2 class="section-title">I bet you</h2>
-        <p>I bet you won't be able to keep watching.</p>
-        <div class="feature-list">
-          <a class="feature" href="https://www.youtube.com/@DarkEchoProject" target="_blank">YouTube Channel</a>
-          <a class="feature" href="https://www.tiktok.com/@darkechoproject" target="_blank">TikTok</a>
-          <a class="feature" href="https://www.instagram.com/dark.echoproject/" target="_blank">Instagram</a>
-          <a class="feature" href="mailto:alinasser00008@gmail.com">alinasser00008@gmail.com</a>
-        </div>
-      </div>
+      <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
     </div>
-  </section>
-
+  </div>
+</section>
   <section id="join">
     <div class="container">
       <div class="subscribe-box">
