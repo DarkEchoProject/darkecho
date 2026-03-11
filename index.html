@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dark Echo | Horror stories and clips</title>
-  <link rel="icon" type="image/png" href="Dark Echo s.png">
+  <link rel="icon" type="image/png" href="Dark Echo s.png" />
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -17,7 +19,10 @@
       line-height: 1.7;
     }
 
-    a { text-decoration: none; color: inherit; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     .container {
       width: min(1400px, 92%);
@@ -28,9 +33,9 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.65));
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.65));
       backdrop-filter: blur(6px);
-      border-bottom: 1px solid rgba(255,255,255,0.04);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     }
 
     nav {
@@ -61,9 +66,9 @@
       display: flex;
       align-items: center;
       background:
-        linear-gradient(to right, rgba(0,0,0,0.92) 20%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.85) 100%),
-        linear-gradient(to top, rgba(0,0,0,0.95) 5%, rgba(0,0,0,0.2) 45%, rgba(0,0,0,0.75) 100%),
-        url('Dark Echo.png') center/cover no-repeat;
+        linear-gradient(to right, rgba(0, 0, 0, 0.92) 20%, rgba(0, 0, 0, 0.55) 55%, rgba(0, 0, 0, 0.85) 100%),
+        linear-gradient(to top, rgba(0, 0, 0, 0.95) 5%, rgba(0, 0, 0, 0.2) 45%, rgba(0, 0, 0, 0.75) 100%),
+        url("Dark Echo.png") center/cover no-repeat;
     }
 
     .hero-content {
@@ -74,8 +79,8 @@
     .badge {
       display: inline-block;
       padding: 8px 14px;
-      background: rgba(255,42,42,0.12);
-      border: 1px solid rgba(255,42,42,0.35);
+      background: rgba(255, 42, 42, 0.12);
+      border: 1px solid rgba(255, 42, 42, 0.35);
       border-radius: 999px;
       color: #ff8e8e;
       font-size: 13px;
@@ -114,12 +119,14 @@
       color: white;
     }
 
-    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
 
     .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.16);
+      border: 1px solid rgba(255, 255, 255, 0.16);
       color: #f0f0f0;
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.03);
     }
 
     section {
@@ -144,11 +151,16 @@
       gap: 22px;
     }
 
+    .slider-wrapper {
+      position: relative;
+      overflow: visible;
+    }
+
     .videos-grid {
       display: flex;
       gap: 18px;
       overflow-x: auto;
-      padding-bottom: 10px;
+      padding: 20px 10px 30px;
       scroll-behavior: smooth;
     }
 
@@ -157,21 +169,21 @@
     }
 
     .card {
-  background: #111;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  cursor: pointer;
-  min-width: 300px;
-  flex: 0 0 300px;
-  position: relative;
-}
+      background: #111;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      cursor: pointer;
+      min-width: 300px;
+      flex: 0 0 300px;
+      position: relative;
+    }
 
-.card:hover {
-  transform: scale(1.12);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.85);
-  z-index: 20;
-}
+    .card:hover {
+      transform: scale(1.12);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.85);
+      z-index: 20;
+    }
 
     .thumb {
       position: relative;
@@ -214,6 +226,11 @@
 
     .card-content {
       padding: 18px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.75));
+    }
+
+    .card:hover .card-content {
+      background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(20, 20, 20, 0.95));
     }
 
     .card h3 {
@@ -234,15 +251,16 @@
       display: inline-block;
       padding: 10px 16px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.10);
       color: #fff;
       font-size: 13px;
       font-weight: 700;
       transition: background 0.25s ease, transform 0.25s ease;
     }
 
-    .mini-btn:hover {
+    .mini-btn:hover,
+    .card:hover .mini-btn {
       background: #e50914;
       transform: translateY(-1px);
     }
@@ -254,8 +272,8 @@
     }
 
     .panel {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 20px;
       padding: 26px;
     }
@@ -269,16 +287,16 @@
     .feature {
       padding: 14px 16px;
       border-radius: 14px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       color: #d9d9d9;
       word-break: break-word;
     }
 
     .subscribe-box {
       text-align: center;
-      background: linear-gradient(135deg, rgba(255,42,42,0.18), rgba(255,255,255,0.03));
-      border: 1px solid rgba(255,42,42,0.2);
+      background: linear-gradient(135deg, rgba(255, 42, 42, 0.18), rgba(255, 255, 255, 0.03));
+      border: 1px solid rgba(255, 42, 42, 0.2);
       border-radius: 24px;
       padding: 34px;
     }
@@ -303,100 +321,82 @@
       margin-bottom: 40px;
     }
 
+    .video-wrapper {
+      position: relative;
+    }
+
     #main-video {
       border-radius: 12px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+    }
+
+    .close-video {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      padding: 10px 14px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .close-video:hover {
+      background: #e50914;
+    }
+
+    .scroll-btn {
+      position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.7);
+      border: none;
+      color: white;
+      font-size: 26px;
+      width: 45px;
+      height: 70px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .scroll-btn:hover {
+      background: #e50914;
+    }
+
+    .scroll-left {
+      left: -10px;
+    }
+
+    .scroll-right {
+      right: -10px;
     }
 
     footer {
       padding: 26px 0 40px;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       color: #9a9a9a;
       text-align: center;
     }
 
     @media (max-width: 860px) {
-      .about-box { grid-template-columns: 1fr; }
-      nav { flex-direction: column; align-items: flex-start; }
-      #main-video { height: 320px; }
+      .about-box {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      #main-video {
+        height: 320px;
+      }
     }
-    .video-wrapper {
-  position: relative;
-}
-
-.close-video {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  z-index: 10;
-  background: rgba(0,0,0,0.75);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 10px;
-  padding: 10px 14px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.close-video:hover {
-  background: #e50914;
-}
-    .slider-wrapper{
-  position: relative;
-}
-
-.scroll-btn{
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  z-index: 10;
-  background: rgba(0,0,0,0.7);
-  border: none;
-  color: white;
-  font-size: 26px;
-  width: 45px;
-  height: 70px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.scroll-btn:hover{
-  background:#e50914;
-}
-
-.scroll-left{
-  left:-10px;
-}
-
-.scroll-right{
-  right:-10px;
-}
-    .videos-grid {
-  display: flex;
-  gap: 18px;
-  overflow-x: auto;
-  padding: 20px 10px 30px;
-  scroll-behavior: smooth;
-}
-
-.slider-wrapper {
-  position: relative;
-  overflow: visible;
-}
-
-.card-content {
-  padding: 18px;
-  background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.75));
-}
-
-.card:hover .card-content {
-  background: linear-gradient(to top, rgba(0,0,0,1), rgba(20,20,20,0.95));
-}
-
-.card:hover .mini-btn {
-  background: #e50914;
-}
   </style>
 </head>
 
@@ -430,217 +430,220 @@
     </div>
   </section>
 
- <div id="video-player">
-  <div class="container">
-    <div class="video-wrapper">
-      <button class="close-video" onclick="closeVideo()">✕ Close</button>
-      <iframe
-        id="main-video"
-        width="100%"
-        height="720"
-        src=""
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-</div>
-
- <section id="videos">
-  <div class="container">
-    <h2 class="section-title">Latest Shorts</h2>
-    <p class="section-subtitle">Watch the newest horror shorts from Dark Echo.</p>
-
-    <div class="slider-wrapper">
-      <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
-
-      <div class="videos-grid">
-        <article class="card">
-          <div class="thumb">
-            <a href="javascript:void(0)" onclick="playVideo('-LZY6crClR0')">
-              <img src="top.png" alt="Top 10 Horror Movies">
-              <div class="play">▶</div>
-            </a>
-          </div>
-          <div class="card-content">
-            <h3>Top 10</h3>
-            <p>Top 10 Best Horror Movies of 2025 | The Scariest Upcoming Horror Films | Dark Echo.</p>
-            <a class="mini-btn" href="https://youtu.be/-LZY6crClR0" target="_blank">Watch now</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="thumb">
-            <a href="javascript:void(0)" onclick="playVideo('XLxOJPfpdwo')">
-              <img src="reflection.jpg" alt="Her reflection moved">
-              <div class="play">▶</div>
-            </a>
-          </div>
-          <div class="card-content">
-            <h3>Her reflection moved</h3>
-            <p>Her Reflection Smiled… She Didn’t | Horror Story | Dark Echo.</p>
-            <a class="mini-btn" href="https://youtu.be/XLxOJPfpdwo" target="_blank">Watch now</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="thumb">
-            <a href="javascript:void(0)" onclick="playVideo('SX8m_2hCqmI')">
-              <img src="Wall.jpg" alt="Inside Her Wall">
-              <div class="play">▶</div>
-            </a>
-          </div>
-          <div class="card-content">
-            <h3>Inside Her Wall</h3>
-            <p>She Heard Scratching Inside Her Wall… What She Found Was Terrifying | Dark Echo.</p>
-            <a class="mini-btn" href="https://youtu.be/SX8m_2hCqmI" target="_blank">Watch now</a>
-          </div>
-        </article>
+  <div id="video-player">
+    <div class="container">
+      <div class="video-wrapper">
+        <button class="close-video" onclick="closeVideo()">✕ Close</button>
+        <iframe
+          id="main-video"
+          width="100%"
+          height="720"
+          src=""
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
       </div>
-
-      <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
     </div>
   </div>
-</section>
- <section>
-  <div class="container">
-    <h2 class="section-title">Most Watched</h2>
-    <p class="section-subtitle">The most popular horror shorts on Dark Echo.</p>
 
-    <div class="slider-wrapper">
-      <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
+  <section id="videos">
+    <div class="container">
+      <h2 class="section-title">Latest Shorts</h2>
+      <p class="section-subtitle">Watch the newest horror shorts from Dark Echo.</p>
 
-      <div class="videos-grid">
-        <article class="card">
-          <div class="thumb">
-            <a href="javascript:void(0)" onclick="playVideo('8qQxgZ0_axw')">
-              <img src="4.jpg" alt="Horror Video">
-              <div class="play">▶</div>
-            </a>
-          </div>
-          <div class="card-content">
-            <h3>Something Was Watching</h3>
-            <p>A strange shadow appeared behind the door.</p>
-          </div>
-        </article>
+      <div class="slider-wrapper">
+        <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
 
-        <article class="card">
-          <div class="thumb">
-            <a href="javascript:void(0)" onclick="playVideo('d-5WMLEz-kc')">
-              <img src="3.jpg" alt="Creepy Video">
-              <div class="play">▶</div>
-            </a>
-          </div>
-          <div class="card-content">
-            <h3>The Camera Saw It</h3>
-            <p>A security camera captured something terrifying.</p>
-          </div>
-        </article>
+        <div class="videos-grid">
+          <article class="card">
+            <div class="thumb">
+              <a href="javascript:void(0)" onclick="playVideo('-LZY6crClR0')">
+                <img src="top.png" alt="Top 10 Horror Movies" />
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <h3>Top 10</h3>
+              <p>Top 10 Best Horror Movies of 2025 | The Scariest Upcoming Horror Films | Dark Echo.</p>
+              <a class="mini-btn" href="https://youtu.be/-LZY6crClR0" target="_blank">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">
+              <a href="javascript:void(0)" onclick="playVideo('XLxOJPfpdwo')">
+                <img src="reflection.jpg" alt="Her reflection moved" />
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <h3>Her reflection moved</h3>
+              <p>Her Reflection Smiled… She Didn’t | Horror Story | Dark Echo.</p>
+              <a class="mini-btn" href="https://youtu.be/XLxOJPfpdwo" target="_blank">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">
+              <a href="javascript:void(0)" onclick="playVideo('SX8m_2hCqmI')">
+                <img src="Wall.jpg" alt="Inside Her Wall" />
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <h3>Inside Her Wall</h3>
+              <p>She Heard Scratching Inside Her Wall… What She Found Was Terrifying | Dark Echo.</p>
+              <a class="mini-btn" href="https://youtu.be/SX8m_2hCqmI" target="_blank">Watch now</a>
+            </div>
+          </article>
+        </div>
+
+        <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
       </div>
-
-      <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
     </div>
-  </div>
-</section>
+  </section>
+
   <section>
-  <div class="container">
-    <h2 class="section-title">Creepy Stories</h2>
-    <p class="section-subtitle">Short horror stories with dark and mysterious endings.</p>
+    <div class="container">
+      <h2 class="section-title">Most Watched</h2>
+      <p class="section-subtitle">The most popular horror shorts on Dark Echo.</p>
 
-    <div class="slider-wrapper">
-      <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
+      <div class="slider-wrapper">
+        <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
 
-      <div class="videos-grid">
-        <article class="card">
-          <div class="thumb">
-            <a href="javascript:void(0)" onclick="playVideo('WIAZRtMuYDQ')">
-              <img src="2.jpg" alt="Creepy Story">
-              <div class="play">▶</div>
-            </a>
-          </div>
-          <div class="card-content">
-            <h3>The Whisper in the Dark</h3>
-            <p>A voice called his name from the empty hallway.</p>
-          </div>
-        </article>
+        <div class="videos-grid">
+          <article class="card">
+            <div class="thumb">
+              <a href="javascript:void(0)" onclick="playVideo('8qQxgZ0_axw')">
+                <img src="4.jpg" alt="Horror Video" />
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <h3>Something Was Watching</h3>
+              <p>A strange shadow appeared behind the door.</p>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="thumb">
-            <a href="javascript:void(0)" onclick="playVideo('wO5y7__jyKM')">
-              <img src="1.jpg" alt="Dark Story">
-              <div class="play">▶</div>
-            </a>
-          </div>
-          <div class="card-content">
-            <h3>The Shadow Behind Me</h3>
-            <p>He checked the mirror… but the shadow was still there.</p>
-          </div>
-        </article>
+          <article class="card">
+            <div class="thumb">
+              <a href="javascript:void(0)" onclick="playVideo('d-5WMLEz-kc')">
+                <img src="3.jpg" alt="Creepy Video" />
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <h3>The Camera Saw It</h3>
+              <p>A security camera captured something terrifying.</p>
+            </div>
+          </article>
+        </div>
+
+        <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
       </div>
-
-      <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Creepy Stories</h2>
+      <p class="section-subtitle">Short horror stories with dark and mysterious endings.</p>
+
+      <div class="slider-wrapper">
+        <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
+
+        <div class="videos-grid">
+          <article class="card">
+            <div class="thumb">
+              <a href="javascript:void(0)" onclick="playVideo('WIAZRtMuYDQ')">
+                <img src="2.jpg" alt="Creepy Story" />
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <h3>The Whisper in the Dark</h3>
+              <p>A voice called his name from the empty hallway.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">
+              <a href="javascript:void(0)" onclick="playVideo('wO5y7__jyKM')">
+                <img src="1.jpg" alt="Dark Story" />
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <h3>The Shadow Behind Me</h3>
+              <p>He checked the mirror… but the shadow was still there.</p>
+            </div>
+          </article>
+        </div>
+
+        <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
+      </div>
+    </div>
+  </section>
 
   <section id="about">
-  <div class="container">
-    <h2 class="section-title">About the channel</h2>
-    <p class="section-subtitle">A collection of dark shorts, creepy moments, and disturbing horror stories from Dark Echo.</p>
+    <div class="container">
+      <h2 class="section-title">About the channel</h2>
+      <p class="section-subtitle">A collection of dark shorts, creepy moments, and disturbing horror stories from Dark Echo.</p>
 
-    <div class="slider-wrapper">
-      <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
+      <div class="slider-wrapper">
+        <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
 
-      <div class="videos-grid">
-        <article class="card">
-          <div class="thumb">
-            <a href="javascript:void(0)" onclick="playVideo('9-eUUTSE-5w')">
-              <img src="h1.png" alt="Dark Echo Short 1">
-              <div class="play">▶</div>
-            </a>
-          </div>
-          <div class="card-content">
-            <h3>Terrifying short story</h3>
-            <p>A dark and mysterious horror short from Dark Echo.</p>
-            <a class="mini-btn" href="https://youtu.be/9-eUUTSE-5w" target="_blank">Watch now</a>
-          </div>
-        </article>
+        <div class="videos-grid">
+          <article class="card">
+            <div class="thumb">
+              <a href="javascript:void(0)" onclick="playVideo('9-eUUTSE-5w')">
+                <img src="h1.png" alt="Dark Echo Short 1" />
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <h3>Terrifying short story</h3>
+              <p>A dark and mysterious horror short from Dark Echo.</p>
+              <a class="mini-btn" href="https://youtu.be/9-eUUTSE-5w" target="_blank">Watch now</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="thumb">
-            <a href="javascript:void(0)" onclick="playVideo('Vf_pYevF5ps')">
-              <img src="h2.png" alt="Dark Echo Short 2">
-              <div class="play">▶</div>
-            </a>
-          </div>
-          <div class="card-content">
-            <h3>Creepy encounter</h3>
-            <p>A quick horror moment with a chilling ending.</p>
-            <a class="mini-btn" href="https://youtu.be/Vf_pYevF5ps" target="_blank">Watch now</a>
-          </div>
-        </article>
+          <article class="card">
+            <div class="thumb">
+              <a href="javascript:void(0)" onclick="playVideo('Vf_pYevF5ps')">
+                <img src="h2.png" alt="Dark Echo Short 2" />
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <h3>Creepy encounter</h3>
+              <p>A quick horror moment with a chilling ending.</p>
+              <a class="mini-btn" href="https://youtu.be/Vf_pYevF5ps" target="_blank">Watch now</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="thumb">
-            <a href="javascript:void(0)" onclick="playVideo('VrWjIg1w3aA')">
-              <img src="h3.jpg" alt="Dark Echo Short 3">
-              <div class="play">▶</div>
-            </a>
-          </div>
-          <div class="card-content">
-            <h3>Disturbing final scene</h3>
-            <p>A creepy short with a shocking horror twist.</p>
-            <a class="mini-btn" href="https://youtu.be/VrWjIg1w3aA" target="_blank">Watch now</a>
-          </div>
-        </article>
+          <article class="card">
+            <div class="thumb">
+              <a href="javascript:void(0)" onclick="playVideo('VrWjIg1w3aA')">
+                <img src="h3.jpg" alt="Dark Echo Short 3" />
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <h3>Disturbing final scene</h3>
+              <p>A creepy short with a shocking horror twist.</p>
+              <a class="mini-btn" href="https://youtu.be/VrWjIg1w3aA" target="_blank">Watch now</a>
+            </div>
+          </article>
+        </div>
+
+        <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
       </div>
-
-      <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
     </div>
-  </div>
-</section>
+  </section>
+
   <section id="join">
     <div class="container">
       <div class="subscribe-box">
@@ -657,31 +660,31 @@
     </div>
   </footer>
 
- <script>
-  function playVideo(videoId) {
-    const playerSection = document.getElementById("video-player");
-    const mainVideo = document.getElementById("main-video");
+  <script>
+    function playVideo(videoId) {
+      const playerSection = document.getElementById("video-player");
+      const mainVideo = document.getElementById("main-video");
 
-    mainVideo.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
-    playerSection.style.display = "block";
-    playerSection.scrollIntoView({ behavior: "smooth" });
-  }
+      mainVideo.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+      playerSection.style.display = "block";
+      playerSection.scrollIntoView({ behavior: "smooth" });
+    }
 
-  function closeVideo() {
-    const playerSection = document.getElementById("video-player");
-    const mainVideo = document.getElementById("main-video");
+    function closeVideo() {
+      const playerSection = document.getElementById("video-player");
+      const mainVideo = document.getElementById("main-video");
 
-    mainVideo.src = "";
-    playerSection.style.display = "none";
-  }
+      mainVideo.src = "";
+      playerSection.style.display = "none";
+    }
 
-  function scrollVideos(button, amount) {
-    const container = button.parentElement.querySelector(".videos-grid");
-    container.scrollBy({
-      left: amount,
-      behavior: "smooth"
-    });
-  }
-</script>
+    function scrollVideos(button, amount) {
+      const container = button.parentElement.querySelector(".videos-grid");
+      container.scrollBy({
+        left: amount,
+        behavior: "smooth"
+      });
+    }
+  </script>
 </body>
 </html>
