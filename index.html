@@ -146,9 +146,13 @@
       font-size: 15px;
     }
 
-    .grid {
-      display: grid;
-      gap: 22px;
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
     }
 
     .slider-wrapper {
@@ -180,7 +184,7 @@
     }
 
     .card:hover {
-      transform: scale(1.12);
+      transform: scale(1.08);
       box-shadow: 0 25px 50px rgba(0, 0, 0, 0.85);
       z-index: 20;
     }
@@ -227,6 +231,10 @@
     .card-content {
       padding: 18px;
       background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.75));
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .card:hover .card-content {
@@ -257,40 +265,13 @@
       font-size: 13px;
       font-weight: 700;
       transition: background 0.25s ease, transform 0.25s ease;
+      align-self: flex-start;
     }
 
     .mini-btn:hover,
     .card:hover .mini-btn {
       background: #e50914;
       transform: translateY(-1px);
-    }
-
-    .about-box {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 26px;
-    }
-
-    .panel {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      padding: 26px;
-    }
-
-    .feature-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .feature {
-      padding: 14px 16px;
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      color: #d9d9d9;
-      word-break: break-word;
     }
 
     .subscribe-box {
@@ -301,24 +282,11 @@
       padding: 34px;
     }
 
-    .shorts-container {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .shorts-container iframe {
-      border: none;
-      border-radius: 12px;
-      max-width: 100%;
-    }
-
     #video-player {
       display: none;
       padding: 30px 0;
       background: linear-gradient(to bottom, #000000, #050505);
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
 
     .video-wrapper {
@@ -384,10 +352,6 @@
     }
 
     @media (max-width: 860px) {
-      .about-box {
-        grid-template-columns: 1fr;
-      }
-
       nav {
         flex-direction: column;
         align-items: flex-start;
@@ -395,6 +359,18 @@
 
       #main-video {
         height: 320px;
+      }
+
+      .section-head {
+        align-items: flex-start;
+      }
+
+      .scroll-left {
+        left: 0;
+      }
+
+      .scroll-right {
+        right: 0;
       }
     }
   </style>
@@ -406,8 +382,10 @@
       <nav>
         <div class="logo">DARK ECHO</div>
         <div class="nav-links">
-          <a href="#videos">Newest clips</a>
-          <a href="#about">About the channel</a>
+          <a href="#latest">Latest Shorts</a>
+          <a href="#most-watched">Most Watched</a>
+          <a href="#stories">Creepy Stories</a>
+          <a href="#featured">Featured</a>
           <a href="#join">Subscribe</a>
         </div>
       </nav>
@@ -420,11 +398,11 @@
         <div class="badge">Short horror stories • Mysterious scenes • Shocking endings</div>
         <h1>Go in... but don't raise your voice if you're alone at night.</h1>
         <p>
-          A page dedicated to posting short horror clips, the latest videos, and quick access to horror content on my channels.
+          A page dedicated to posting short horror clips, the latest videos, and quick access to horror content on my channel.
         </p>
         <div class="buttons">
           <a class="btn btn-primary" href="https://www.youtube.com/@DarkEchoProject" target="_blank">Watch the channel</a>
-          <a class="btn btn-secondary" href="#videos">Exploring the sections</a>
+          <a class="btn btn-secondary" href="#latest">Explore sections</a>
         </div>
       </div>
     </div>
@@ -448,10 +426,14 @@
     </div>
   </div>
 
-  <section id="videos">
+  <section id="latest">
     <div class="container">
-      <h2 class="section-title">Latest Shorts</h2>
-      <p class="section-subtitle">Watch the newest horror shorts from Dark Echo.</p>
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Latest Shorts</h2>
+          <p class="section-subtitle">Watch the newest horror shorts from Dark Echo.</p>
+        </div>
+      </div>
 
       <div class="slider-wrapper">
         <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
@@ -465,8 +447,10 @@
               </a>
             </div>
             <div class="card-content">
-              <h3>Top 10</h3>
-              <p>Top 10 Best Horror Movies of 2025 | The Scariest Upcoming Horror Films | Dark Echo.</p>
+              <div>
+                <h3>Top 10</h3>
+                <p>Top 10 Best Horror Movies of 2025 | The Scariest Upcoming Horror Films | Dark Echo.</p>
+              </div>
               <a class="mini-btn" href="https://youtu.be/-LZY6crClR0" target="_blank">Watch now</a>
             </div>
           </article>
@@ -479,8 +463,10 @@
               </a>
             </div>
             <div class="card-content">
-              <h3>Her reflection moved</h3>
-              <p>Her Reflection Smiled… She Didn’t | Horror Story | Dark Echo.</p>
+              <div>
+                <h3>Her reflection moved</h3>
+                <p>Her Reflection Smiled… She Didn’t | Horror Story | Dark Echo.</p>
+              </div>
               <a class="mini-btn" href="https://youtu.be/XLxOJPfpdwo" target="_blank">Watch now</a>
             </div>
           </article>
@@ -493,8 +479,10 @@
               </a>
             </div>
             <div class="card-content">
-              <h3>Inside Her Wall</h3>
-              <p>She Heard Scratching Inside Her Wall… What She Found Was Terrifying | Dark Echo.</p>
+              <div>
+                <h3>Inside Her Wall</h3>
+                <p>She Heard Scratching Inside Her Wall… What She Found Was Terrifying | Dark Echo.</p>
+              </div>
               <a class="mini-btn" href="https://youtu.be/SX8m_2hCqmI" target="_blank">Watch now</a>
             </div>
           </article>
@@ -505,10 +493,14 @@
     </div>
   </section>
 
-  <section>
+  <section id="most-watched">
     <div class="container">
-      <h2 class="section-title">Most Watched</h2>
-      <p class="section-subtitle">The most popular horror shorts on Dark Echo.</p>
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Most Watched</h2>
+          <p class="section-subtitle">The most popular horror shorts on Dark Echo.</p>
+        </div>
+      </div>
 
       <div class="slider-wrapper">
         <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
@@ -517,26 +509,32 @@
           <article class="card">
             <div class="thumb">
               <a href="javascript:void(0)" onclick="playVideo('8qQxgZ0_axw')">
-                <img src="4.jpg" alt="Horror Video" />
+                <img src="4.jpg" alt="Something Was Watching" />
                 <div class="play">▶</div>
               </a>
             </div>
             <div class="card-content">
-              <h3>Something Was Watching</h3>
-              <p>A strange shadow appeared behind the door.</p>
+              <div>
+                <h3>Something Was Watching</h3>
+                <p>A strange shadow appeared behind the door.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/8qQxgZ0_axw" target="_blank">Watch now</a>
             </div>
           </article>
 
           <article class="card">
             <div class="thumb">
               <a href="javascript:void(0)" onclick="playVideo('d-5WMLEz-kc')">
-                <img src="3.jpg" alt="Creepy Video" />
+                <img src="3.jpg" alt="The Camera Saw It" />
                 <div class="play">▶</div>
               </a>
             </div>
             <div class="card-content">
-              <h3>The Camera Saw It</h3>
-              <p>A security camera captured something terrifying.</p>
+              <div>
+                <h3>The Camera Saw It</h3>
+                <p>A security camera captured something terrifying.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/d-5WMLEz-kc" target="_blank">Watch now</a>
             </div>
           </article>
         </div>
@@ -546,10 +544,14 @@
     </div>
   </section>
 
-  <section>
+  <section id="stories">
     <div class="container">
-      <h2 class="section-title">Creepy Stories</h2>
-      <p class="section-subtitle">Short horror stories with dark and mysterious endings.</p>
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Creepy Stories</h2>
+          <p class="section-subtitle">Short horror stories with dark and mysterious endings.</p>
+        </div>
+      </div>
 
       <div class="slider-wrapper">
         <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
@@ -558,26 +560,32 @@
           <article class="card">
             <div class="thumb">
               <a href="javascript:void(0)" onclick="playVideo('WIAZRtMuYDQ')">
-                <img src="2.jpg" alt="Creepy Story" />
+                <img src="2.jpg" alt="The Whisper in the Dark" />
                 <div class="play">▶</div>
               </a>
             </div>
             <div class="card-content">
-              <h3>The Whisper in the Dark</h3>
-              <p>A voice called his name from the empty hallway.</p>
+              <div>
+                <h3>The Whisper in the Dark</h3>
+                <p>A voice called his name from the empty hallway.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/WIAZRtMuYDQ" target="_blank">Watch now</a>
             </div>
           </article>
 
           <article class="card">
             <div class="thumb">
               <a href="javascript:void(0)" onclick="playVideo('wO5y7__jyKM')">
-                <img src="1.jpg" alt="Dark Story" />
+                <img src="1.jpg" alt="The Shadow Behind Me" />
                 <div class="play">▶</div>
               </a>
             </div>
             <div class="card-content">
-              <h3>The Shadow Behind Me</h3>
-              <p>He checked the mirror… but the shadow was still there.</p>
+              <div>
+                <h3>The Shadow Behind Me</h3>
+                <p>He checked the mirror… but the shadow was still there.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/wO5y7__jyKM" target="_blank">Watch now</a>
             </div>
           </article>
         </div>
@@ -587,10 +595,14 @@
     </div>
   </section>
 
-  <section id="about">
+  <section id="featured">
     <div class="container">
-      <h2 class="section-title">About the channel</h2>
-      <p class="section-subtitle">A collection of dark shorts, creepy moments, and disturbing horror stories from Dark Echo.</p>
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Featured Clips</h2>
+          <p class="section-subtitle">A collection of dark shorts, creepy moments, and disturbing horror stories from Dark Echo.</p>
+        </div>
+      </div>
 
       <div class="slider-wrapper">
         <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
@@ -599,13 +611,15 @@
           <article class="card">
             <div class="thumb">
               <a href="javascript:void(0)" onclick="playVideo('9-eUUTSE-5w')">
-                <img src="h1.png" alt="Dark Echo Short 1" />
+                <img src="h1.png" alt="Terrifying short story" />
                 <div class="play">▶</div>
               </a>
             </div>
             <div class="card-content">
-              <h3>Terrifying short story</h3>
-              <p>A dark and mysterious horror short from Dark Echo.</p>
+              <div>
+                <h3>Terrifying short story</h3>
+                <p>A dark and mysterious horror short from Dark Echo.</p>
+              </div>
               <a class="mini-btn" href="https://youtu.be/9-eUUTSE-5w" target="_blank">Watch now</a>
             </div>
           </article>
@@ -613,13 +627,15 @@
           <article class="card">
             <div class="thumb">
               <a href="javascript:void(0)" onclick="playVideo('Vf_pYevF5ps')">
-                <img src="h2.png" alt="Dark Echo Short 2" />
+                <img src="h2.png" alt="Creepy encounter" />
                 <div class="play">▶</div>
               </a>
             </div>
             <div class="card-content">
-              <h3>Creepy encounter</h3>
-              <p>A quick horror moment with a chilling ending.</p>
+              <div>
+                <h3>Creepy encounter</h3>
+                <p>A quick horror moment with a chilling ending.</p>
+              </div>
               <a class="mini-btn" href="https://youtu.be/Vf_pYevF5ps" target="_blank">Watch now</a>
             </div>
           </article>
@@ -627,13 +643,15 @@
           <article class="card">
             <div class="thumb">
               <a href="javascript:void(0)" onclick="playVideo('VrWjIg1w3aA')">
-                <img src="h3.jpg" alt="Dark Echo Short 3" />
+                <img src="h3.jpg" alt="Disturbing final scene" />
                 <div class="play">▶</div>
               </a>
             </div>
             <div class="card-content">
-              <h3>Disturbing final scene</h3>
-              <p>A creepy short with a shocking horror twist.</p>
+              <div>
+                <h3>Disturbing final scene</h3>
+                <p>A creepy short with a shocking horror twist.</p>
+              </div>
               <a class="mini-btn" href="https://youtu.be/VrWjIg1w3aA" target="_blank">Watch now</a>
             </div>
           </article>
