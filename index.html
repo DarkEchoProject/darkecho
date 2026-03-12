@@ -1,77 +1,175 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dark Echo | Best Horror Shorts, Creepy Stories & Scary Clips</title>
-<meta name="description" content="Best horror shorts, creepy stories, scary clips and dark horror videos from Dark Echo. Watch terrifying horror scenes now.">
-<meta name="keywords" content="horror shorts, creepy stories, scary videos, horror clips, dark horror, horror youtube, scary moments, horror channel">
-<meta name="author" content="Dark Echo">
-<meta name="robots" content="index, follow">
+<title>Dark Echo | Horror Shorts</title>
+<meta name="description" content="Best horror shorts and creepy stories">
 
-<meta property="og:title" content="Dark Echo Horror Website">
-<meta property="og:description" content="Watch the best horror shorts and creepy stories from Dark Echo.">
-<meta property="og:image" content="https://darkechoproject.github.io/darkecho/Dark%20Echo.png">
-<meta property="og:url" content="https://darkechoproject.github.io/darkecho/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Dark Echo">
-
-<link rel="icon" type="image/png" href="Dark Echo s.png" />
-<link rel="sitemap" type="application/xml" href="sitemap.xml">
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QSKD08ZSXE"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-QSKD08ZSXE');
-</script>
+<link rel="icon" href="Dark Echo s.png">
 
 <style>
+
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial;background:radial-gradient(circle at top,#111 0%,#050505 60%);color:#f2f2f2}
-.container{width:min(1400px,92%);margin:auto}
 
-header{position:sticky;top:0;background:linear-gradient(to bottom,#000,#00000099)}
-nav{display:flex;justify-content:space-between;padding:16px 0}
-.logo{font-size:28px;font-weight:800;color:#e50914}
-.nav-links{display:flex;gap:18px;color:#ccc}
-
-.hero{min-height:90vh;display:flex;align-items:center;
-background:linear-gradient(to right,#000000ee,#00000088,#000000dd),url("Dark Echo.png") center/cover}
-
-.hero-content{max-width:600px;padding:80px 0}
-h1{font-size:70px;margin-bottom:18px}
-.hero p{color:#ccc}
-
-.btn{padding:14px 22px;border-radius:12px;font-weight:700;text-decoration:none}
-.btn-primary{background:#ff2a2a;color:white}
-.btn-secondary{border:1px solid #555;color:white}
-
-section{padding:70px 0}
-.section-title{font-size:30px;font-weight:800}
-
-.videos-grid{display:flex;gap:18px;overflow-x:auto;padding:20px 10px}
-.card{background:#111;border-radius:12px;overflow:hidden;min-width:300px}
-
-.thumb{position:relative;padding-top:56.25%;overflow:hidden}
-.thumb img{
-position:absolute;top:0;left:0;width:100%;height:100%;
-object-fit:cover;transition:.35s
+body{
+margin:0;
+font-family:Arial;
+background:#070707;
+color:white;
 }
-.thumb:hover img{transform:scale(1.12);filter:brightness(.45)}
 
-.play{position:absolute;inset:0;display:grid;place-items:center;font-size:50px;opacity:0}
-.thumb:hover .play{opacity:1}
+.container{
+width:min(1400px,92%);
+margin:auto;
+}
 
-.card-content{padding:18px}
-.mini-btn{padding:10px 16px;border-radius:999px;background:#222;color:white;text-decoration:none}
+header{
+background:#000;
+position:sticky;
+top:0;
+z-index:10;
+}
 
-.big-video-wrapper{position:relative;width:100%;padding-top:56.25%}
-.big-video-wrapper iframe{position:absolute;width:100%;height:100%}
+nav{
+display:flex;
+justify-content:space-between;
+padding:15px 0;
+}
 
-footer{padding:30px;text-align:center;color:#777}
+.logo{
+color:#e50914;
+font-size:26px;
+font-weight:900;
+}
+
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+background:linear-gradient(to right,#000000ee,#00000088),url("Dark Echo.png") center/cover;
+}
+
+.hero-content{
+max-width:600px;
+}
+
+h1{
+font-size:70px;
+margin-bottom:10px;
+}
+
+.btn{
+background:#e50914;
+padding:14px 22px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+section{
+padding:60px 0;
+}
+
+.section-title{
+font-size:28px;
+font-weight:800;
+margin-bottom:20px;
+}
+
+/* GRID */
+
+.videos-grid{
+display:flex;
+gap:16px;
+overflow-x:auto;
+padding-bottom:20px;
+}
+
+/* CARD */
+
+.card{
+min-width:280px;
+height:250px;
+background:#111;
+border-radius:12px;
+overflow:hidden;
+display:flex;
+flex-direction:column;
+transition:.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+/* THUMB */
+
+.thumb{
+height:150px;
+position:relative;
+overflow:hidden;
+}
+
+.thumb img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.play{
+position:absolute;
+inset:0;
+display:grid;
+place-items:center;
+font-size:40px;
+opacity:0;
+transition:.3s;
+}
+
+.card:hover .play{
+opacity:1;
+}
+
+/* CONTENT */
+
+.card-content{
+padding:12px;
+height:100px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.mini-btn{
+background:#222;
+padding:8px 14px;
+border-radius:999px;
+text-decoration:none;
+color:white;
+font-size:13px;
+}
+
+.big-video{
+position:relative;
+padding-top:56%;
+}
+
+.big-video iframe{
+position:absolute;
+width:100%;
+height:100%;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#777;
+}
+
 </style>
 </head>
 
@@ -81,11 +179,6 @@ footer{padding:30px;text-align:center;color:#777}
 <div class="container">
 <nav>
 <div class="logo">DARK ECHO</div>
-<div class="nav-links">
-<a href="#latest">Latest</a>
-<a href="#stories">Stories</a>
-<a href="#featured">Featured</a>
-</div>
 </nav>
 </div>
 </header>
@@ -94,61 +187,56 @@ footer{padding:30px;text-align:center;color:#777}
 <div class="container">
 <div class="hero-content">
 <h1>Enter if you dare.</h1>
-<p>Short horror clips, creepy stories and shocking endings.</p>
-<a class="btn btn-primary" href="https://www.youtube.com/@DarkEchoProject">Watch Channel</a>
+<a class="btn" href="https://www.youtube.com/@DarkEchoProject">Watch Channel</a>
 </div>
 </div>
 </section>
 
 <section>
 <div class="container">
-<h2 class="section-title">🔥 Watch Latest Horror Now</h2>
-<div class="big-video-wrapper">
-<iframe src="https://www.youtube.com/embed/XLxOJPfpdwo?autoplay=1&mute=1" allowfullscreen></iframe>
+<h2 class="section-title">🔥 Latest Horror</h2>
+<div class="big-video">
+<iframe src="https://www.youtube.com/embed/XLxOJPfpdwo?mute=1" allowfullscreen></iframe>
 </div>
 </div>
 </section>
 
-<section id="latest">
+<section>
 <div class="container">
 <h2 class="section-title">Latest Shorts</h2>
+
 <div class="videos-grid">
 
 <div class="card">
 <div class="thumb">
-<a href="https://youtu.be/-LZY6crClR0">
 <img src="top.png">
 <div class="play">▶</div>
-</a>
 </div>
 <div class="card-content">
-<h3>Top 10 Horror</h3>
+<div>Top 10 Horror</div>
 <a class="mini-btn" href="https://youtu.be/-LZY6crClR0">Watch</a>
 </div>
 </div>
 
 <div class="card">
 <div class="thumb">
-<a href="https://youtu.be/XLxOJPfpdwo">
 <img src="reflection.jpg">
 <div class="play">▶</div>
-</a>
 </div>
 <div class="card-content">
-<h3>Reflection Smiled</h3>
+<div>Reflection Smiled</div>
 <a class="mini-btn" href="https://youtu.be/XLxOJPfpdwo">Watch</a>
 </div>
 </div>
 
 </div>
+
 </div>
 </section>
 
 <footer>
-© 2026 Dark Echo — All rights reserved.
+© 2026 Dark Echo
 </footer>
-
-<script src="https://counter.websiteout.net/js/36/6/0/0"></script>
 
 </body>
 </html>
