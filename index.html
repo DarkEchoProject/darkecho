@@ -15,8 +15,7 @@
   <meta property="og:url" content="https://darkechoproject.github.io/darkecho/">
   <meta property="og:type" content="website">
 
-  <link rel="icon" type="image/png" href="Dark Echo s.png" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+  <link rel="icon" type="image/png" href="Dark Echo s.png">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSKD08ZSXE"></script>
@@ -32,17 +31,26 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: radial-gradient(circle at top, #111 0%, #050505 60%);
+      background: #050505;
       color: #f2f2f2;
-      line-height: 1.7;
+      line-height: 1.6;
     }
 
     a {
       text-decoration: none;
       color: inherit;
+    }
+
+    img {
+      display: block;
+      width: 100%;
     }
 
     .container {
@@ -53,72 +61,78 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.65));
-      backdrop-filter: blur(6px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     nav {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      gap: 20px;
       padding: 16px 0;
-      gap: 16px;
+      flex-wrap: wrap;
     }
 
     .logo {
       font-size: 28px;
-      font-weight: 800;
-      color: #e50914;
+      font-weight: 900;
       letter-spacing: 2px;
+      color: #e50914;
     }
 
     .nav-links {
       display: flex;
       gap: 18px;
       flex-wrap: wrap;
-      font-size: 15px;
       color: #d6d6d6;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
     }
 
     .hero {
-      min-height: 90vh;
+      min-height: 88vh;
       display: flex;
       align-items: center;
       background:
-        linear-gradient(to right, rgba(0, 0, 0, 0.92) 20%, rgba(0, 0, 0, 0.55) 55%, rgba(0, 0, 0, 0.85) 100%),
-        linear-gradient(to top, rgba(0, 0, 0, 0.95) 5%, rgba(0, 0, 0, 0.2) 45%, rgba(0, 0, 0, 0.75) 100%),
+        linear-gradient(to right, rgba(0,0,0,0.92) 18%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.9) 100%),
+        linear-gradient(to top, rgba(0,0,0,0.92), rgba(0,0,0,0.20)),
         url("Dark Echo.png") center/cover no-repeat;
     }
 
     .hero-content {
-      max-width: 620px;
-      padding: 80px 0;
+      max-width: 650px;
+      padding: 90px 0;
     }
 
     .badge {
       display: inline-block;
-      padding: 8px 14px;
-      background: rgba(255, 42, 42, 0.12);
-      border: 1px solid rgba(255, 42, 42, 0.35);
-      border-radius: 999px;
-      color: #ff8e8e;
-      font-size: 13px;
       margin-bottom: 18px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(229, 9, 20, 0.12);
+      border: 1px solid rgba(229, 9, 20, 0.35);
+      color: #ff9a9a;
+      font-size: 13px;
     }
 
     h1 {
-      font-size: clamp(42px, 6vw, 76px);
-      line-height: 1.05;
       margin: 0 0 18px;
+      font-size: clamp(38px, 6vw, 74px);
+      line-height: 1.05;
       font-weight: 900;
     }
 
     .hero p {
-      color: #d1d1d1;
+      margin: 0 0 28px;
+      color: #d0d0d0;
       font-size: 18px;
-      margin-bottom: 28px;
+      max-width: 580px;
     }
 
     .buttons {
@@ -136,102 +150,160 @@
     }
 
     .btn-primary {
-      background: #ff2a2a;
-      color: white;
+      background: #e50914;
+      color: #fff;
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
+      background: #ff1c27;
     }
 
     .btn-secondary {
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      color: #f0f0f0;
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.12);
     }
 
     section {
-      padding: 76px 0;
-    }
-
-    .section-title {
-      font-size: 30px;
-      font-weight: 800;
-      margin-bottom: 14px;
-      color: #ffffff;
-    }
-
-    .section-subtitle {
-      color: #9f9f9f;
-      margin-bottom: 22px;
-      font-size: 15px;
+      padding: 72px 0;
     }
 
     .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 10px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      margin: 0 0 10px;
+      font-size: 30px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .section-subtitle {
+      margin: 0;
+      font-size: 15px;
+      color: #a0a0a0;
+    }
+
+    .featured-video {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 28px 60px rgba(0,0,0,0.65);
+      background: #000;
+    }
+
+    .featured-video iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+    }
+
+    #video-player {
+      display: none;
+      padding: 24px 0 10px;
+      background: linear-gradient(to bottom, #000, #080808);
+    }
+
+    .video-wrapper {
+      position: relative;
+    }
+
+    #main-video {
+      width: 100%;
+      height: 720px;
+      border: 0;
+      border-radius: 14px;
+      box-shadow: 0 24px 50px rgba(0,0,0,0.8);
+      background: #000;
+    }
+
+    .close-video {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 5;
+      padding: 10px 14px;
+      border: 0;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.75);
+      color: #fff;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .close-video:hover {
+      background: #e50914;
     }
 
     .slider-wrapper {
       position: relative;
-      overflow: visible;
     }
 
     .videos-grid {
       display: flex;
       gap: 18px;
       overflow-x: auto;
-      padding: 20px 10px 30px;
       scroll-behavior: smooth;
+      padding: 14px 6px 18px;
     }
 
     .videos-grid::-webkit-scrollbar {
-      display: none;
+      height: 8px;
+    }
+
+    .videos-grid::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15);
+      border-radius: 999px;
     }
 
     .card {
-      background: #111;
-      border-radius: 12px;
-      overflow: hidden;
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-      cursor: pointer;
       min-width: 300px;
       flex: 0 0 300px;
-      position: relative;
+      background: #101010;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.28);
     }
 
     .card:hover {
-      transform: scale(1.08);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.85);
-      z-index: 20;
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 22px 45px rgba(0,0,0,0.55);
     }
 
     .thumb {
       position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      background: #111;
+      aspect-ratio: 16 / 9;
       overflow: hidden;
+      background: #111;
       cursor: pointer;
     }
 
     .thumb img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease, filter 0.35s ease;
+      filter: brightness(0.82);
+    }
+
+    .thumb:hover img {
+      transform: scale(1.08);
+      filter: brightness(0.45);
+    }
+
+    .thumb iframe {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      filter: brightness(0.75);
-      transition: transform 0.4s ease, filter 0.4s ease;
-    }
-
-    .thumb:hover img {
-      transform: scale(1.12);
-      filter: brightness(0.45);
+      border: 0;
+      pointer-events: none;
     }
 
     .play {
@@ -239,10 +311,11 @@
       inset: 0;
       display: grid;
       place-items: center;
-      font-size: 52px;
-      color: white;
+      font-size: 54px;
+      color: #fff;
       opacity: 0;
       transition: opacity 0.3s ease;
+      background: linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0.1));
     }
 
     .thumb:hover .play {
@@ -251,106 +324,55 @@
 
     .card-content {
       padding: 18px;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.75));
-      min-height: 160px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
-
-    .card:hover .card-content {
-      background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(20, 20, 20, 0.95));
+      min-height: 170px;
+      background: linear-gradient(to top, rgba(0,0,0,0.92), rgba(18,18,18,0.98));
     }
 
     .card h3 {
       margin: 0 0 8px;
       font-size: 18px;
-      font-weight: 700;
       color: #fff;
     }
 
     .card p {
-      margin: 0 0 14px;
-      color: #9c9c9c;
+      margin: 0 0 16px;
+      color: #a9a9a9;
       font-size: 13px;
-      line-height: 1.6;
     }
 
     .mini-btn {
       display: inline-block;
+      align-self: flex-start;
       padding: 10px 16px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.10);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
       color: #fff;
       font-size: 13px;
       font-weight: 700;
-      transition: background 0.25s ease, transform 0.25s ease;
-      align-self: flex-start;
+      transition: 0.25s ease;
     }
 
-    .mini-btn:hover,
-    .card:hover .mini-btn {
-      background: #e50914;
-      transform: translateY(-1px);
-    }
-
-    .subscribe-box {
-      text-align: center;
-      background: linear-gradient(135deg, rgba(255, 42, 42, 0.18), rgba(255, 255, 255, 0.03));
-      border: 1px solid rgba(255, 42, 42, 0.2);
-      border-radius: 24px;
-      padding: 34px;
-    }
-
-    #video-player {
-      display: none;
-      padding: 30px 0;
-      background: linear-gradient(to bottom, #000000, #050505);
-      margin-bottom: 10px;
-    }
-
-    .video-wrapper {
-      position: relative;
-    }
-
-    #main-video {
-      border-radius: 12px;
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
-    }
-
-    .close-video {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      z-index: 10;
-      background: rgba(0, 0, 0, 0.75);
-      color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 10px;
-      padding: 10px 14px;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .close-video:hover {
+    .mini-btn:hover {
       background: #e50914;
     }
 
     .scroll-btn {
       position: absolute;
-      top: 40%;
+      top: 42%;
       transform: translateY(-50%);
       z-index: 10;
-      background: rgba(0, 0, 0, 0.7);
-      border: none;
-      color: white;
-      font-size: 26px;
-      width: 45px;
-      height: 70px;
+      width: 44px;
+      height: 68px;
+      border: 0;
+      border-radius: 8px;
+      background: rgba(0,0,0,0.72);
+      color: #fff;
+      font-size: 24px;
       cursor: pointer;
-      border-radius: 6px;
     }
 
     .scroll-btn:hover {
@@ -358,32 +380,31 @@
     }
 
     .scroll-left {
-      left: -10px;
+      left: -8px;
     }
 
     .scroll-right {
-      right: -10px;
+      right: -8px;
+    }
+
+    .subscribe-box {
+      text-align: center;
+      padding: 38px 24px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(229,9,20,0.18), rgba(255,255,255,0.03));
+      border: 1px solid rgba(229,9,20,0.20);
     }
 
     footer {
-      padding: 26px 0 40px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(255,255,255,0.08);
       color: #9a9a9a;
       text-align: center;
+      padding: 28px 0 40px;
     }
 
-    @media (max-width: 860px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
+    @media (max-width: 900px) {
       #main-video {
-        height: 320px;
-      }
-
-      .section-head {
-        align-items: flex-start;
+        height: 360px;
       }
 
       .scroll-left {
@@ -395,30 +416,32 @@
       }
     }
 
-    .big-video-wrapper {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.9);
-    }
+    @media (max-width: 640px) {
+      nav {
+        align-items: flex-start;
+      }
 
-    .big-video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      .card {
+        min-width: 260px;
+        flex-basis: 260px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      #main-video {
+        height: 240px;
+      }
     }
   </style>
 </head>
-
 <body>
   <header>
     <div class="container">
       <nav>
         <div class="logo">DARK ECHO</div>
+
         <div class="nav-links">
           <a href="#latest">Latest Shorts</a>
           <a href="#most-watched">Most Watched</a>
@@ -438,6 +461,7 @@
         <p>
           A page dedicated to posting short horror clips, the latest videos, and quick access to horror content on my channel.
         </p>
+
         <div class="buttons">
           <a class="btn btn-primary" href="https://www.youtube.com/@DarkEchoProject" target="_blank" rel="noopener noreferrer">Watch the channel</a>
           <a class="btn btn-secondary" href="#latest">Explore sections</a>
@@ -448,13 +472,16 @@
 
   <section id="big-feature">
     <div class="container">
-      <h2 class="section-title">🔥 Watch Latest Horror Now</h2>
-      <div class="big-video-wrapper">
+      <div class="section-head">
+        <h2 class="section-title">🔥 Watch Latest Horror Now</h2>
+        <p class="section-subtitle">Featured horror video from Dark Echo.</p>
+      </div>
+
+      <div class="featured-video">
         <iframe
           src="https://www.youtube.com/embed/XLxOJPfpdwo?autoplay=1&mute=1"
           title="Featured Horror Video"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
+          allow="autoplay; encrypted-media; picture-in-picture"
           allowfullscreen>
         </iframe>
       </div>
@@ -467,11 +494,8 @@
         <button class="close-video" onclick="closeVideo()">✕ Close</button>
         <iframe
           id="main-video"
-          width="100%"
-          height="720"
           src=""
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
@@ -482,20 +506,18 @@
   <section id="latest">
     <div class="container">
       <div class="section-head">
-        <div>
-          <h2 class="section-title">Latest Shorts</h2>
-          <p class="section-subtitle">Watch the newest horror shorts from Dark Echo.</p>
-        </div>
+        <h2 class="section-title">Latest Shorts</h2>
+        <p class="section-subtitle">Watch the newest horror shorts from Dark Echo.</p>
       </div>
 
       <div class="slider-wrapper">
-        <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
+        <button class="scroll-btn scroll-left" onclick="scrollVideos(this, -400)">❮</button>
 
         <div class="videos-grid">
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'-LZY6crClR0')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('-LZY6crClR0')">
-                <img src="top.png" alt="Top 10 Horror Movies" />
+                <img src="top.png" alt="Top 10 Horror Movies">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -511,7 +533,7 @@
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'XLxOJPfpdwo')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('XLxOJPfpdwo')">
-                <img src="reflection.jpg" alt="Her reflection moved" />
+                <img src="reflection.jpg" alt="Her reflection moved">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -527,7 +549,7 @@
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'iF4QBUDNDBw')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('iF4QBUDNDBw')">
-                <img src="10 most terrifying horror movies.png" alt="New Creepy Story" />
+                <img src="10 most terrifying horror movies.png" alt="New Creepy Story">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -543,7 +565,7 @@
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'SX8m_2hCqmI')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('SX8m_2hCqmI')">
-                <img src="Wall.jpg" alt="Inside Her Wall" />
+                <img src="Wall.jpg" alt="Inside Her Wall">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -557,7 +579,7 @@
           </article>
         </div>
 
-        <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
+        <button class="scroll-btn scroll-right" onclick="scrollVideos(this, 400)">❯</button>
       </div>
     </div>
   </section>
@@ -565,20 +587,18 @@
   <section id="most-watched">
     <div class="container">
       <div class="section-head">
-        <div>
-          <h2 class="section-title">Most Watched</h2>
-          <p class="section-subtitle">The most popular horror shorts on Dark Echo.</p>
-        </div>
+        <h2 class="section-title">Most Watched</h2>
+        <p class="section-subtitle">The most popular horror shorts on Dark Echo.</p>
       </div>
 
       <div class="slider-wrapper">
-        <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
+        <button class="scroll-btn scroll-left" onclick="scrollVideos(this, -400)">❮</button>
 
         <div class="videos-grid">
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'8qQxgZ0_axw')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('8qQxgZ0_axw')">
-                <img src="4.jpg" alt="Something Was Watching" />
+                <img src="4.jpg" alt="Something Was Watching">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -594,7 +614,7 @@
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'d-5WMLEz-kc')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('d-5WMLEz-kc')">
-                <img src="3.jpg" alt="The Camera Saw It" />
+                <img src="3.jpg" alt="The Camera Saw It">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -608,7 +628,7 @@
           </article>
         </div>
 
-        <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
+        <button class="scroll-btn scroll-right" onclick="scrollVideos(this, 400)">❯</button>
       </div>
     </div>
   </section>
@@ -616,20 +636,18 @@
   <section id="stories">
     <div class="container">
       <div class="section-head">
-        <div>
-          <h2 class="section-title">Creepy Stories</h2>
-          <p class="section-subtitle">Short horror stories with dark and mysterious endings.</p>
-        </div>
+        <h2 class="section-title">Creepy Stories</h2>
+        <p class="section-subtitle">Short horror stories with dark and mysterious endings.</p>
       </div>
 
       <div class="slider-wrapper">
-        <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
+        <button class="scroll-btn scroll-left" onclick="scrollVideos(this, -400)">❮</button>
 
         <div class="videos-grid">
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'WIAZRtMuYDQ')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('WIAZRtMuYDQ')">
-                <img src="2.jpg" alt="The Whisper in the Dark" />
+                <img src="2.jpg" alt="The Whisper in the Dark">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -645,7 +663,7 @@
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'2nCszNsRBsM')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('2nCszNsRBsM')">
-                <img src="image_media_01KKEE4M5X9GJ9M62ND3YKSFAV.png" alt="New Creepy Story" />
+                <img src="image_media_01KKEE4M5X9GJ9M62ND3YKSFAV.png" alt="New Creepy Story">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -661,7 +679,7 @@
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'wO5y7__jyKM')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('wO5y7__jyKM')">
-                <img src="1.jpg" alt="The Shadow Behind Me" />
+                <img src="1.jpg" alt="The Shadow Behind Me">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -675,7 +693,7 @@
           </article>
         </div>
 
-        <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
+        <button class="scroll-btn scroll-right" onclick="scrollVideos(this, 400)">❯</button>
       </div>
     </div>
   </section>
@@ -683,20 +701,18 @@
   <section id="featured">
     <div class="container">
       <div class="section-head">
-        <div>
-          <h2 class="section-title">Featured Clips</h2>
-          <p class="section-subtitle">A collection of dark shorts, creepy moments, and disturbing horror stories from Dark Echo.</p>
-        </div>
+        <h2 class="section-title">Featured Clips</h2>
+        <p class="section-subtitle">A collection of dark shorts, creepy moments, and disturbing horror stories from Dark Echo.</p>
       </div>
 
       <div class="slider-wrapper">
-        <button class="scroll-btn scroll-left" onclick="scrollVideos(this,-400)">❮</button>
+        <button class="scroll-btn scroll-left" onclick="scrollVideos(this, -400)">❮</button>
 
         <div class="videos-grid">
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'nOskUJEcKgc')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('nOskUJEcKgc')">
-                <img src="t1.jpg" alt="Horror Short" />
+                <img src="t1.jpg" alt="Horror Short">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -712,7 +728,7 @@
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'NqRuB-Pz7fo')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('NqRuB-Pz7fo')">
-                <img src="t2.jpg" alt="Horror Short" />
+                <img src="t2.jpg" alt="Horror Short">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -728,7 +744,7 @@
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'kGAShG1Pj8s')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('kGAShG1Pj8s')">
-                <img src="t3.jpg" alt="Horror Short" />
+                <img src="t3.jpg" alt="Horror Short">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -744,7 +760,7 @@
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'R3lPH4xyXaI')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('R3lPH4xyXaI')">
-                <img src="t4.jpg" alt="Horror Short" />
+                <img src="t4.jpg" alt="Horror Short">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -760,7 +776,7 @@
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'MuGz3YKRYNk')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('MuGz3YKRYNk')">
-                <img src="t5.jpg" alt="Horror Short" />
+                <img src="t5.jpg" alt="Horror Short">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -776,7 +792,7 @@
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'9-eUUTSE-5w')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('9-eUUTSE-5w')">
-                <img src="h1.png" alt="Terrifying short story" />
+                <img src="h1.png" alt="Terrifying short story">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -792,7 +808,7 @@
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'Vf_pYevF5ps')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('Vf_pYevF5ps')">
-                <img src="h2.png" alt="Creepy encounter" />
+                <img src="h2.png" alt="Creepy encounter">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -808,7 +824,7 @@
           <article class="card">
             <div class="thumb" onmouseenter="previewVideo(this,'VrWjIg1w3aA')" onmouseleave="stopPreview(this)">
               <a href="javascript:void(0)" onclick="playVideo('VrWjIg1w3aA')">
-                <img src="h3.jpg" alt="Disturbing final scene" />
+                <img src="h3.jpg" alt="Disturbing final scene">
                 <div class="play">▶</div>
               </a>
             </div>
@@ -822,7 +838,7 @@
           </article>
         </div>
 
-        <button class="scroll-btn scroll-right" onclick="scrollVideos(this,400)">❯</button>
+        <button class="scroll-btn scroll-right" onclick="scrollVideos(this, 400)">❯</button>
       </div>
     </div>
   </section>
@@ -848,32 +864,24 @@
       if (element.querySelector("iframe")) return;
 
       const iframe = document.createElement("iframe");
-      iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1";
-      iframe.style.position = "absolute";
-      iframe.style.top = "0";
-      iframe.style.left = "0";
-      iframe.style.width = "100%";
-      iframe.style.height = "100%";
-      iframe.style.border = "none";
-      iframe.style.pointerEvents = "none";
-
+      iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0";
+      iframe.allow = "autoplay; encrypted-media";
+      iframe.setAttribute("loading", "lazy");
       element.appendChild(iframe);
     }
 
     function stopPreview(element) {
       const iframe = element.querySelector("iframe");
-      if (iframe) {
-        iframe.remove();
-      }
+      if (iframe) iframe.remove();
     }
 
     function playVideo(videoId) {
       const playerSection = document.getElementById("video-player");
       const mainVideo = document.getElementById("main-video");
 
-      mainVideo.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+      mainVideo.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&rel=0";
       playerSection.style.display = "block";
-      playerSection.scrollIntoView({ behavior: "smooth" });
+      playerSection.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
     function closeVideo() {
@@ -886,10 +894,9 @@
 
     function scrollVideos(button, amount) {
       const container = button.parentElement.querySelector(".videos-grid");
-      container.scrollBy({
-        left: amount,
-        behavior: "smooth"
-      });
+      if (container) {
+        container.scrollBy({ left: amount, behavior: "smooth" });
+      }
     }
   </script>
 
