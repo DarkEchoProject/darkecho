@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Dark Echo | More Horror Videos</title>
+  <meta name="description" content="More horror shorts and creepy videos from Dark Echo.">
+  <meta name="keywords" content="horror shorts, creepy stories, scary videos, dark echo">
+  <meta name="author" content="Dark Echo">
+
+  <link rel="icon" type="image/png" href="Dark Echo s.png">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050505;
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1400px, 92%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 0;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #e50914;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: #d6d6d6;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      min-height: 55vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(to right, rgba(0,0,0,0.92) 20%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.88) 100%),
+        url("Dark Echo.png") center/cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      padding: 80px 0;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(229, 9, 20, 0.12);
+      border: 1px solid rgba(229, 9, 20, 0.35);
+      color: #ff9a9a;
+      font-size: 13px;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.05;
+      font-weight: 900;
+    }
+
+    .hero p {
+      margin: 0 0 28px;
+      color: #d0d0d0;
+      font-size: 18px;
+      max-width: 580px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: #e50914;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #ff1c27;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      margin: 0 0 10px;
+      font-size: 30px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .section-subtitle {
+      margin: 0 0 24px;
+      font-size: 15px;
+      color: #a0a0a0;
+    }
+
+    #video-player {
+      display: none;
+      padding: 24px 0 10px;
+      background: linear-gradient(to bottom, #000, #080808);
+    }
+
+    .video-wrapper {
+      position: relative;
+    }
+
+    #main-video {
+      width: 100%;
+      height: 720px;
+      border: 0;
+      border-radius: 14px;
+      box-shadow: 0 24px 50px rgba(0,0,0,0.8);
+      background: #000;
+    }
+
+    .close-video {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 5;
+      padding: 10px 14px;
+      border: 0;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.75);
+      color: #fff;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .close-video:hover {
+      background: #e50914;
+    }
+
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #101010;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.28);
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 22px 45px rgba(0,0,0,0.55);
+    }
+
+    .thumb {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #111;
+      cursor: pointer;
+    }
+
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease, filter 0.35s ease;
+      filter: brightness(0.82);
+    }
+
+    .thumb:hover img {
+      transform: scale(1.08);
+      filter: brightness(0.45);
+    }
+
+    .play {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      font-size: 54px;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      background: linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0.1));
+    }
+
+    .thumb:hover .play {
+      opacity: 1;
+    }
+
+    .card-content {
+      padding: 18px;
+      min-height: 150px;
+      background: linear-gradient(to top, rgba(0,0,0,0.92), rgba(18,18,18,0.98));
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .card p {
+      margin: 0 0 16px;
+      color: #a9a9a9;
+      font-size: 13px;
+    }
+
+    .mini-btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
+
+    .mini-btn:hover {
+      background: #e50914;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #9a9a9a;
+      text-align: center;
+      padding: 28px 0 40px;
+    }
+
+    @media (max-width: 900px) {
+      #main-video {
+        height: 360px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      #main-video {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">DARK ECHO</div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="#new-videos">New Videos</a>
+          <a href="https://www.youtube.com/@DarkEchoProject" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="badge">More horror shorts • New creepy moments • Dark Echo</div>
+        <h1>More darkness. More whispers. More horror.</h1>
+        <p>Another page connected to the main website, filled with new horror videos and creepy shorts.</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#new-videos">Watch new videos</a>
+          <a class="btn btn-secondary" href="index.html">Back to main page</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="video-player">
+    <div class="container">
+      <div class="video-wrapper">
+        <button class="close-video" onclick="closeVideo()">✕ Close</button>
+        <iframe
+          id="main-video"
+          src=""
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <section id="new-videos">
+    <div class="container">
+      <h2 class="section-title">New Horror Videos</h2>
+      <p class="section-subtitle">A second page linked to the main site, with a fresh set of scary videos.</p>
+
+      <div class="videos-grid">
+        <article class="card">
+          <div class="thumb" onclick="playVideo('pkxsSTwy3LM')">
+            <img src="https://img.youtube.com/vi/pkxsSTwy3LM/hqdefault.jpg" alt="Horror short 1">
+            <div class="play">▶</div>
+          </div>
+          <div class="card-content">
+            <h3>Dark Short 1</h3>
+            <p>A new creepy short from the uploaded list.</p>
+            <a class="mini-btn" href="https://youtube.com/shorts/pkxsSTwy3LM" target="_blank" rel="noopener noreferrer">Watch now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" onclick="playVideo('egZghd9D9WE')">
+            <img src="https://img.youtube.com/vi/egZghd9D9WE/hqdefault.jpg" alt="Horror short 2">
+            <div class="play">▶</div>
+          </div>
+          <div class="card-content">
+            <h3>Dark Short 2</h3>
+            <p>Another disturbing moment from Dark Echo.</p>
+            <a class="mini-btn" href="https://youtube.com/shorts/egZghd9D9WE" target="_blank" rel="noopener noreferrer">Watch now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" onclick="playVideo('VtIh2Ey78iQ')">
+            <img src="https://img.youtube.com/vi/VtIh2Ey78iQ/hqdefault.jpg" alt="Horror short 3">
+            <div class="play">▶</div>
+          </div>
+          <div class="card-content">
+            <h3>Dark Short 3</h3>
+            <p>A chilling clip with a sharp ending.</p>
+            <a class="mini-btn" href="https://youtube.com/shorts/VtIh2Ey78iQ" target="_blank" rel="noopener noreferrer">Watch now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" onclick="playVideo('S8-8GRXz27g')">
+            <img src="https://img.youtube.com/vi/S8-8GRXz27g/hqdefault.jpg" alt="Horror short 4">
+            <div class="play">▶</div>
+          </div>
+          <div class="card-content">
+            <h3>Dark Short 4</h3>
+            <p>A creepy scene pulled from your new uploads.</p>
+            <a class="mini-btn" href="https://youtube.com/shorts/S8-8GRXz27g" target="_blank" rel="noopener noreferrer">Watch now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" onclick="playVideo('ObW6vSLAtaw')">
+            <img src="https://img.youtube.com/vi/ObW6vSLAtaw/hqdefault.jpg" alt="Horror video 5">
+            <div class="play">▶</div>
+          </div>
+          <div class="card-content">
+            <h3>Featured Fear 1</h3>
+            <p>A longer creepy video from your second file.</p>
+            <a class="mini-btn" href="https://youtu.be/ObW6vSLAtaw" target="_blank" rel="noopener noreferrer">Watch now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" onclick="playVideo('cY0FgKS6iPM')">
+            <img src="https://img.youtube.com/vi/cY0FgKS6iPM/hqdefault.jpg" alt="Horror video 6">
+            <div class="play">▶</div>
+          </div>
+          <div class="card-content">
+            <h3>Featured Fear 2</h3>
+            <p>A fresh horror video connected to the main site.</p>
+            <a class="mini-btn" href="https://youtu.be/cY0FgKS6iPM" target="_blank" rel="noopener noreferrer">Watch now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" onclick="playVideo('wP3dfZ4YpBs')">
+            <img src="https://img.youtube.com/vi/wP3dfZ4YpBs/hqdefault.jpg" alt="Horror video 7">
+            <div class="play">▶</div>
+          </div>
+          <div class="card-content">
+            <h3>Featured Fear 3</h3>
+            <p>Another dark entry from the uploaded video list.</p>
+            <a class="mini-btn" href="https://youtu.be/wP3dfZ4YpBs" target="_blank" rel="noopener noreferrer">Watch now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" onclick="playVideo('G7WpKyIxQu0')">
+            <img src="https://img.youtube.com/vi/G7WpKyIxQu0/hqdefault.jpg" alt="Horror video 8">
+            <div class="play">▶</div>
+          </div>
+          <div class="card-content">
+            <h3>Featured Fear 4</h3>
+            <p>A new horror selection ready on the second page.</p>
+            <a class="mini-btn" href="https://youtu.be/G7WpKyIxQu0" target="_blank" rel="noopener noreferrer">Watch now</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2026 Dark Echo — More Videos Page
+    </div>
+  </footer>
+
+  <script>
+    function playVideo(videoId) {
+      const playerSection = document.getElementById("video-player");
+      const mainVideo = document.getElementById("main-video");
+
+      mainVideo.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&rel=0";
+      playerSection.style.display = "block";
+      playerSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function closeVideo() {
+      const playerSection = document.getElementById("video-player");
+      const mainVideo = document.getElementById("main-video");
+
+      mainVideo.src = "";
+      playerSection.style.display = "none";
+    }
+  </script>
+</body>
+</html>
