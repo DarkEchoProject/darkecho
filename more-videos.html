@@ -5,14 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Dark Echo | More Horror Videos</title>
-  <meta name="description" content="More horror shorts and creepy videos from Dark Echo.">
-  <meta name="keywords" content="horror shorts, creepy stories, scary videos, dark echo">
+  <meta name="description" content="More horror shorts, creepy stories, and scary videos from Dark Echo. Explore new shorts and longer horror videos on the second page." />
+  <meta name="keywords" content="dark echo, horror shorts, creepy stories, scary videos, horror channel, more horror videos">
   <meta name="author" content="Dark Echo">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://darkechoproject.github.io/darkecho/more-videos.html">
+
+  <meta property="og:title" content="Dark Echo | More Horror Videos">
+  <meta property="og:description" content="More horror shorts and creepy videos from Dark Echo.">
+  <meta property="og:image" content="https://darkechoproject.github.io/darkecho/Dark%20Echo.png">
+  <meta property="og:url" content="https://darkechoproject.github.io/darkecho/more-videos.html">
+  <meta property="og:type" content="website">
 
   <link rel="icon" type="image/png" href="Dark Echo s.png">
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -27,6 +41,11 @@
       color: inherit;
     }
 
+    img {
+      display: block;
+      width: 100%;
+    }
+
     .container {
       width: min(1400px, 92%);
       margin: auto;
@@ -36,9 +55,9 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(0,0,0,0.88);
+      background: rgba(0, 0, 0, 0.88);
       backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     nav {
@@ -66,21 +85,22 @@
     }
 
     .nav-links a:hover {
-      color: #fff;
+      color: #ffffff;
     }
 
     .hero {
-      min-height: 55vh;
+      min-height: 72vh;
       display: flex;
       align-items: center;
       background:
-        linear-gradient(to right, rgba(0,0,0,0.92) 20%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.88) 100%),
+        linear-gradient(to right, rgba(0,0,0,0.92) 18%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.9) 100%),
+        linear-gradient(to top, rgba(0,0,0,0.92), rgba(0,0,0,0.20)),
         url("Dark Echo.png") center/cover no-repeat;
     }
 
     .hero-content {
-      max-width: 700px;
-      padding: 80px 0;
+      max-width: 760px;
+      padding: 90px 0;
     }
 
     .badge {
@@ -96,7 +116,7 @@
 
     h1 {
       margin: 0 0 18px;
-      font-size: clamp(38px, 6vw, 64px);
+      font-size: clamp(38px, 6vw, 72px);
       line-height: 1.05;
       font-weight: 900;
     }
@@ -105,7 +125,7 @@
       margin: 0 0 28px;
       color: #d0d0d0;
       font-size: 18px;
-      max-width: 580px;
+      max-width: 620px;
     }
 
     .buttons {
@@ -143,7 +163,11 @@
     }
 
     section {
-      padding: 70px 0;
+      padding: 72px 0;
+    }
+
+    .section-head {
+      margin-bottom: 18px;
     }
 
     .section-title {
@@ -154,7 +178,7 @@
     }
 
     .section-subtitle {
-      margin: 0 0 24px;
+      margin: 0;
       font-size: 15px;
       color: #a0a0a0;
     }
@@ -196,13 +220,30 @@
       background: #e50914;
     }
 
+    .slider-wrapper {
+      position: relative;
+    }
+
     .videos-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 14px 6px 18px;
+    }
+
+    .videos-grid::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .videos-grid::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15);
+      border-radius: 999px;
     }
 
     .card {
+      min-width: 300px;
+      flex: 0 0 300px;
       background: #101010;
       border-radius: 14px;
       overflow: hidden;
@@ -211,7 +252,7 @@
     }
 
     .card:hover {
-      transform: translateY(-8px) scale(1.02);
+      transform: translateY(-8px) scale(1.03);
       box-shadow: 0 22px 45px rgba(0,0,0,0.55);
     }
 
@@ -224,7 +265,6 @@
     }
 
     .thumb img {
-      width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.35s ease, filter 0.35s ease;
@@ -234,6 +274,15 @@
     .thumb:hover img {
       transform: scale(1.08);
       filter: brightness(0.45);
+    }
+
+    .thumb iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      pointer-events: none;
     }
 
     .play {
@@ -254,7 +303,10 @@
 
     .card-content {
       padding: 18px;
-      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 170px;
       background: linear-gradient(to top, rgba(0,0,0,0.92), rgba(18,18,18,0.98));
     }
 
@@ -272,6 +324,7 @@
 
     .mini-btn {
       display: inline-block;
+      align-self: flex-start;
       padding: 10px 16px;
       border-radius: 999px;
       background: rgba(255,255,255,0.08);
@@ -286,6 +339,41 @@
       background: #e50914;
     }
 
+    .scroll-btn {
+      position: absolute;
+      top: 42%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 44px;
+      height: 68px;
+      border: 0;
+      border-radius: 8px;
+      background: rgba(0,0,0,0.72);
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .scroll-btn:hover {
+      background: #e50914;
+    }
+
+    .scroll-left {
+      left: -8px;
+    }
+
+    .scroll-right {
+      right: -8px;
+    }
+
+    .subscribe-box {
+      text-align: center;
+      padding: 38px 24px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(229,9,20,0.18), rgba(255,255,255,0.03));
+      border: 1px solid rgba(229,9,20,0.20);
+    }
+
     footer {
       border-top: 1px solid rgba(255,255,255,0.08);
       color: #9a9a9a;
@@ -297,9 +385,30 @@
       #main-video {
         height: 360px;
       }
+
+      .scroll-left {
+        left: 0;
+      }
+
+      .scroll-right {
+        right: 0;
+      }
     }
 
     @media (max-width: 640px) {
+      nav {
+        align-items: flex-start;
+      }
+
+      .card {
+        min-width: 260px;
+        flex-basis: 260px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
       #main-video {
         height: 240px;
       }
@@ -311,10 +420,13 @@
     <div class="container">
       <nav>
         <div class="logo">DARK ECHO</div>
+
         <div class="nav-links">
           <a href="index.html">Home</a>
-          <a href="#new-videos">New Videos</a>
-          <a href="https://www.youtube.com/@DarkEchoProject" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="#shorts">Shorts</a>
+          <a href="#long-videos">Long Videos</a>
+          <a href="#quick-picks">Quick Picks</a>
+          <a href="#join">Subscribe</a>
         </div>
       </nav>
     </div>
@@ -323,12 +435,16 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <div class="badge">More horror shorts • New creepy moments • Dark Echo</div>
-        <h1>More darkness. More whispers. More horror.</h1>
-        <p>Another page connected to the main website, filled with new horror videos and creepy shorts.</p>
+        <div class="badge">More horror shorts • Longer videos • Dark Echo archive</div>
+        <h1>The second door is open. Enter if you dare.</h1>
+        <p>
+          A professional second page linked to the main Dark Echo website, built with the same cinematic style and divided into clean horror sections.
+        </p>
+
         <div class="buttons">
-          <a class="btn btn-primary" href="#new-videos">Watch new videos</a>
-          <a class="btn btn-secondary" href="index.html">Back to main page</a>
+          <a class="btn btn-primary" href="#shorts">Watch Shorts</a>
+          <a class="btn btn-secondary" href="#long-videos">Watch Long Videos</a>
+          <a class="btn btn-secondary" href="index.html">Back to Main Page</a>
         </div>
       </div>
     </div>
@@ -349,118 +465,1062 @@
     </div>
   </div>
 
-  <section id="new-videos">
+  <section id="shorts">
     <div class="container">
-      <h2 class="section-title">New Horror Videos</h2>
-      <p class="section-subtitle">A second page linked to the main site, with a fresh set of scary videos.</p>
+      <div class="section-head">
+        <h2 class="section-title">Fresh Horror Shorts</h2>
+        <p class="section-subtitle">All 22 shorts from your uploaded list in a cinematic slider.</p>
+      </div>
 
-      <div class="videos-grid">
-        <article class="card">
-          <div class="thumb" onclick="playVideo('pkxsSTwy3LM')">
-            <img src="https://img.youtube.com/vi/pkxsSTwy3LM/hqdefault.jpg" alt="Horror short 1">
-            <div class="play">▶</div>
-          </div>
-          <div class="card-content">
-            <h3>Dark Short 1</h3>
-            <p>A new creepy short from the uploaded list.</p>
-            <a class="mini-btn" href="https://youtube.com/shorts/pkxsSTwy3LM" target="_blank" rel="noopener noreferrer">Watch now</a>
-          </div>
-        </article>
+      <div class="slider-wrapper">
+        <button class="scroll-btn scroll-left" onclick="scrollVideos(this, -400)">❮</button>
+        <div class="videos-grid">
 
-        <article class="card">
-          <div class="thumb" onclick="playVideo('egZghd9D9WE')">
-            <img src="https://img.youtube.com/vi/egZghd9D9WE/hqdefault.jpg" alt="Horror short 2">
-            <div class="play">▶</div>
-          </div>
-          <div class="card-content">
-            <h3>Dark Short 2</h3>
-            <p>Another disturbing moment from Dark Echo.</p>
-            <a class="mini-btn" href="https://youtube.com/shorts/egZghd9D9WE" target="_blank" rel="noopener noreferrer">Watch now</a>
-          </div>
-        </article>
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'pkxsSTwy3LM')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('pkxsSTwy3LM')">
+                <img loading="lazy" src="https://img.youtube.com/vi/pkxsSTwy3LM/mqdefault.jpg" alt="Dark Echo Short 01">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 01</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/pkxsSTwy3LM" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="thumb" onclick="playVideo('VtIh2Ey78iQ')">
-            <img src="https://img.youtube.com/vi/VtIh2Ey78iQ/hqdefault.jpg" alt="Horror short 3">
-            <div class="play">▶</div>
-          </div>
-          <div class="card-content">
-            <h3>Dark Short 3</h3>
-            <p>A chilling clip with a sharp ending.</p>
-            <a class="mini-btn" href="https://youtube.com/shorts/VtIh2Ey78iQ" target="_blank" rel="noopener noreferrer">Watch now</a>
-          </div>
-        </article>
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'egZghd9D9WE')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('egZghd9D9WE')">
+                <img loading="lazy" src="https://img.youtube.com/vi/egZghd9D9WE/mqdefault.jpg" alt="Dark Echo Short 02">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 02</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/egZghd9D9WE" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="thumb" onclick="playVideo('S8-8GRXz27g')">
-            <img src="https://img.youtube.com/vi/S8-8GRXz27g/hqdefault.jpg" alt="Horror short 4">
-            <div class="play">▶</div>
-          </div>
-          <div class="card-content">
-            <h3>Dark Short 4</h3>
-            <p>A creepy scene pulled from your new uploads.</p>
-            <a class="mini-btn" href="https://youtube.com/shorts/S8-8GRXz27g" target="_blank" rel="noopener noreferrer">Watch now</a>
-          </div>
-        </article>
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'VtIh2Ey78iQ')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('VtIh2Ey78iQ')">
+                <img loading="lazy" src="https://img.youtube.com/vi/VtIh2Ey78iQ/mqdefault.jpg" alt="Dark Echo Short 03">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 03</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/VtIh2Ey78iQ" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="thumb" onclick="playVideo('ObW6vSLAtaw')">
-            <img src="https://img.youtube.com/vi/ObW6vSLAtaw/hqdefault.jpg" alt="Horror video 5">
-            <div class="play">▶</div>
-          </div>
-          <div class="card-content">
-            <h3>Featured Fear 1</h3>
-            <p>A longer creepy video from your second file.</p>
-            <a class="mini-btn" href="https://youtu.be/ObW6vSLAtaw" target="_blank" rel="noopener noreferrer">Watch now</a>
-          </div>
-        </article>
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'S8-8GRXz27g')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('S8-8GRXz27g')">
+                <img loading="lazy" src="https://img.youtube.com/vi/S8-8GRXz27g/mqdefault.jpg" alt="Dark Echo Short 04">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 04</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/S8-8GRXz27g" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="thumb" onclick="playVideo('cY0FgKS6iPM')">
-            <img src="https://img.youtube.com/vi/cY0FgKS6iPM/hqdefault.jpg" alt="Horror video 6">
-            <div class="play">▶</div>
-          </div>
-          <div class="card-content">
-            <h3>Featured Fear 2</h3>
-            <p>A fresh horror video connected to the main site.</p>
-            <a class="mini-btn" href="https://youtu.be/cY0FgKS6iPM" target="_blank" rel="noopener noreferrer">Watch now</a>
-          </div>
-        </article>
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'br22Nx3bKYU')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('br22Nx3bKYU')">
+                <img loading="lazy" src="https://img.youtube.com/vi/br22Nx3bKYU/mqdefault.jpg" alt="Dark Echo Short 05">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 05</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/br22Nx3bKYU" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="thumb" onclick="playVideo('wP3dfZ4YpBs')">
-            <img src="https://img.youtube.com/vi/wP3dfZ4YpBs/hqdefault.jpg" alt="Horror video 7">
-            <div class="play">▶</div>
-          </div>
-          <div class="card-content">
-            <h3>Featured Fear 3</h3>
-            <p>Another dark entry from the uploaded video list.</p>
-            <a class="mini-btn" href="https://youtu.be/wP3dfZ4YpBs" target="_blank" rel="noopener noreferrer">Watch now</a>
-          </div>
-        </article>
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'M9hIVn1L1Cg')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('M9hIVn1L1Cg')">
+                <img loading="lazy" src="https://img.youtube.com/vi/M9hIVn1L1Cg/mqdefault.jpg" alt="Dark Echo Short 06">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 06</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/M9hIVn1L1Cg" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="thumb" onclick="playVideo('G7WpKyIxQu0')">
-            <img src="https://img.youtube.com/vi/G7WpKyIxQu0/hqdefault.jpg" alt="Horror video 8">
-            <div class="play">▶</div>
-          </div>
-          <div class="card-content">
-            <h3>Featured Fear 4</h3>
-            <p>A new horror selection ready on the second page.</p>
-            <a class="mini-btn" href="https://youtu.be/G7WpKyIxQu0" target="_blank" rel="noopener noreferrer">Watch now</a>
-          </div>
-        </article>
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'LxWWWepq9zc')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('LxWWWepq9zc')">
+                <img loading="lazy" src="https://img.youtube.com/vi/LxWWWepq9zc/mqdefault.jpg" alt="Dark Echo Short 07">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 07</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/LxWWWepq9zc" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'mDuJv9XN8CU')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('mDuJv9XN8CU')">
+                <img loading="lazy" src="https://img.youtube.com/vi/mDuJv9XN8CU/mqdefault.jpg" alt="Dark Echo Short 08">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 08</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/mDuJv9XN8CU" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'R_58nGWFVos')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('R_58nGWFVos')">
+                <img loading="lazy" src="https://img.youtube.com/vi/R_58nGWFVos/mqdefault.jpg" alt="Dark Echo Short 09">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 09</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/R_58nGWFVos" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'XAteuxj6iJI')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('XAteuxj6iJI')">
+                <img loading="lazy" src="https://img.youtube.com/vi/XAteuxj6iJI/mqdefault.jpg" alt="Dark Echo Short 10">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 10</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/XAteuxj6iJI" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'unmOs1LnVt0')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('unmOs1LnVt0')">
+                <img loading="lazy" src="https://img.youtube.com/vi/unmOs1LnVt0/mqdefault.jpg" alt="Dark Echo Short 11">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 11</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/unmOs1LnVt0" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'mMOdxgcmJis')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('mMOdxgcmJis')">
+                <img loading="lazy" src="https://img.youtube.com/vi/mMOdxgcmJis/mqdefault.jpg" alt="Dark Echo Short 12">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 12</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/mMOdxgcmJis" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'4e_pa7POCEk')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('4e_pa7POCEk')">
+                <img loading="lazy" src="https://img.youtube.com/vi/4e_pa7POCEk/mqdefault.jpg" alt="Dark Echo Short 13">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 13</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/4e_pa7POCEk" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'J5vfvbEPiCY')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('J5vfvbEPiCY')">
+                <img loading="lazy" src="https://img.youtube.com/vi/J5vfvbEPiCY/mqdefault.jpg" alt="Dark Echo Short 14">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 14</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/J5vfvbEPiCY" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'jGpYckVP650')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('jGpYckVP650')">
+                <img loading="lazy" src="https://img.youtube.com/vi/jGpYckVP650/mqdefault.jpg" alt="Dark Echo Short 15">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 15</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/jGpYckVP650" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'ppGvfSAikkE')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('ppGvfSAikkE')">
+                <img loading="lazy" src="https://img.youtube.com/vi/ppGvfSAikkE/mqdefault.jpg" alt="Dark Echo Short 16">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 16</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/ppGvfSAikkE" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'kBNQLEyPBRg')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('kBNQLEyPBRg')">
+                <img loading="lazy" src="https://img.youtube.com/vi/kBNQLEyPBRg/mqdefault.jpg" alt="Dark Echo Short 17">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 17</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/kBNQLEyPBRg" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'Fw7_pMoEcVA')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('Fw7_pMoEcVA')">
+                <img loading="lazy" src="https://img.youtube.com/vi/Fw7_pMoEcVA/mqdefault.jpg" alt="Dark Echo Short 18">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 18</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/Fw7_pMoEcVA" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'pqTXXN1ofms')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('pqTXXN1ofms')">
+                <img loading="lazy" src="https://img.youtube.com/vi/pqTXXN1ofms/mqdefault.jpg" alt="Dark Echo Short 19">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 19</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/pqTXXN1ofms" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'--TBJ8EJ1HM')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('--TBJ8EJ1HM')">
+                <img loading="lazy" src="https://img.youtube.com/vi/--TBJ8EJ1HM/mqdefault.jpg" alt="Dark Echo Short 20">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 20</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/--TBJ8EJ1HM" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'Wfr-FO9OZtI')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('Wfr-FO9OZtI')">
+                <img loading="lazy" src="https://img.youtube.com/vi/Wfr-FO9OZtI/mqdefault.jpg" alt="Dark Echo Short 21">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 21</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/Wfr-FO9OZtI" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'87XKdBJIkAw')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('87XKdBJIkAw')">
+                <img loading="lazy" src="https://img.youtube.com/vi/87XKdBJIkAw/mqdefault.jpg" alt="Dark Echo Short 22">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Short 22</h3>
+                <p>A creepy short from the new Dark Echo collection.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/87XKdBJIkAw" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollVideos(this, 400)">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="long-videos">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Long Horror Videos</h2>
+        <p class="section-subtitle">All 27 longer YouTube videos from your second uploaded file.</p>
+      </div>
+
+      <div class="slider-wrapper">
+        <button class="scroll-btn scroll-left" onclick="scrollVideos(this, -400)">❮</button>
+        <div class="videos-grid">
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'ObW6vSLAtaw')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('ObW6vSLAtaw')">
+                <img loading="lazy" src="https://img.youtube.com/vi/ObW6vSLAtaw/mqdefault.jpg" alt="Dark Echo Video 01">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 01</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/ObW6vSLAtaw" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'cY0FgKS6iPM')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('cY0FgKS6iPM')">
+                <img loading="lazy" src="https://img.youtube.com/vi/cY0FgKS6iPM/mqdefault.jpg" alt="Dark Echo Video 02">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 02</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/cY0FgKS6iPM" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'wP3dfZ4YpBs')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('wP3dfZ4YpBs')">
+                <img loading="lazy" src="https://img.youtube.com/vi/wP3dfZ4YpBs/mqdefault.jpg" alt="Dark Echo Video 03">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 03</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/wP3dfZ4YpBs" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'G7WpKyIxQu0')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('G7WpKyIxQu0')">
+                <img loading="lazy" src="https://img.youtube.com/vi/G7WpKyIxQu0/mqdefault.jpg" alt="Dark Echo Video 04">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 04</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/G7WpKyIxQu0" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'83NIGGgCB7o')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('83NIGGgCB7o')">
+                <img loading="lazy" src="https://img.youtube.com/vi/83NIGGgCB7o/mqdefault.jpg" alt="Dark Echo Video 05">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 05</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/83NIGGgCB7o" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'kWhtG0XC8nI')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('kWhtG0XC8nI')">
+                <img loading="lazy" src="https://img.youtube.com/vi/kWhtG0XC8nI/mqdefault.jpg" alt="Dark Echo Video 06">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 06</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/kWhtG0XC8nI" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'G3XHAMBy8D0')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('G3XHAMBy8D0')">
+                <img loading="lazy" src="https://img.youtube.com/vi/G3XHAMBy8D0/mqdefault.jpg" alt="Dark Echo Video 07">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 07</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/G3XHAMBy8D0" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'YwFdnbYCaR0')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('YwFdnbYCaR0')">
+                <img loading="lazy" src="https://img.youtube.com/vi/YwFdnbYCaR0/mqdefault.jpg" alt="Dark Echo Video 08">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 08</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/YwFdnbYCaR0" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'7M6zdIySnEs')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('7M6zdIySnEs')">
+                <img loading="lazy" src="https://img.youtube.com/vi/7M6zdIySnEs/mqdefault.jpg" alt="Dark Echo Video 09">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 09</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/7M6zdIySnEs" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'IsCfJS52nOA')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('IsCfJS52nOA')">
+                <img loading="lazy" src="https://img.youtube.com/vi/IsCfJS52nOA/mqdefault.jpg" alt="Dark Echo Video 10">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 10</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/IsCfJS52nOA" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'zC8KfaunjDE')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('zC8KfaunjDE')">
+                <img loading="lazy" src="https://img.youtube.com/vi/zC8KfaunjDE/mqdefault.jpg" alt="Dark Echo Video 11">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 11</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/zC8KfaunjDE" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'q1Dq7ktTorE')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('q1Dq7ktTorE')">
+                <img loading="lazy" src="https://img.youtube.com/vi/q1Dq7ktTorE/mqdefault.jpg" alt="Dark Echo Video 12">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 12</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/q1Dq7ktTorE" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'QEy_ACgH6Zg')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('QEy_ACgH6Zg')">
+                <img loading="lazy" src="https://img.youtube.com/vi/QEy_ACgH6Zg/mqdefault.jpg" alt="Dark Echo Video 13">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 13</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/QEy_ACgH6Zg" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'qggSBIcvd8M')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('qggSBIcvd8M')">
+                <img loading="lazy" src="https://img.youtube.com/vi/qggSBIcvd8M/mqdefault.jpg" alt="Dark Echo Video 14">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 14</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/qggSBIcvd8M" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'r5Ymx3bTsYE')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('r5Ymx3bTsYE')">
+                <img loading="lazy" src="https://img.youtube.com/vi/r5Ymx3bTsYE/mqdefault.jpg" alt="Dark Echo Video 15">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 15</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/r5Ymx3bTsYE" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'0YfcJeIHd9A')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('0YfcJeIHd9A')">
+                <img loading="lazy" src="https://img.youtube.com/vi/0YfcJeIHd9A/mqdefault.jpg" alt="Dark Echo Video 16">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 16</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/0YfcJeIHd9A" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'I_xC9SUTWnY')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('I_xC9SUTWnY')">
+                <img loading="lazy" src="https://img.youtube.com/vi/I_xC9SUTWnY/mqdefault.jpg" alt="Dark Echo Video 17">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 17</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/I_xC9SUTWnY" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'42erdKx_N7I')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('42erdKx_N7I')">
+                <img loading="lazy" src="https://img.youtube.com/vi/42erdKx_N7I/mqdefault.jpg" alt="Dark Echo Video 18">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 18</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/42erdKx_N7I" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'4_3H1pjPu8Q')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('4_3H1pjPu8Q')">
+                <img loading="lazy" src="https://img.youtube.com/vi/4_3H1pjPu8Q/mqdefault.jpg" alt="Dark Echo Video 19">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 19</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/4_3H1pjPu8Q" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'bJo0D6XAOfM')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('bJo0D6XAOfM')">
+                <img loading="lazy" src="https://img.youtube.com/vi/bJo0D6XAOfM/mqdefault.jpg" alt="Dark Echo Video 20">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 20</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/bJo0D6XAOfM" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'QbnpYS3NJ-E')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('QbnpYS3NJ-E')">
+                <img loading="lazy" src="https://img.youtube.com/vi/QbnpYS3NJ-E/mqdefault.jpg" alt="Dark Echo Video 21">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 21</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/QbnpYS3NJ-E" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'bs3_coxdBKY')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('bs3_coxdBKY')">
+                <img loading="lazy" src="https://img.youtube.com/vi/bs3_coxdBKY/mqdefault.jpg" alt="Dark Echo Video 22">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 22</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/bs3_coxdBKY" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'-2VGaxeq8zA')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('-2VGaxeq8zA')">
+                <img loading="lazy" src="https://img.youtube.com/vi/-2VGaxeq8zA/mqdefault.jpg" alt="Dark Echo Video 23">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 23</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/-2VGaxeq8zA" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'9zhcaXx8LCo')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('9zhcaXx8LCo')">
+                <img loading="lazy" src="https://img.youtube.com/vi/9zhcaXx8LCo/mqdefault.jpg" alt="Dark Echo Video 24">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 24</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/9zhcaXx8LCo" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'7LuK1caeanw')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('7LuK1caeanw')">
+                <img loading="lazy" src="https://img.youtube.com/vi/7LuK1caeanw/mqdefault.jpg" alt="Dark Echo Video 25">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 25</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/7LuK1caeanw" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'iaHtkAjTxlE')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('iaHtkAjTxlE')">
+                <img loading="lazy" src="https://img.youtube.com/vi/iaHtkAjTxlE/mqdefault.jpg" alt="Dark Echo Video 26">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 26</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/iaHtkAjTxlE" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'Cmmnq0NCu3k')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('Cmmnq0NCu3k')">
+                <img loading="lazy" src="https://img.youtube.com/vi/Cmmnq0NCu3k/mqdefault.jpg" alt="Dark Echo Video 27">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Dark Echo Video 27</h3>
+                <p>A darker and longer horror video from the uploaded list.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/Cmmnq0NCu3k" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollVideos(this, 400)">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="quick-picks">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Quick Picks</h2>
+        <p class="section-subtitle">A mixed row of shorts and longer videos for faster browsing.</p>
+      </div>
+
+      <div class="slider-wrapper">
+        <button class="scroll-btn scroll-left" onclick="scrollVideos(this, -400)">❮</button>
+        <div class="videos-grid">
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'pkxsSTwy3LM')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('pkxsSTwy3LM')">
+                <img loading="lazy" src="https://img.youtube.com/vi/pkxsSTwy3LM/mqdefault.jpg" alt="Quick Pick 01">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Quick Pick 01</h3>
+                <p>A handpicked horror watch from Dark Echo.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/pkxsSTwy3LM" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'ObW6vSLAtaw')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('ObW6vSLAtaw')">
+                <img loading="lazy" src="https://img.youtube.com/vi/ObW6vSLAtaw/mqdefault.jpg" alt="Quick Pick 02">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Quick Pick 02</h3>
+                <p>A handpicked horror watch from Dark Echo.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/ObW6vSLAtaw" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'egZghd9D9WE')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('egZghd9D9WE')">
+                <img loading="lazy" src="https://img.youtube.com/vi/egZghd9D9WE/mqdefault.jpg" alt="Quick Pick 03">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Quick Pick 03</h3>
+                <p>A handpicked horror watch from Dark Echo.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/egZghd9D9WE" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'cY0FgKS6iPM')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('cY0FgKS6iPM')">
+                <img loading="lazy" src="https://img.youtube.com/vi/cY0FgKS6iPM/mqdefault.jpg" alt="Quick Pick 04">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Quick Pick 04</h3>
+                <p>A handpicked horror watch from Dark Echo.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/cY0FgKS6iPM" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'VtIh2Ey78iQ')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('VtIh2Ey78iQ')">
+                <img loading="lazy" src="https://img.youtube.com/vi/VtIh2Ey78iQ/mqdefault.jpg" alt="Quick Pick 05">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Quick Pick 05</h3>
+                <p>A handpicked horror watch from Dark Echo.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/VtIh2Ey78iQ" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'wP3dfZ4YpBs')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('wP3dfZ4YpBs')">
+                <img loading="lazy" src="https://img.youtube.com/vi/wP3dfZ4YpBs/mqdefault.jpg" alt="Quick Pick 06">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Quick Pick 06</h3>
+                <p>A handpicked horror watch from Dark Echo.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/wP3dfZ4YpBs" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'S8-8GRXz27g')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('S8-8GRXz27g')">
+                <img loading="lazy" src="https://img.youtube.com/vi/S8-8GRXz27g/mqdefault.jpg" alt="Quick Pick 07">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Quick Pick 07</h3>
+                <p>A handpicked horror watch from Dark Echo.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/S8-8GRXz27g" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'G7WpKyIxQu0')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('G7WpKyIxQu0')">
+                <img loading="lazy" src="https://img.youtube.com/vi/G7WpKyIxQu0/mqdefault.jpg" alt="Quick Pick 08">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Quick Pick 08</h3>
+                <p>A handpicked horror watch from Dark Echo.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/G7WpKyIxQu0" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'br22Nx3bKYU')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('br22Nx3bKYU')">
+                <img loading="lazy" src="https://img.youtube.com/vi/br22Nx3bKYU/mqdefault.jpg" alt="Quick Pick 09">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Quick Pick 09</h3>
+                <p>A handpicked horror watch from Dark Echo.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/br22Nx3bKYU" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'83NIGGgCB7o')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('83NIGGgCB7o')">
+                <img loading="lazy" src="https://img.youtube.com/vi/83NIGGgCB7o/mqdefault.jpg" alt="Quick Pick 10">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Quick Pick 10</h3>
+                <p>A handpicked horror watch from Dark Echo.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/83NIGGgCB7o" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'M9hIVn1L1Cg')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('M9hIVn1L1Cg')">
+                <img loading="lazy" src="https://img.youtube.com/vi/M9hIVn1L1Cg/mqdefault.jpg" alt="Quick Pick 11">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Quick Pick 11</h3>
+                <p>A handpicked horror watch from Dark Echo.</p>
+              </div>
+              <a class="mini-btn" href="https://youtube.com/shorts/M9hIVn1L1Cg" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" onmouseenter="previewVideo(this,'kWhtG0XC8nI')" onmouseleave="stopPreview(this)">
+              <a href="javascript:void(0)" onclick="playVideo('kWhtG0XC8nI')">
+                <img loading="lazy" src="https://img.youtube.com/vi/kWhtG0XC8nI/mqdefault.jpg" alt="Quick Pick 12">
+                <div class="play">▶</div>
+              </a>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Quick Pick 12</h3>
+                <p>A handpicked horror watch from Dark Echo.</p>
+              </div>
+              <a class="mini-btn" href="https://youtu.be/kWhtG0XC8nI" target="_blank" rel="noopener noreferrer">Watch now</a>
+            </div>
+          </article>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollVideos(this, 400)">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="join">
+    <div class="container">
+      <div class="subscribe-box">
+        <h2 class="section-title">Don't miss the next nightmare</h2>
+        <p class="section-subtitle">The second page is now organized, cinematic, and ready for more uploads.</p>
+        <a class="btn btn-primary" href="https://www.youtube.com/@DarkEchoProject" target="_blank" rel="noopener noreferrer">Subscribe to the channel</a>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      © 2026 Dark Echo — More Videos Page
+      © 2026 Dark Echo — More Videos
     </div>
   </footer>
 
   <script>
+    function previewVideo(element, videoId) {
+      if (element.querySelector("iframe")) return;
+
+      const iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0";
+      iframe.allow = "autoplay; encrypted-media";
+      iframe.setAttribute("loading", "lazy");
+      element.appendChild(iframe);
+    }
+
+    function stopPreview(element) {
+      const iframe = element.querySelector("iframe");
+      if (iframe) iframe.remove();
+    }
+
     function playVideo(videoId) {
       const playerSection = document.getElementById("video-player");
       const mainVideo = document.getElementById("main-video");
@@ -477,6 +1537,15 @@
       mainVideo.src = "";
       playerSection.style.display = "none";
     }
+
+    function scrollVideos(button, amount) {
+      const container = button.parentElement.querySelector(".videos-grid");
+      if (container) {
+        container.scrollBy({ left: amount, behavior: "smooth" });
+      }
+    }
   </script>
+
+  <script type="text/javascript" src="https://counter.websiteout.net/js/36/6/0/0"></script>
 </body>
 </html>
