@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://darkechoproject.github.io/darkecho/</loc>
     <lastmod>2026-03-12</lastmod>
     <priority>1.00</priority>
   </url>
+
   <url>
     <loc>https://darkechoproject.github.io/darkecho/more-videos.html</loc>
     <lastmod>2026-03-12</lastmod>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://darkechoproject.github.io/darkecho/earn-with-nasser.html</loc>
     <lastmod>2026-03-12</lastmod>
     <priority>0.90</priority>
   </url>
-  <url>
-  <loc>https://darkechoproject.github.io/darkecho/blog.html</loc>
-  <lastmod>2026-03-12</lastmod>
-  <priority>0.70</priority>
-    <url>
-  <loc>https://darkechoproject.github.io/darkecho/true-horror-stories.html</loc>
-  <lastmod>2026-03-12</lastmod>
-  <priority>0.70</priority>
-</url>
-    <url>
-  <loc>https://darkechoproject.github.io/darkecho/top-10-scariest-moments.html</loc>
-  <lastmod>2026-03-12</lastmod>
-  <priority>0.70</priority>
-      <url>
-  <loc>https://darkechoproject.github.io/darkecho/creepiest-things-caught-on-camera.html</loc>
-  <lastmod>2026-03-12</lastmod>
-  <priority>0.70</priority>
 
-</url>
+  <url>
+    <loc>https://darkechoproject.github.io/darkecho/blog.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://darkechoproject.github.io/darkecho/true-horror-stories.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://darkechoproject.github.io/darkecho/top-10-scariest-moments.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://darkechoproject.github.io/darkecho/creepiest-things-caught-on-camera.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <priority>0.70</priority>
+  </url>
+
 </urlset>
