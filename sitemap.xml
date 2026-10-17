@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://darkechoproject.github.io/darkecho/</loc>
-  </url>
-  <url>
-    <loc>https://darkechoproject.github.io/darkecho/about.html</loc>
-  </url>
-  <url>
-    <loc>https://darkechoproject.github.io/darkecho/more-videos.html</loc>
-  </url>
-  <url>
-    <loc>https://darkechoproject.github.io/darkecho/earn-with-nasser.html</loc>
-  </url>
-  <url>
-    <loc>https://darkechoproject.github.io/darkecho/blog.html</loc>
-  </url>
-  <url>
-    <loc>https://darkechoproject.github.io/darkecho/true-horror-stories.html</loc>
-  </url>
-  <url>
-    <loc>https://darkechoproject.github.io/darkecho/top-10-scariest-moments.html</loc>
-  </url>
-  <url>
-    <loc>https://darkechoproject.github.io/darkecho/creepiest-things-caught-on-camera.html</loc>
-  </url>
+  <url><loc>https://darkechoproject.github.io/darkecho/</loc></url>
+  <url><loc>https://darkechoproject.github.io/darkecho/more-videos.html</loc></url>
+  <url><loc>https://darkechoproject.github.io/darkecho/earn-with-nasser.html</loc></url>
+  <url><loc>https://darkechoproject.github.io/darkecho/blog.html</loc></url>
+  <url><loc>https://darkechoproject.github.io/darkecho/about.html</loc></url>
+  <url><loc>https://darkechoproject.github.io/darkecho/contact.html</loc></url>
+  <url><loc>https://darkechoproject.github.io/darkecho/privacy.html</loc></url>
+  <url><loc>https://darkechoproject.github.io/darkecho/true-horror-stories.html</loc></url>
+  <url><loc>https://darkechoproject.github.io/darkecho/top-10-scariest-moments.html</loc></url>
+  <url><loc>https://darkechoproject.github.io/darkecho/creepiest-things-caught-on-camera.html</loc></url>
 </urlset>
