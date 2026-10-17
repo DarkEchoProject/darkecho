@@ -1,0 +1,40 @@
+name: Patch image 4 reference
+
+on:
+  push:
+    paths:
+      - '.github/workflows/patch-image-4.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace 4.jpg with 4.webp
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          changed = []
+          for path in Path('.').glob('*.html'):
+              text = path.read_text(encoding='utf-8')
+              if '4.jpg' in text:
+                  new = text.replace('4.jpg', '4.webp')
+                  if new != text:
+                      path.write_text(new, encoding='utf-8')
+                      changed.append(path.name)
+          if not changed:
+              raise SystemExit('No 4.jpg references found')
+          print('Updated:', ', '.join(changed))
+          PY
+      - name: Commit changes
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add '*.html'
+          git commit -m "Use optimized 4.webp image"
+          git push
