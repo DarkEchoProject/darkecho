@@ -212,9 +212,13 @@
     }
 
     #video-player {
-      display: none;
+      display: block;
       padding: 24px 0 10px;
       background: linear-gradient(to bottom, #000, #080808);
+    }
+
+    #video-player[hidden] {
+      display: none;
     }
 
     .video-wrapper {
@@ -222,8 +226,10 @@
     }
 
     #main-video {
+      display: block;
       width: 100%;
-      height: 720px;
+      height: auto;
+      aspect-ratio: 16 / 9;
       border: 0;
       border-radius: 14px;
       box-shadow: 0 24px 50px rgba(0,0,0,0.8);
@@ -284,6 +290,17 @@
       box-shadow: 0 22px 45px rgba(0,0,0,0.55);
     }
 
+    .video-open {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-open:focus-visible, .scroll-btn:focus-visible, .close-video:focus-visible {
+      outline: 3px solid #ff8585;
+      outline-offset: 3px;
+    }
+
     .thumb {
       position: relative;
       aspect-ratio: 16 / 9;
@@ -302,15 +319,6 @@
     .thumb:hover img {
       transform: scale(1.08);
       filter: brightness(0.45);
-    }
-
-    .thumb iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      pointer-events: none;
     }
 
     .play {
@@ -424,10 +432,6 @@
     }
 
     @media (max-width: 900px) {
-      #main-video {
-        height: 360px;
-      }
-
       .scroll-left {
         left: 0;
       }
@@ -451,9 +455,10 @@
         font-size: 16px;
       }
 
-      #main-video {
-        height: 240px;
-      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html, .videos-grid { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
     }
   </style>
 </head>
@@ -515,10 +520,10 @@
     </div>
   </section>
 
-  <div id="video-player">
+  <div id="video-player" hidden role="region" aria-label="Video player">
     <div class="container">
       <div class="video-wrapper">
-        <button class="close-video" onclick="closeVideo()">✕ Close</button>
+        <button type="button" class="close-video" aria-label="Close video player" onclick="closeVideo()">✕ Close</button>
         <iframe loading="lazy"
           id="main-video"
           src=""
@@ -538,12 +543,12 @@
       </div>
 
       <div class="slider-wrapper">
-        <button class="scroll-btn scroll-left" onclick="scrollVideos(this, -400)">❮</button>
+        <button type="button" class="scroll-btn scroll-left" aria-label="Scroll videos left" onclick="scrollVideos(this, -400)">❮</button>
 
         <div class="videos-grid">
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'-LZY6crClR0')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('-LZY6crClR0')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=-LZY6crClR0" data-video-id="-LZY6crClR0" aria-label="Play video: Top 10">
                 <img src="top-horror-movies.webp" alt="Top 10 Horror Movies" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -558,8 +563,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'XLxOJPfpdwo')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('XLxOJPfpdwo')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=XLxOJPfpdwo" data-video-id="XLxOJPfpdwo" aria-label="Play video: Her reflection moved">
                 <img src="reflection.jpg" alt="Her reflection moved" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -574,8 +579,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'iF4QBUDNDBw')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('iF4QBUDNDBw')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=iF4QBUDNDBw" data-video-id="iF4QBUDNDBw" aria-label="Play video: New Creepy Story">
                 <img src="new-creepy-story.webp" alt="New Creepy Story" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -590,8 +595,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'SX8m_2hCqmI')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('SX8m_2hCqmI')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=SX8m_2hCqmI" data-video-id="SX8m_2hCqmI" aria-label="Play video: Inside Her Wall">
                 <img src="Wall.jpg" alt="Inside Her Wall" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -606,7 +611,7 @@
           </article>
         </div>
 
-        <button class="scroll-btn scroll-right" onclick="scrollVideos(this, 400)">❯</button>
+        <button type="button" class="scroll-btn scroll-right" aria-label="Scroll videos right" onclick="scrollVideos(this, 400)">❯</button>
       </div>
     </div>
   </section>
@@ -619,12 +624,12 @@
       </div>
 
       <div class="slider-wrapper">
-        <button class="scroll-btn scroll-left" onclick="scrollVideos(this, -400)">❮</button>
+        <button type="button" class="scroll-btn scroll-left" aria-label="Scroll videos left" onclick="scrollVideos(this, -400)">❮</button>
 
         <div class="videos-grid">
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'8qQxgZ0_axw')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('8qQxgZ0_axw')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=8qQxgZ0_axw" data-video-id="8qQxgZ0_axw" aria-label="Play video: Something Was Watching">
                 <img src="4.webp" alt="Something Was Watching" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -639,8 +644,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'d-5WMLEz-kc')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('d-5WMLEz-kc')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=d-5WMLEz-kc" data-video-id="d-5WMLEz-kc" aria-label="Play video: The Camera Saw It">
                 <img src="3.jpg" alt="The Camera Saw It" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -655,7 +660,7 @@
           </article>
         </div>
 
-        <button class="scroll-btn scroll-right" onclick="scrollVideos(this, 400)">❯</button>
+        <button type="button" class="scroll-btn scroll-right" aria-label="Scroll videos right" onclick="scrollVideos(this, 400)">❯</button>
       </div>
     </div>
   </section>
@@ -668,12 +673,12 @@
       </div>
 
       <div class="slider-wrapper">
-        <button class="scroll-btn scroll-left" onclick="scrollVideos(this, -400)">❮</button>
+        <button type="button" class="scroll-btn scroll-left" aria-label="Scroll videos left" onclick="scrollVideos(this, -400)">❮</button>
 
         <div class="videos-grid">
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'WIAZRtMuYDQ')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('WIAZRtMuYDQ')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=WIAZRtMuYDQ" data-video-id="WIAZRtMuYDQ" aria-label="Play video: The Whisper in the Dark">
                 <img src="whisper-in-the-dark.webp" alt="The Whisper in the Dark" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -688,8 +693,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'2nCszNsRBsM')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('2nCszNsRBsM')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=2nCszNsRBsM" data-video-id="2nCszNsRBsM" aria-label="Play video: New Creepy Story">
                 <img src="image_media_01KKEE4M5X9GJ9M62ND3YKSFAV.png" alt="New Creepy Story" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -704,8 +709,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'wO5y7__jyKM')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('wO5y7__jyKM')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=wO5y7__jyKM" data-video-id="wO5y7__jyKM" aria-label="Play video: The Shadow Behind Me">
                 <img src="1.jpg" alt="The Shadow Behind Me" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -720,7 +725,7 @@
           </article>
         </div>
 
-        <button class="scroll-btn scroll-right" onclick="scrollVideos(this, 400)">❯</button>
+        <button type="button" class="scroll-btn scroll-right" aria-label="Scroll videos right" onclick="scrollVideos(this, 400)">❯</button>
       </div>
     </div>
   </section>
@@ -733,12 +738,12 @@
       </div>
 
       <div class="slider-wrapper">
-        <button class="scroll-btn scroll-left" onclick="scrollVideos(this, -400)">❮</button>
+        <button type="button" class="scroll-btn scroll-left" aria-label="Scroll videos left" onclick="scrollVideos(this, -400)">❮</button>
 
         <div class="videos-grid">
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'nOskUJEcKgc')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('nOskUJEcKgc')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=nOskUJEcKgc" data-video-id="nOskUJEcKgc" aria-label="Play video: Dark Echo Horror">
                 <img src="t1.jpg" alt="Dark Echo Horror" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -753,8 +758,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'NqRuB-Pz7fo')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('NqRuB-Pz7fo')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=NqRuB-Pz7fo" data-video-id="NqRuB-Pz7fo" aria-label="Play video: Creepy Night">
                 <img src="t2.jpg" alt="Creepy Night" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -769,8 +774,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'kGAShG1Pj8s')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('kGAShG1Pj8s')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=kGAShG1Pj8s" data-video-id="kGAShG1Pj8s" aria-label="Play video: The Camera Saw It">
                 <img src="t3.jpg" alt="The Camera Saw It" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -785,8 +790,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'R3lPH4xyXaI')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('R3lPH4xyXaI')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=R3lPH4xyXaI" data-video-id="R3lPH4xyXaI" aria-label="Play video: The Shadow">
                 <img src="t4.jpg" alt="The Shadow" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -801,8 +806,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'MuGz3YKRYNk')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('MuGz3YKRYNk')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=MuGz3YKRYNk" data-video-id="MuGz3YKRYNk" aria-label="Play video: The Whisper">
                 <img src="t5.jpg" alt="The Whisper" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -817,8 +822,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'9-eUUTSE-5w')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('9-eUUTSE-5w')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=9-eUUTSE-5w" data-video-id="9-eUUTSE-5w" aria-label="Play video: Terrifying short story">
                 <img src="terrifying-short-story.webp" alt="Terrifying short story" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -833,8 +838,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'Vf_pYevF5ps')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('Vf_pYevF5ps')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=Vf_pYevF5ps" data-video-id="Vf_pYevF5ps" aria-label="Play video: Creepy encounter">
                 <img src="h2.png" alt="Creepy encounter" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -849,8 +854,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'VrWjIg1w3aA')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('VrWjIg1w3aA')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=VrWjIg1w3aA" data-video-id="VrWjIg1w3aA" aria-label="Play video: Disturbing final scene">
                 <img src="h3.jpg" alt="Disturbing final scene" loading="lazy" decoding="async">
                 <div class="play">▶</div>
               </a>
@@ -865,7 +870,7 @@
           </article>
         </div>
 
-        <button class="scroll-btn scroll-right" onclick="scrollVideos(this, 400)">❯</button>
+        <button type="button" class="scroll-btn scroll-right" aria-label="Scroll videos right" onclick="scrollVideos(this, 400)">❯</button>
       </div>
     </div>
   </section>
@@ -904,44 +909,56 @@
   </footer>
 
   <script>
-    function previewVideo(element, videoId) {
-      if (element.querySelector("iframe")) return;
+    let lastVideoTrigger = null;
 
-      const iframe = document.createElement("iframe");
-      iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0";
-      iframe.allow = "autoplay; encrypted-media";
-      iframe.setAttribute("loading", "lazy");
-      element.appendChild(iframe);
-    }
-
-    function stopPreview(element) {
-      const iframe = element.querySelector("iframe");
-      if (iframe) iframe.remove();
-    }
-
-    function playVideo(videoId) {
+    function playVideo(videoId, trigger) {
+      if (!/^[A-Za-z0-9_-]{11}$/.test(videoId)) return;
       const playerSection = document.getElementById("video-player");
       const mainVideo = document.getElementById("main-video");
-
+      lastVideoTrigger = trigger || document.activeElement;
       mainVideo.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&rel=0";
-      playerSection.style.display = "block";
-      playerSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      playerSection.hidden = false;
+      playerSection.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+        block: "start"
+      });
+      playerSection.querySelector(".close-video").focus({ preventScroll: true });
     }
 
     function closeVideo() {
       const playerSection = document.getElementById("video-player");
       const mainVideo = document.getElementById("main-video");
-
-      mainVideo.src = "";
-      playerSection.style.display = "none";
+      mainVideo.removeAttribute("src");
+      playerSection.hidden = true;
+      if (lastVideoTrigger && lastVideoTrigger.isConnected) lastVideoTrigger.focus();
+      lastVideoTrigger = null;
     }
 
     function scrollVideos(button, amount) {
       const container = button.parentElement.querySelector(".videos-grid");
       if (container) {
-        container.scrollBy({ left: amount, behavior: "smooth" });
+        container.scrollBy({
+          left: amount,
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+        });
       }
     }
+
+    document.addEventListener("click", function(event) {
+      if (!(event.target instanceof Element)) return;
+      const link = event.target.closest("a.video-open");
+      if (!link || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const videoId = link.dataset.videoId;
+      if (!/^[A-Za-z0-9_-]{11}$/.test(videoId || "")) return;
+      event.preventDefault();
+      playVideo(videoId, link);
+    });
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape" && !document.getElementById("video-player").hidden) {
+        closeVideo();
+      }
+    });
   </script>
 </body>
 </html>

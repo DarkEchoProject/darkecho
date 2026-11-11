@@ -46,9 +46,10 @@
     .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.05); }
     .btn-secondary { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.14); color: #fff; }
     .btn-secondary:hover { background: rgba(255,255,255,.12); }
-    #video-player { display: none; padding: 24px 0 10px; background: linear-gradient(to bottom, #050806, #08120e); }
+    #video-player { padding: 24px 0 10px; background: linear-gradient(to bottom, #050806, #08120e); }
+    #video-player[hidden] { display: none; }
     .video-wrapper { position: relative; }
-    #main-video { width: 100%; height: 720px; border: 0; border-radius: 14px; box-shadow: 0 24px 50px rgba(0,0,0,.7); background: #000; }
+    #main-video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; border-radius: 14px; box-shadow: 0 24px 50px rgba(0,0,0,.7); background: #000; }
     .close-video { position: absolute; top: 14px; right: 14px; z-index: 5; padding: 10px 14px; border: 0; border-radius: 10px; background: rgba(0,0,0,.75); color: #fff; cursor: pointer; font-weight: 700; }
     .close-video:hover { background: #d9b76f; color: #091009; }
     section { padding: 70px 0; }
@@ -59,6 +60,8 @@
     .card { background: linear-gradient(to bottom, rgba(18,30,22,.98), rgba(10,16,12,.98)); border-radius: 16px; overflow: hidden; transition: transform .28s ease, box-shadow .28s ease; box-shadow: 0 8px 20px rgba(0,0,0,.28); border: 1px solid rgba(217,183,111,.08); }
     .card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 22px 45px rgba(0,0,0,.48); border-color: rgba(217,183,111,.28); }
     .thumb { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #111; cursor: pointer; }
+    .video-open { display: block; width: 100%; height: 100%; }
+    .video-open:focus-visible, .close-video:focus-visible { outline: 3px solid #d9b76f; outline-offset: 3px; }
     .thumb img { height: 100%; object-fit: cover; transition: transform .35s ease, filter .35s ease; filter: brightness(.88); }
     .thumb:hover img { transform: scale(1.07); filter: brightness(.42); }
     .play { position: absolute; inset: 0; display: grid; place-items: center; font-size: 54px; color: #fff; opacity: 0; transition: opacity .3s ease; background: linear-gradient(to top, rgba(0,0,0,.50), rgba(0,0,0,.1)); }
@@ -71,8 +74,11 @@
     .mini-btn:hover { background: #d9b76f; color: #091009; }
     .cta-box { text-align: center; padding: 40px 24px; border-radius: 24px; background: linear-gradient(135deg, rgba(217,183,111,.14), rgba(156,212,107,.10)); border: 1px solid rgba(217,183,111,.18); }
     footer { border-top: 1px solid rgba(255,255,255,.08); color: #9fb29e; text-align: center; padding: 28px 0 40px; }
-    @media (max-width: 900px) { #main-video { height: 360px; } }
-    @media (max-width: 640px) { nav { align-items: flex-start; } .hero p { font-size: 16px; } #main-video { height: 240px; } }
+    @media (max-width: 640px) { nav { align-items: flex-start; } .hero p { font-size: 16px; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
   </style>
 </head>
 <body>
@@ -104,10 +110,10 @@
       </div>
     </div>
   </section>
-  <div id="video-player">
+  <div id="video-player" hidden role="region" aria-label="Video player">
     <div class="container">
       <div class="video-wrapper">
-        <button class="close-video" onclick="closeVideo()">✕ Close</button>
+        <button type="button" class="close-video" aria-label="Close video player" onclick="closeVideo()">✕ Close</button>
         <iframe id="main-video" src="" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
@@ -122,9 +128,11 @@
       <div class="videos-grid">
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('k1FzFxkUnK0')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=k1FzFxkUnK0" data-video-id="k1FzFxkUnK0" aria-label="Play video: Krea.ai: Revolutionizing Creative Design with AI!">
               <img loading="lazy" src="https://img.youtube.com/vi/k1FzFxkUnK0/mqdefault.jpg" alt="Krea.ai: Revolutionizing Creative Design with AI!">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -137,9 +145,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('UU3ew3Ss2t4')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=UU3ew3Ss2t4" data-video-id="UU3ew3Ss2t4" aria-label="Play video: What is ChatGPT? The AI Revolution in Communication and Problem-Solving">
               <img loading="lazy" src="https://img.youtube.com/vi/UU3ew3Ss2t4/mqdefault.jpg" alt="What is ChatGPT? The AI Revolution in Communication and Problem-Solving">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -152,9 +162,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('Tp8nJznNSzI')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=Tp8nJznNSzI" data-video-id="Tp8nJznNSzI" aria-label="Play video: How to Create Videos from Text">
               <img loading="lazy" src="https://img.youtube.com/vi/Tp8nJznNSzI/mqdefault.jpg" alt="How to Create Videos from Text">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -178,9 +190,11 @@
       <div class="videos-grid">
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('Lbf0j1pBSdY')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=Lbf0j1pBSdY" data-video-id="Lbf0j1pBSdY" aria-label="Play video: Explanation of the Tasks Section of the Aviso Website">
               <img loading="lazy" src="https://img.youtube.com/vi/Lbf0j1pBSdY/mqdefault.jpg" alt="Explanation of the Tasks Section of the Aviso Website">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -193,9 +207,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('MH29ANEKVPY')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=MH29ANEKVPY" data-video-id="MH29ANEKVPY" aria-label="Play video: prtsc.site: Solving Image Upload Problems for Tasks">
               <img loading="lazy" src="https://img.youtube.com/vi/MH29ANEKVPY/mqdefault.jpg" alt="prtsc.site: Solving Image Upload Problems for Tasks">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -208,9 +224,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('c7j8EESTQk0')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=c7j8EESTQk0" data-video-id="c7j8EESTQk0" aria-label="Play video: Aviso Site Explanation">
               <img loading="lazy" src="https://img.youtube.com/vi/c7j8EESTQk0/mqdefault.jpg" alt="Aviso Site Explanation">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -223,9 +241,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('XF_lLVtNFPU')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=XF_lLVtNFPU" data-video-id="XF_lLVtNFPU" aria-label="Play video: IP Web Site Explanation with Withdrawal Proof">
               <img loading="lazy" src="https://img.youtube.com/vi/XF_lLVtNFPU/mqdefault.jpg" alt="IP Web Site Explanation with Withdrawal Proof">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -249,9 +269,11 @@
       <div class="videos-grid">
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('o2tCyL8vypk')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=o2tCyL8vypk" data-video-id="o2tCyL8vypk" aria-label="Play video: Qashbits: Withdraw 500 Satoshis Upon Registration">
               <img loading="lazy" src="https://img.youtube.com/vi/o2tCyL8vypk/mqdefault.jpg" alt="Qashbits: Withdraw 500 Satoshis Upon Registration">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -264,9 +286,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('VCLlE96FUHc')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=VCLlE96FUHc" data-video-id="VCLlE96FUHc" aria-label="Play video: FaucetPay Explained: Find Your Referral Link">
               <img loading="lazy" src="https://img.youtube.com/vi/VCLlE96FUHc/mqdefault.jpg" alt="FaucetPay Explained: Find Your Referral Link">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -279,9 +303,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('8PfpHxgsjVA')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=8PfpHxgsjVA" data-video-id="8PfpHxgsjVA" aria-label="Play video: Trust Wallet Tutorial">
               <img loading="lazy" src="https://img.youtube.com/vi/8PfpHxgsjVA/mqdefault.jpg" alt="Trust Wallet Tutorial">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -305,9 +331,11 @@
       <div class="videos-grid">
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('wP7FKsIlcOM')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=wP7FKsIlcOM" data-video-id="wP7FKsIlcOM" aria-label="Play video: How to Create a Semi-Permanent RDP">
               <img loading="lazy" src="https://img.youtube.com/vi/wP7FKsIlcOM/mqdefault.jpg" alt="How to Create a Semi-Permanent RDP">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -320,9 +348,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('PeDgnvKeHYs')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=PeDgnvKeHYs" data-video-id="PeDgnvKeHYs" aria-label="Play video: How to Repeat Work Using TinyTask">
               <img loading="lazy" src="https://img.youtube.com/vi/PeDgnvKeHYs/mqdefault.jpg" alt="How to Repeat Work Using TinyTask">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -346,9 +376,11 @@
       <div class="videos-grid">
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('7YwMMB5Cc8Y')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=7YwMMB5Cc8Y" data-video-id="7YwMMB5Cc8Y" aria-label="Play video: Play Dota 2 and Win Real Money">
               <img loading="lazy" src="https://img.youtube.com/vi/7YwMMB5Cc8Y/mqdefault.jpg" alt="Play Dota 2 and Win Real Money">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -361,9 +393,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('9baS1itvwu8')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=9baS1itvwu8" data-video-id="9baS1itvwu8" aria-label="Play video: How to Restore Your Item from VPGAME to Steam">
               <img loading="lazy" src="https://img.youtube.com/vi/9baS1itvwu8/mqdefault.jpg" alt="How to Restore Your Item from VPGAME to Steam">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -376,9 +410,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('BOHnGpaQAkY')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=BOHnGpaQAkY" data-video-id="BOHnGpaQAkY" aria-label="Play video: How to Transfer Dota 2 Items to VPGAME and Bet">
               <img loading="lazy" src="https://img.youtube.com/vi/BOHnGpaQAkY/mqdefault.jpg" alt="How to Transfer Dota 2 Items to VPGAME and Bet">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -391,9 +427,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('TvC8RgpE078')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=TvC8RgpE078" data-video-id="TvC8RgpE078" aria-label="Play video: How to Win Free Dota 2 Items in SteamPowers">
               <img loading="lazy" src="https://img.youtube.com/vi/TvC8RgpE078/mqdefault.jpg" alt="How to Win Free Dota 2 Items in SteamPowers">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -406,9 +444,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('HOeNaXWg8f0')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=HOeNaXWg8f0" data-video-id="HOeNaXWg8f0" aria-label="Play video: How to Create a New Account on Steam">
               <img loading="lazy" src="https://img.youtube.com/vi/HOeNaXWg8f0/mqdefault.jpg" alt="How to Create a New Account on Steam">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -421,9 +461,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('e97B1H2h6ek')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=e97B1H2h6ek" data-video-id="e97B1H2h6ek" aria-label="Play video: Play Dota 2 with Prizes for the Winner">
               <img loading="lazy" src="https://img.youtube.com/vi/e97B1H2h6ek/mqdefault.jpg" alt="Play Dota 2 with Prizes for the Winner">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -447,9 +489,11 @@
       <div class="videos-grid">
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('ETVOJC6vYts')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=ETVOJC6vYts" data-video-id="ETVOJC6vYts" aria-label="Play video: Ever Thought About Selling Your Skills Online?">
               <img loading="lazy" src="https://img.youtube.com/vi/ETVOJC6vYts/mqdefault.jpg" alt="Ever Thought About Selling Your Skills Online?">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -462,9 +506,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('bEQxz_S_ifE')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=bEQxz_S_ifE" data-video-id="bEQxz_S_ifE" aria-label="Play video: Did You Know You Can Earn from These Sites Only?">
               <img loading="lazy" src="https://img.youtube.com/vi/bEQxz_S_ifE/mqdefault.jpg" alt="Did You Know You Can Earn from These Sites Only?">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -477,9 +523,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('W1nKmSh0b5w')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=W1nKmSh0b5w" data-video-id="W1nKmSh0b5w" aria-label="Play video: Earn Money Online in Just One Hour?">
               <img loading="lazy" src="https://img.youtube.com/vi/W1nKmSh0b5w/mqdefault.jpg" alt="Earn Money Online in Just One Hour?">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -492,9 +540,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('SaUl2if8YfI')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=SaUl2if8YfI" data-video-id="SaUl2if8YfI" aria-label="Play video: Ready to Turn Your Passion into Income?">
               <img loading="lazy" src="https://img.youtube.com/vi/SaUl2if8YfI/mqdefault.jpg" alt="Ready to Turn Your Passion into Income?">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -507,9 +557,11 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onclick="playVideo('Y9KqzvqRlhE')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=Y9KqzvqRlhE" data-video-id="Y9KqzvqRlhE" aria-label="Play video: Want to Earn a Steady Monthly Income from the Internet?">
               <img loading="lazy" src="https://img.youtube.com/vi/Y9KqzvqRlhE/mqdefault.jpg" alt="Want to Earn a Steady Monthly Income from the Internet?">
               <div class="play">▶</div>
+                          </a>
             </div>
             <div class="card-content">
               <div>
@@ -536,19 +588,45 @@
     <div class="container">© 2026 Earn With Nasser — Online Income Video Hub</div>
   </footer>
   <script>
-    function playVideo(videoId) {
+    let lastVideoTrigger = null;
+
+    function playVideo(videoId, trigger) {
+      if (!/^[A-Za-z0-9_-]{11}$/.test(videoId)) return;
       const playerSection = document.getElementById("video-player");
       const mainVideo = document.getElementById("main-video");
+      lastVideoTrigger = trigger || document.activeElement;
       mainVideo.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&rel=0";
-      playerSection.style.display = "block";
-      playerSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      playerSection.hidden = false;
+      playerSection.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+        block: "start"
+      });
+      playerSection.querySelector(".close-video").focus({ preventScroll: true });
     }
+
     function closeVideo() {
       const playerSection = document.getElementById("video-player");
-      const mainVideo = document.getElementById("main-video");
-      mainVideo.src = "";
-      playerSection.style.display = "none";
+      document.getElementById("main-video").removeAttribute("src");
+      playerSection.hidden = true;
+      if (lastVideoTrigger && lastVideoTrigger.isConnected) lastVideoTrigger.focus();
+      lastVideoTrigger = null;
     }
+
+    document.addEventListener("click", function(event) {
+      if (!(event.target instanceof Element)) return;
+      const link = event.target.closest("a.video-open");
+      if (!link || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const videoId = link.dataset.videoId;
+      if (!/^[A-Za-z0-9_-]{11}$/.test(videoId || "")) return;
+      event.preventDefault();
+      playVideo(videoId, link);
+    });
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape" && !document.getElementById("video-player").hidden) {
+        closeVideo();
+      }
+    });
   </script>
 </body>
 </html>

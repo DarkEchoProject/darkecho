@@ -190,9 +190,13 @@
     }
 
     #video-player {
-      display: none;
+      display: block;
       padding: 24px 0 10px;
       background: linear-gradient(to bottom, #000, #080808);
+    }
+
+    #video-player[hidden] {
+      display: none;
     }
 
     .video-wrapper {
@@ -200,8 +204,10 @@
     }
 
     #main-video {
+      display: block;
       width: 100%;
-      height: 720px;
+      height: auto;
+      aspect-ratio: 16 / 9;
       border: 0;
       border-radius: 14px;
       box-shadow: 0 24px 50px rgba(0,0,0,0.8);
@@ -262,6 +268,17 @@
       box-shadow: 0 22px 45px rgba(0,0,0,0.55);
     }
 
+    .video-open {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-open:focus-visible, .scroll-btn:focus-visible, .close-video:focus-visible {
+      outline: 3px solid #ff8585;
+      outline-offset: 3px;
+    }
+
     .thumb {
       position: relative;
       aspect-ratio: 16 / 9;
@@ -280,15 +297,6 @@
     .thumb:hover img {
       transform: scale(1.08);
       filter: brightness(0.45);
-    }
-
-    .thumb iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      pointer-events: none;
     }
 
     .play {
@@ -388,10 +396,6 @@
     }
 
     @media (max-width: 900px) {
-      #main-video {
-        height: 360px;
-      }
-
       .scroll-left {
         left: 0;
       }
@@ -415,9 +419,10 @@
         font-size: 16px;
       }
 
-      #main-video {
-        height: 240px;
-      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html, .videos-grid { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
     }
   </style>
 </head>
@@ -460,10 +465,10 @@
     </div>
   </section>
 
-  <div id="video-player">
+  <div id="video-player" hidden role="region" aria-label="Video player">
     <div class="container">
       <div class="video-wrapper">
-        <button class="close-video" onclick="closeVideo()">✕ Close</button>
+        <button type="button" class="close-video" aria-label="Close video player" onclick="closeVideo()">✕ Close</button>
         <iframe loading="lazy"
           id="main-video"
           src=""
@@ -483,12 +488,12 @@
       </div>
 
       <div class="slider-wrapper">
-        <button class="scroll-btn scroll-left" onclick="scrollVideos(this, -400)">❮</button>
+        <button type="button" class="scroll-btn scroll-left" aria-label="Scroll videos left" onclick="scrollVideos(this, -400)">❮</button>
         <div class="videos-grid">
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'pkxsSTwy3LM')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('pkxsSTwy3LM')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=pkxsSTwy3LM" data-video-id="pkxsSTwy3LM" aria-label="Play video: Incidents that happened to people due to">
                 <img loading="lazy" src="https://img.youtube.com/vi/pkxsSTwy3LM/mqdefault.jpg" alt="Incidents that happened to people due to">
                 <div class="play">▶</div>
               </a>
@@ -503,8 +508,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'egZghd9D9WE')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('egZghd9D9WE')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=egZghd9D9WE" data-video-id="egZghd9D9WE" aria-label="Play video: The Most Powerful Natural Disasters and Space Secrets">
                 <img loading="lazy" src="https://img.youtube.com/vi/egZghd9D9WE/mqdefault.jpg" alt="The Most Powerful Natural Disasters and Space Secrets">
                 <div class="play">▶</div>
               </a>
@@ -519,8 +524,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'VtIh2Ey78iQ')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('VtIh2Ey78iQ')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=VtIh2Ey78iQ" data-video-id="VtIh2Ey78iQ" aria-label="Play video: Firestorm Unleashes Chaos Across the City">
                 <img loading="lazy" src="https://img.youtube.com/vi/VtIh2Ey78iQ/mqdefault.jpg" alt="Firestorm Unleashes Chaos Across the City">
                 <div class="play">▶</div>
               </a>
@@ -535,8 +540,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'S8-8GRXz27g')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('S8-8GRXz27g')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=S8-8GRXz27g" data-video-id="S8-8GRXz27g" aria-label="Play video: volcano eruption">
                 <img loading="lazy" src="https://img.youtube.com/vi/S8-8GRXz27g/mqdefault.jpg" alt="volcano eruption">
                 <div class="play">▶</div>
               </a>
@@ -551,8 +556,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'br22Nx3bKYU')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('br22Nx3bKYU')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=br22Nx3bKYU" data-video-id="br22Nx3bKYU" aria-label="Play video: The Epic Moment the Volcano Erupted">
                 <img loading="lazy" src="https://img.youtube.com/vi/br22Nx3bKYU/mqdefault.jpg" alt="The Epic Moment the Volcano Erupted">
                 <div class="play">▶</div>
               </a>
@@ -567,8 +572,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'M9hIVn1L1Cg')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('M9hIVn1L1Cg')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=M9hIVn1L1Cg" data-video-id="M9hIVn1L1Cg" aria-label="Play video: The moment the volcano erupted">
                 <img loading="lazy" src="https://img.youtube.com/vi/M9hIVn1L1Cg/mqdefault.jpg" alt="The moment the volcano erupted">
                 <div class="play">▶</div>
               </a>
@@ -583,8 +588,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'LxWWWepq9zc')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('LxWWWepq9zc')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=LxWWWepq9zc" data-video-id="LxWWWepq9zc" aria-label="Play video: Epic Iceland Volcano Eruption">
                 <img loading="lazy" src="https://img.youtube.com/vi/LxWWWepq9zc/mqdefault.jpg" alt=" Epic Iceland Volcano Eruption">
                 <div class="play">▶</div>
               </a>
@@ -599,8 +604,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'mDuJv9XN8CU')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('mDuJv9XN8CU')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=mDuJv9XN8CU" data-video-id="mDuJv9XN8CU" aria-label="Play video: cene make you feel anxious or impressed A lake of magma gushes out of a crater in">
                 <img loading="lazy" src="https://img.youtube.com/vi/mDuJv9XN8CU/mqdefault.jpg" alt="cene make you feel anxious or impressed A lake of magma gushes out of a crater in">
                 <div class="play">▶</div>
               </a>
@@ -615,8 +620,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'R_58nGWFVos')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('R_58nGWFVos')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=R_58nGWFVos" data-video-id="R_58nGWFVos" aria-label="Play video: Lava Flows Profusely from Sundhankasjar Volcano">
                 <img loading="lazy" src="https://img.youtube.com/vi/R_58nGWFVos/mqdefault.jpg" alt="Lava Flows Profusely from Sundhankasjar Volcano">
                 <div class="play">▶</div>
               </a>
@@ -631,8 +636,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'XAteuxj6iJI')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('XAteuxj6iJI')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=XAteuxj6iJI" data-video-id="XAteuxj6iJI" aria-label="Play video: Volcano in the Middle of the Ocean">
                 <img loading="lazy" src="https://img.youtube.com/vi/XAteuxj6iJI/mqdefault.jpg" alt="Volcano in the Middle of the Ocean">
                 <div class="play">▶</div>
               </a>
@@ -647,8 +652,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'unmOs1LnVt0')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('unmOs1LnVt0')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=unmOs1LnVt0" data-video-id="unmOs1LnVt0" aria-label="Play video: Volcanic Eruption Edit">
                 <img loading="lazy" src="https://img.youtube.com/vi/unmOs1LnVt0/mqdefault.jpg" alt="Volcanic Eruption Edit">
                 <div class="play">▶</div>
               </a>
@@ -663,8 +668,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'mMOdxgcmJis')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('mMOdxgcmJis')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=mMOdxgcmJis" data-video-id="mMOdxgcmJis" aria-label="Play video: China's Deadliest Volcanoes Eruption Destroys Homes">
                 <img loading="lazy" src="https://img.youtube.com/vi/mMOdxgcmJis/mqdefault.jpg" alt="China's Deadliest Volcanoes Eruption Destroys Homes">
                 <div class="play">▶</div>
               </a>
@@ -679,8 +684,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'4e_pa7POCEk')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('4e_pa7POCEk')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=4e_pa7POCEk" data-video-id="4e_pa7POCEk" aria-label="Play video: Nature's Fireworks">
                 <img loading="lazy" src="https://img.youtube.com/vi/4e_pa7POCEk/mqdefault.jpg" alt="Nature's Fireworks">
                 <div class="play">▶</div>
               </a>
@@ -695,8 +700,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'J5vfvbEPiCY')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('J5vfvbEPiCY')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=J5vfvbEPiCY" data-video-id="J5vfvbEPiCY" aria-label="Play video: Lava Flowing Like Liquid Flame">
                 <img loading="lazy" src="https://img.youtube.com/vi/J5vfvbEPiCY/mqdefault.jpg" alt="Lava Flowing Like Liquid Flame">
                 <div class="play">▶</div>
               </a>
@@ -711,8 +716,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'jGpYckVP650')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('jGpYckVP650')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=jGpYckVP650" data-video-id="jGpYckVP650" aria-label="Play video: Volcano Flowing Like Quicksand: A Mesmerizing Natural Phenomenon">
                 <img loading="lazy" src="https://img.youtube.com/vi/jGpYckVP650/mqdefault.jpg" alt="Volcano Flowing Like Quicksand: A Mesmerizing Natural Phenomenon">
                 <div class="play">▶</div>
               </a>
@@ -727,8 +732,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'ppGvfSAikkE')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('ppGvfSAikkE')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=ppGvfSAikkE" data-video-id="ppGvfSAikkE" aria-label="Play video: Lava Flowing Like Liquid Flame">
                 <img loading="lazy" src="https://img.youtube.com/vi/ppGvfSAikkE/mqdefault.jpg" alt="Lava Flowing Like Liquid Flame">
                 <div class="play">▶</div>
               </a>
@@ -743,8 +748,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'kBNQLEyPBRg')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('kBNQLEyPBRg')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=kBNQLEyPBRg" data-video-id="kBNQLEyPBRg" aria-label="Play video: Volcano Footage Captured from a Helicopter">
                 <img loading="lazy" src="https://img.youtube.com/vi/kBNQLEyPBRg/mqdefault.jpg" alt="Volcano Footage Captured from a Helicopter">
                 <div class="play">▶</div>
               </a>
@@ -759,8 +764,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'Fw7_pMoEcVA')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('Fw7_pMoEcVA')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=Fw7_pMoEcVA" data-video-id="Fw7_pMoEcVA" aria-label="Play video: volcanoeruption Terrifying Volcano Eruption">
                 <img loading="lazy" src="https://img.youtube.com/vi/Fw7_pMoEcVA/mqdefault.jpg" alt="volcanoeruption Terrifying Volcano Eruption">
                 <div class="play">▶</div>
               </a>
@@ -775,8 +780,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'pqTXXN1ofms')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('pqTXXN1ofms')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=pqTXXN1ofms" data-video-id="pqTXXN1ofms" aria-label="Play video: Extreme Events Epic">
                 <img loading="lazy" src="https://img.youtube.com/vi/pqTXXN1ofms/mqdefault.jpg" alt="Extreme Events Epic">
                 <div class="play">▶</div>
               </a>
@@ -791,8 +796,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'--TBJ8EJ1HM')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('--TBJ8EJ1HM')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=--TBJ8EJ1HM" data-video-id="--TBJ8EJ1HM" aria-label="Play video: How to stay safe after a natural disaster">
                 <img loading="lazy" src="https://img.youtube.com/vi/--TBJ8EJ1HM/mqdefault.jpg" alt="How to stay safe after a natural disaster">
                 <div class="play">▶</div>
               </a>
@@ -807,8 +812,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'Wfr-FO9OZtI')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('Wfr-FO9OZtI')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=Wfr-FO9OZtI" data-video-id="Wfr-FO9OZtI" aria-label="Play video: How to stay safe after a natural disaster">
                 <img loading="lazy" src="https://img.youtube.com/vi/Wfr-FO9OZtI/mqdefault.jpg" alt="How to stay safe after a natural disaster">
                 <div class="play">▶</div>
               </a>
@@ -823,8 +828,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'87XKdBJIkAw')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('87XKdBJIkAw')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=87XKdBJIkAw" data-video-id="87XKdBJIkAw" aria-label="Play video: Do you know where to escape during a flood">
                 <img loading="lazy" src="https://img.youtube.com/vi/87XKdBJIkAw/mqdefault.jpg" alt="Do you know where to escape during a flood">
                 <div class="play">▶</div>
               </a>
@@ -838,7 +843,7 @@
             </div>
           </article>
         </div>
-        <button class="scroll-btn scroll-right" onclick="scrollVideos(this, 400)">❯</button>
+        <button type="button" class="scroll-btn scroll-right" aria-label="Scroll videos right" onclick="scrollVideos(this, 400)">❯</button>
       </div>
     </div>
   </section>
@@ -851,12 +856,12 @@
       </div>
 
       <div class="slider-wrapper">
-        <button class="scroll-btn scroll-left" onclick="scrollVideos(this, -400)">❮</button>
+        <button type="button" class="scroll-btn scroll-left" aria-label="Scroll videos left" onclick="scrollVideos(this, -400)">❮</button>
         <div class="videos-grid">
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'ObW6vSLAtaw')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('ObW6vSLAtaw')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=ObW6vSLAtaw" data-video-id="ObW6vSLAtaw" aria-label="Play video: Master Natural Disaster Vocabulary">
                 <img loading="lazy" src="https://img.youtube.com/vi/ObW6vSLAtaw/mqdefault.jpg" alt="Master Natural Disaster Vocabulary">
                 <div class="play">▶</div>
               </a>
@@ -871,8 +876,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'cY0FgKS6iPM')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('cY0FgKS6iPM')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=cY0FgKS6iPM" data-video-id="cY0FgKS6iPM" aria-label="Play video: Doomsday Meteor! Will Bennu collide with Earth and destroy the planet?">
                 <img loading="lazy" src="https://img.youtube.com/vi/cY0FgKS6iPM/mqdefault.jpg" alt="Doomsday Meteor! Will Bennu collide with Earth and destroy the planet?">
                 <div class="play">▶</div>
               </a>
@@ -887,8 +892,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'wP3dfZ4YpBs')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('wP3dfZ4YpBs')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=wP3dfZ4YpBs" data-video-id="wP3dfZ4YpBs" aria-label="Play video: Impending Disaster: Devastating Earthquakes Threaten Istanbul – Urgent Warning">
                 <img loading="lazy" src="https://img.youtube.com/vi/wP3dfZ4YpBs/mqdefault.jpg" alt="Impending Disaster: Devastating Earthquakes Threaten Istanbul – Urgent Warning">
                 <div class="play">▶</div>
               </a>
@@ -903,8 +908,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'G7WpKyIxQu0')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('G7WpKyIxQu0')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=G7WpKyIxQu0" data-video-id="G7WpKyIxQu0" aria-label="Play video: Axial Seamount Volcano Threatens Eruption:Is a Disaster Looming?">
                 <img loading="lazy" src="https://img.youtube.com/vi/G7WpKyIxQu0/mqdefault.jpg" alt="Axial Seamount Volcano Threatens Eruption in 2025: Is a Disaster Looming?">
                 <div class="play">▶</div>
               </a>
@@ -919,8 +924,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'83NIGGgCB7o')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('83NIGGgCB7o')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=83NIGGgCB7o" data-video-id="83NIGGgCB7o" aria-label="Play video: The most powerful destructive video about natural disasters that you must watch">
                 <img loading="lazy" src="https://img.youtube.com/vi/83NIGGgCB7o/mqdefault.jpg" alt="The most powerful destructive video about natural disasters that you must watch">
                 <div class="play">▶</div>
               </a>
@@ -935,8 +940,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'kWhtG0XC8nI')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('kWhtG0XC8nI')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=kWhtG0XC8nI" data-video-id="kWhtG0XC8nI" aria-label="Play video: Fountaining &amp; flowing lava in Halemaʻumaʻu #hawaiivolcanoesnp">
                 <img loading="lazy" src="https://img.youtube.com/vi/kWhtG0XC8nI/mqdefault.jpg" alt="Fountaining & flowing lava in Halemaʻumaʻu #hawaiivolcanoesnp">
                 <div class="play">▶</div>
               </a>
@@ -951,8 +956,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'G3XHAMBy8D0')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('G3XHAMBy8D0')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=G3XHAMBy8D0" data-video-id="G3XHAMBy8D0" aria-label="Play video: Flowing lava in #hawaiivolcanoesnp">
                 <img loading="lazy" src="https://img.youtube.com/vi/G3XHAMBy8D0/mqdefault.jpg" alt="Flowing lava in #hawaiivolcanoesnp">
                 <div class="play">▶</div>
               </a>
@@ -967,8 +972,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'YwFdnbYCaR0')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('YwFdnbYCaR0')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=YwFdnbYCaR0" data-video-id="YwFdnbYCaR0" aria-label="Play video: Close up view of lava lake in Halemaʻumaʻu #hawaiivolcanoesnationalpark">
                 <img loading="lazy" src="https://img.youtube.com/vi/YwFdnbYCaR0/mqdefault.jpg" alt="Close up view of lava lake in Halemaʻumaʻu #hawaiivolcanoesnationalpark">
                 <div class="play">▶</div>
               </a>
@@ -983,8 +988,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'7M6zdIySnEs')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('7M6zdIySnEs')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=7M6zdIySnEs" data-video-id="7M6zdIySnEs" aria-label="Play video: The Intriguing Link  Animals and Earthqu">
                 <img loading="lazy" src="https://img.youtube.com/vi/7M6zdIySnEs/mqdefault.jpg" alt="The Intriguing Link  Animals and Earthqu">
                 <div class="play">▶</div>
               </a>
@@ -999,8 +1004,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'IsCfJS52nOA')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('IsCfJS52nOA')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=IsCfJS52nOA" data-video-id="IsCfJS52nOA" aria-label="Play video: Is there something in the universe that lives forever?">
                 <img loading="lazy" src="https://img.youtube.com/vi/IsCfJS52nOA/mqdefault.jpg" alt="Is there something in the universe that lives forever?">
                 <div class="play">▶</div>
               </a>
@@ -1015,8 +1020,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'zC8KfaunjDE')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('zC8KfaunjDE')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=zC8KfaunjDE" data-video-id="zC8KfaunjDE" aria-label="Play video: One moment could mean the end of everything!.Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/zC8KfaunjDE/mqdefault.jpg" alt="One moment could mean the end of everything!.Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1031,8 +1036,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'q1Dq7ktTorE')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('q1Dq7ktTorE')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=q1Dq7ktTorE" data-video-id="q1Dq7ktTorE" aria-label="Play video: Can you believe there’s a planet where it rains glass instead of water.Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/q1Dq7ktTorE/mqdefault.jpg" alt="Can you believe there’s a planet where it rains glass instead of water.Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1047,8 +1052,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'QEy_ACgH6Zg')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('QEy_ACgH6Zg')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=QEy_ACgH6Zg" data-video-id="QEy_ACgH6Zg" aria-label="Play video: Did you know a black hole could swallow Earth whole.Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/QEy_ACgH6Zg/mqdefault.jpg" alt="Did you know a black hole could swallow Earth whole.Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1063,8 +1068,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'qggSBIcvd8M')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('qggSBIcvd8M')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=qggSBIcvd8M" data-video-id="qggSBIcvd8M" aria-label="Play video: Is the Earth Flat or Spherical? Historical Maps and Scientific Evidence.Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/qggSBIcvd8M/mqdefault.jpg" alt="Is the Earth Flat or Spherical? Historical Maps and Scientific Evidence.Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1079,8 +1084,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'r5Ymx3bTsYE')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('r5Ymx3bTsYE')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=r5Ymx3bTsYE" data-video-id="r5Ymx3bTsYE" aria-label="Play video: What to do if a storm hits suddenly?.Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/r5Ymx3bTsYE/mqdefault.jpg" alt="What to do if a storm hits suddenly?.Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1095,8 +1100,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'0YfcJeIHd9A')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('0YfcJeIHd9A')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=0YfcJeIHd9A" data-video-id="0YfcJeIHd9A" aria-label="Play video: How to survive">
                 <img loading="lazy" src="https://img.youtube.com/vi/0YfcJeIHd9A/mqdefault.jpg" alt="How to survive">
                 <div class="play">▶</div>
               </a>
@@ -1111,8 +1116,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'I_xC9SUTWnY')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('I_xC9SUTWnY')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=I_xC9SUTWnY" data-video-id="I_xC9SUTWnY" aria-label="Play video: The Melting Poles: North and South in Crisis.Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/I_xC9SUTWnY/mqdefault.jpg" alt="The Melting Poles: North and South in Crisis.Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1127,8 +1132,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'42erdKx_N7I')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('42erdKx_N7I')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=42erdKx_N7I" data-video-id="42erdKx_N7I" aria-label="Play video: Understanding Floods: Causes, Effects, and Prevention.Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/42erdKx_N7I/mqdefault.jpg" alt="Understanding Floods: Causes, Effects, and Prevention.Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1143,8 +1148,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'4_3H1pjPu8Q')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('4_3H1pjPu8Q')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=4_3H1pjPu8Q" data-video-id="4_3H1pjPu8Q" aria-label="Play video: Your Ultimate Source for Thrilling and Impactful Stories.Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/4_3H1pjPu8Q/mqdefault.jpg" alt="Your Ultimate Source for Thrilling and Impactful Stories.Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1159,8 +1164,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'bJo0D6XAOfM')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('bJo0D6XAOfM')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=bJo0D6XAOfM" data-video-id="bJo0D6XAOfM" aria-label="Play video: Mysteries of the Universe: The Fascinating World of Meteors.Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/bJo0D6XAOfM/mqdefault.jpg" alt="Mysteries of the Universe: The Fascinating World of Meteors.Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1175,8 +1180,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'QbnpYS3NJ-E')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('QbnpYS3NJ-E')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=QbnpYS3NJ-E" data-video-id="QbnpYS3NJ-E" aria-label="Play video: The Majestic Power of Thunder &amp; Lightning | Nature’s Raw Beauty.Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/QbnpYS3NJ-E/mqdefault.jpg" alt="The Majestic Power of Thunder & Lightning | Nature’s Raw Beauty.Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1191,8 +1196,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'bs3_coxdBKY')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('bs3_coxdBKY')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=bs3_coxdBKY" data-video-id="bs3_coxdBKY" aria-label="Play video: Best Moments from Disaster Movies.Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/bs3_coxdBKY/mqdefault.jpg" alt="Best Moments from Disaster Movies.Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1207,8 +1212,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'-2VGaxeq8zA')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('-2VGaxeq8zA')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=-2VGaxeq8zA" data-video-id="-2VGaxeq8zA" aria-label="Play video: All About Hurricanes: Nature’s Most Powerful Storms.Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/-2VGaxeq8zA/mqdefault.jpg" alt="All About Hurricanes: Nature’s Most Powerful Storms.Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1223,8 +1228,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'9zhcaXx8LCo')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('9zhcaXx8LCo')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=9zhcaXx8LCo" data-video-id="9zhcaXx8LCo" aria-label="Play video: Volcanoes Unleashed: The Power of Nature Revealed.Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/9zhcaXx8LCo/mqdefault.jpg" alt="Volcanoes Unleashed: The Power of Nature Revealed.Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1239,8 +1244,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'7LuK1caeanw')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('7LuK1caeanw')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=7LuK1caeanw" data-video-id="7LuK1caeanw" aria-label="Play video: California Earthquake 2024.Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/7LuK1caeanw/mqdefault.jpg" alt="California Earthquake 2024.Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1255,8 +1260,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'iaHtkAjTxlE')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('iaHtkAjTxlE')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=iaHtkAjTxlE" data-video-id="iaHtkAjTxlE" aria-label="Play video: Why Do Earthquakes Happen Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/iaHtkAjTxlE/mqdefault.jpg" alt="Why Do Earthquakes Happen Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1271,8 +1276,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'Cmmnq0NCu3k')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('Cmmnq0NCu3k')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=Cmmnq0NCu3k" data-video-id="Cmmnq0NCu3k" aria-label="Play video: Türkiye Earthquake Panic and ResilExtreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/Cmmnq0NCu3k/mqdefault.jpg" alt="Türkiye Earthquake Panic and ResilExtreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1286,7 +1291,7 @@
             </div>
           </article>
         </div>
-        <button class="scroll-btn scroll-right" onclick="scrollVideos(this, 400)">❯</button>
+        <button type="button" class="scroll-btn scroll-right" aria-label="Scroll videos right" onclick="scrollVideos(this, 400)">❯</button>
       </div>
     </div>
   </section>
@@ -1299,12 +1304,12 @@
       </div>
 
       <div class="slider-wrapper">
-        <button class="scroll-btn scroll-left" onclick="scrollVideos(this, -400)">❮</button>
+        <button type="button" class="scroll-btn scroll-left" aria-label="Scroll videos left" onclick="scrollVideos(this, -400)">❮</button>
         <div class="videos-grid">
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'pkxsSTwy3LM')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('pkxsSTwy3LM')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=pkxsSTwy3LM" data-video-id="pkxsSTwy3LM" aria-label="Play video: The Power of Natural.Extreme Events">
                 <img loading="lazy" src="https://img.youtube.com/vi/pkxsSTwy3LM/mqdefault.jpg" alt="The Power of Natural.Extreme Events">
                 <div class="play">▶</div>
               </a>
@@ -1319,8 +1324,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'ObW6vSLAtaw')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('ObW6vSLAtaw')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=ObW6vSLAtaw" data-video-id="ObW6vSLAtaw" aria-label="Play video: Volcano Eruption: Rivers">
                 <img loading="lazy" src="https://img.youtube.com/vi/ObW6vSLAtaw/mqdefault.jpg" alt="Volcano Eruption: Rivers">
                 <div class="play">▶</div>
               </a>
@@ -1335,8 +1340,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'egZghd9D9WE')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('egZghd9D9WE')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=egZghd9D9WE" data-video-id="egZghd9D9WE" aria-label="Play video: Epic #Night Terror: Darkness Took Over the Room #Horror">
                 <img loading="lazy" src="https://img.youtube.com/vi/egZghd9D9WE/mqdefault.jpg" alt="Epic #Night Terror: Darkness Took Over the Room #Horror">
                 <div class="play">▶</div>
               </a>
@@ -1351,8 +1356,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'cY0FgKS6iPM')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('cY0FgKS6iPM')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=cY0FgKS6iPM" data-video-id="cY0FgKS6iPM" aria-label="Play video: Epic #Paranormal Attack: The Silence Was Broken #Fear">
                 <img loading="lazy" src="https://img.youtube.com/vi/cY0FgKS6iPM/mqdefault.jpg" alt="Epic #Paranormal Attack: The Silence Was Broken #Fear">
                 <div class="play">▶</div>
               </a>
@@ -1367,8 +1372,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'VtIh2Ey78iQ')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('VtIh2Ey78iQ')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=VtIh2Ey78iQ" data-video-id="VtIh2Ey78iQ" aria-label="Play video: Epic #Shadow Invasion: No One Was There #Creepy">
                 <img loading="lazy" src="https://img.youtube.com/vi/VtIh2Ey78iQ/mqdefault.jpg" alt="Epic #Shadow Invasion: No One Was There #Creepy">
                 <div class="play">▶</div>
               </a>
@@ -1383,8 +1388,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'wP3dfZ4YpBs')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('wP3dfZ4YpBs')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=wP3dfZ4YpBs" data-video-id="wP3dfZ4YpBs" aria-label="Play video: Epic #Haunted Camera: It Recorded Something Alive #Scary">
                 <img loading="lazy" src="https://img.youtube.com/vi/wP3dfZ4YpBs/mqdefault.jpg" alt="Epic #Haunted Camera: It Recorded Something Alive #Scary">
                 <div class="play">▶</div>
               </a>
@@ -1399,8 +1404,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'S8-8GRXz27g')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('S8-8GRXz27g')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=S8-8GRXz27g" data-video-id="S8-8GRXz27g" aria-label="Play video: Epic #Horror Awakens: The Nightmare Became Real #Dark">
                 <img loading="lazy" src="https://img.youtube.com/vi/S8-8GRXz27g/mqdefault.jpg" alt="Epic #Horror Awakens: The Nightmare Became Real #Dark">
                 <div class="play">▶</div>
               </a>
@@ -1415,8 +1420,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'G7WpKyIxQu0')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('G7WpKyIxQu0')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=G7WpKyIxQu0" data-video-id="G7WpKyIxQu0" aria-label="Play video: Epic #Forbidden Place: Something Was Waiting #Mystery">
                 <img loading="lazy" src="https://img.youtube.com/vi/G7WpKyIxQu0/mqdefault.jpg" alt="Epic #Forbidden Place: Something Was Waiting #Mystery">
                 <div class="play">▶</div>
               </a>
@@ -1431,8 +1436,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'br22Nx3bKYU')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('br22Nx3bKYU')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=br22Nx3bKYU" data-video-id="br22Nx3bKYU" aria-label="Play video: Epic #Fear Rising: The Presence Was Real #Paranormal">
                 <img loading="lazy" src="https://img.youtube.com/vi/br22Nx3bKYU/mqdefault.jpg" alt="Epic #Fear Rising: The Presence Was Real #Paranormal">
                 <div class="play">▶</div>
               </a>
@@ -1447,8 +1452,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'83NIGGgCB7o')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('83NIGGgCB7o')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=83NIGGgCB7o" data-video-id="83NIGGgCB7o" aria-label="Play video: Epic #3AM Horror: He Shouldn’t Have Looked Back">
                 <img loading="lazy" src="https://img.youtube.com/vi/83NIGGgCB7o/mqdefault.jpg" alt="Epic #3AM Horror: He Shouldn’t Have Looked Back">
                 <div class="play">▶</div>
               </a>
@@ -1463,8 +1468,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'M9hIVn1L1Cg')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('M9hIVn1L1Cg')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=M9hIVn1L1Cg" data-video-id="M9hIVn1L1Cg" aria-label="Play video: Epic #Creepy Encounter: She Wasn’t Alone">
                 <img loading="lazy" src="https://img.youtube.com/vi/M9hIVn1L1Cg/mqdefault.jpg" alt="Epic #Creepy Encounter: She Wasn’t Alone">
                 <div class="play">▶</div>
               </a>
@@ -1479,8 +1484,8 @@
           </article>
 
           <article class="card">
-            <div class="thumb" onmouseenter="previewVideo(this,'kWhtG0XC8nI')" onmouseleave="stopPreview(this)">
-              <a href="javascript:void(0)" onclick="playVideo('kWhtG0XC8nI')">
+            <div class="thumb">
+              <a class="video-open" href="https://www.youtube.com/watch?v=kWhtG0XC8nI" data-video-id="kWhtG0XC8nI" aria-label="Play video: Epic #Shadow Attack: The Lights Went Out">
                 <img loading="lazy" src="https://img.youtube.com/vi/kWhtG0XC8nI/mqdefault.jpg" alt="Epic #Shadow Attack: The Lights Went Out">
                 <div class="play">▶</div>
               </a>
@@ -1494,7 +1499,7 @@
             </div>
           </article>
         </div>
-        <button class="scroll-btn scroll-right" onclick="scrollVideos(this, 400)">❯</button>
+        <button type="button" class="scroll-btn scroll-right" aria-label="Scroll videos right" onclick="scrollVideos(this, 400)">❯</button>
       </div>
     </div>
   </section>
@@ -1516,44 +1521,56 @@
   </footer>
 
   <script>
-    function previewVideo(element, videoId) {
-      if (element.querySelector("iframe")) return;
+    let lastVideoTrigger = null;
 
-      const iframe = document.createElement("iframe");
-      iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0";
-      iframe.allow = "autoplay; encrypted-media";
-      iframe.setAttribute("loading", "lazy");
-      element.appendChild(iframe);
-    }
-
-    function stopPreview(element) {
-      const iframe = element.querySelector("iframe");
-      if (iframe) iframe.remove();
-    }
-
-    function playVideo(videoId) {
+    function playVideo(videoId, trigger) {
+      if (!/^[A-Za-z0-9_-]{11}$/.test(videoId)) return;
       const playerSection = document.getElementById("video-player");
       const mainVideo = document.getElementById("main-video");
-
+      lastVideoTrigger = trigger || document.activeElement;
       mainVideo.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&rel=0";
-      playerSection.style.display = "block";
-      playerSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      playerSection.hidden = false;
+      playerSection.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+        block: "start"
+      });
+      playerSection.querySelector(".close-video").focus({ preventScroll: true });
     }
 
     function closeVideo() {
       const playerSection = document.getElementById("video-player");
       const mainVideo = document.getElementById("main-video");
-
-      mainVideo.src = "";
-      playerSection.style.display = "none";
+      mainVideo.removeAttribute("src");
+      playerSection.hidden = true;
+      if (lastVideoTrigger && lastVideoTrigger.isConnected) lastVideoTrigger.focus();
+      lastVideoTrigger = null;
     }
 
     function scrollVideos(button, amount) {
       const container = button.parentElement.querySelector(".videos-grid");
       if (container) {
-        container.scrollBy({ left: amount, behavior: "smooth" });
+        container.scrollBy({
+          left: amount,
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+        });
       }
     }
+
+    document.addEventListener("click", function(event) {
+      if (!(event.target instanceof Element)) return;
+      const link = event.target.closest("a.video-open");
+      if (!link || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const videoId = link.dataset.videoId;
+      if (!/^[A-Za-z0-9_-]{11}$/.test(videoId || "")) return;
+      event.preventDefault();
+      playVideo(videoId, link);
+    });
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape" && !document.getElementById("video-player").hidden) {
+        closeVideo();
+      }
+    });
   </script>
 
 </body>
