@@ -30,6 +30,8 @@
     .top-links a { margin: 0 10px; color: #ccc; font-size: 14px; }
     .top-links a:hover { color: #fff; }
     .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+    .blog-heading { color: #fff; font-size: clamp(28px,5vw,42px); margin: 0 0 10px; }
+    .blog-intro { color: #c8c8c8; margin: 0 0 32px; line-height: 1.6; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
     .card { background: #111; padding: 20px; border-radius: 12px; transition: 0.3s; }
     .card:hover { transform: translateY(-5px); background: #1a1a1a; }
@@ -45,6 +47,8 @@
     footer a { color: #bbb; margin: 0 8px; }
     footer a:hover { color: #fff; }
   </style>
+  <link rel="stylesheet" href="site-consent.css">
+  <script defer src="site-consent.js"></script>
 </head>
 
 <body>
@@ -57,21 +61,23 @@
     <a href="privacy.html">Privacy</a>
   </div>
 
-  <div class="container">
+  <main class="container">
+    <h1 class="blog-heading">Dark Echo Horror Stories &amp; Articles</h1>
+    <p class="blog-intro">Explore eerie fiction, suspenseful storytelling, and paranormal-inspired scenes.</p>
     <div class="grid">
-      <a href="creepiest-things-caught-on-camera.html"><div class="card"><h2>Creepiest Things Caught on Camera</h2><p>Explore terrifying paranormal moments captured on camera and unexplained horror footage.</p></div></a>
-      <a href="top-10-scariest-moments.html"><div class="card"><h2>Top 10 Scariest Moments Ever Recorded</h2><p>A collection of the most terrifying paranormal events ever captured.</p></div></a>
-      <a href="true-horror-stories.html"><div class="card"><h2>True Horror Stories That Will Haunt You</h2><p>Explore terrifying real-life horror encounters and unexplained paranormal events.</p></div></a>
+      <a href="creepiest-things-caught-on-camera.html"><div class="card"><h2>Creepiest Things Caught on Camera</h2><p>Explore eerie camera-inspired horror scenes and mysterious fictional encounters.</p></div></a>
+      <a href="top-10-scariest-moments.html"><div class="card"><h2>Top 10 Scariest Moments Ever Recorded</h2><p>Ten dramatic horror scenarios involving shadows, strange recordings, and the unexplained.</p></div></a>
+      <a href="true-horror-stories.html"><div class="card"><h2>True Horror Stories That Will Haunt You</h2><p>Read dramatized ghost stories and unsettling tales of unexplained encounters.</p></div></a>
     </div>
 
     <section>
       <div class="subscribe-box">
-        <h2 class="section-title">New Horror Article</h2>
-        <p class="section-subtitle">Read our latest horror article: a chilling collection of paranormal stories and unexplained events.</p>
+        <h2 class="section-title">Featured Horror Article</h2>
+        <p class="section-subtitle">Explore chilling paranormal-inspired tales and mysterious fictional encounters.</p>
         <a class="btn" href="true-horror-stories.html">Read the Article</a>
       </div>
     </section>
-  </div>
+  </main>
 
   <footer>© 2026 Dark Echo Blog · <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy</a></footer>
 </body>
