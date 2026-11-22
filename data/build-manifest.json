@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-22.1",
+  "version": "2026-11-22.2",
   "catalogUpdated": "2026-11-22",
   "generated": [
     {
@@ -480,6 +480,26 @@
     {
       "path": "watch/zC8KfaunjDE.html",
       "index": true,
+      "modified": "2026-11-22"
+    },
+    {
+      "path": "series.html",
+      "index": true,
+      "modified": "2026-11-22"
+    },
+    {
+      "path": "series/inside-the-wall.html",
+      "index": true,
+      "modified": "2026-11-22"
+    },
+    {
+      "path": "series/the-reflection.html",
+      "index": true,
+      "modified": "2026-11-22"
+    },
+    {
+      "path": "watch-later.html",
+      "index": false,
       "modified": "2026-11-22"
     },
     {

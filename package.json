@@ -1,1 +1,10 @@
-{"name":"darkecho-site","private":true,"version":"2.0.0","scripts":{"dev":"python3 scripts/serve.py","build":"python3 scripts/build.py","test":"python3 scripts/check.py"}}
+{
+  "name": "darkecho-site",
+  "private": true,
+  "version": "2.1.0",
+  "scripts": {
+    "dev": "python3 scripts/serve.py",
+    "build": "python3 scripts/build.py",
+    "test": "python3 scripts/check.py && python3 scripts/test_catalog.py && node --test scripts/test-browser-helpers.cjs"
+  }
+}

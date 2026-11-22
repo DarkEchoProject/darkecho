@@ -5,10 +5,11 @@ from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
 from collections import Counter
 import base64,hashlib,json,re,xml.etree.ElementTree as ET
+from catalog import validate_catalog
 
 ROOT=Path(__file__).resolve().parents[1]
-BASE='https://darkechoproject.github.io/darkecho/'
-PREFIX='/darkecho/'
+BASE=json.loads((ROOT/'data/site.json').read_text())['baseUrl']
+PREFIX=urlsplit(BASE).path
 catalog=json.loads((ROOT/'data/videos.json').read_text(encoding='utf-8'))
 videos={v['id']:v for v in catalog['videos']}
 manifest=json.loads((ROOT/'data/build-manifest.json').read_text())['generated']
@@ -58,11 +59,23 @@ for item in manifest:
    require('/embed/'+id+'?' in schema.get('embedUrl',''),f'{path}: schema embed points to another video')
    require(any(t=='iframe' and '/embed/'+id+'?' in a.get('src','') for t,a in doc.nodes),f'{path}: no directly rendered watch iframe')
  for tag,a in doc.nodes:
+  for attr in ['aria-controls','aria-labelledby','aria-describedby']:
+   for target in a.get(attr,'').split():require(target in doc.ids,f'{path}: {attr} references missing ID {target}')
   require(not any(key.startswith('on') for key in a),f'{path}: inline event handler disallowed by CSP')
   require('style' not in a,f'{path}: inline style disallowed by CSP')
   if tag=='a' and a.get('target')=='_blank':require({'noopener','noreferrer'}<=set(a.get('rel','').split()),f'{path}: unsafe external window link')
   if tag=='img':
    require('alt' in a and bool(a.get('width')) and bool(a.get('height')),f'{path}: missing image dimensions or alternative text')
+   for candidate in a.get('srcset','').split(','):
+    if not candidate.strip():continue
+    src=candidate.strip().split()[0]
+    require(src.startswith(PREFIX) and (ROOT/unquote(urlsplit(src).path[len(PREFIX):])).is_file(),f'{path}: missing responsive image {src}')
+  if 'data-save-video' in a:
+   v=videos.get(a['data-save-video'])
+   require(v is not None and a.get('data-save-title')==v['title'],f'{path}: saved-video identity mismatch')
+   require('hidden' in a and a.get('aria-pressed')=='false',f'{path}: save control must be progressively enhanced')
+  if 'data-copy-link' in a:require(a['data-copy-link']==expected and 'hidden' in a,f'{path}: incorrect copy link or no-JS control')
+  if 'data-consent-manage' in a or 'menu-toggle' in a.get('class','').split():require('hidden' in a,f'{path}: inert no-JS control')
   if tag=='a' and 'data-video-id' in a:
    card_count+=1;id=a['data-video-id'];v=videos.get(id)
    require(v is not None,f'{path}: unknown video ID {id}')
@@ -78,9 +91,15 @@ for item in manifest:
    else:continue
    link_count+=1
    require((ROOT/targetpath).is_file(),f'{path}: missing target {value}')
+   if u.query and tag in ['link','script'] and (ROOT/targetpath).is_file():
+    digest=hashlib.sha256((ROOT/targetpath).read_bytes()).hexdigest()[:12]
+    require(u.query=='v='+digest,f'{path}: stale asset version {value}')
    if u.fragment and targetpath in docs:require(u.fragment in docs[targetpath].ids,f'{path}: missing fragment {value}')
 
-require(len(videos)==89,'Unexpected loss or duplication of catalog videos')
+try:validate_catalog(catalog)
+except (ValueError,KeyError,TypeError) as error:errors.append('Catalog: '+str(error))
+require(len(videos)==len(catalog['videos']),'Duplicate catalog video IDs')
+require(len(docs)==len(manifest),'Duplicate generated page paths')
 for id,v in videos.items():
  require(re.fullmatch('[A-Za-z0-9_-]{11}',id) is not None,'Invalid video ID')
  require(v['format']==('clip' if v['seconds']<=180 else 'video'),f'Wrong length category {id}')
@@ -95,6 +114,26 @@ require(set(url_values)==expected_urls and len(url_values)==len(expected_urls),'
 require('404.html' not in ' '.join(url_values) and not any('earn-with-nasser' in x for x in url_values),'Nonindexable pages leaked into sitemap')
 for article in json.loads((ROOT/'data/articles.json').read_text()):
  doc=docs[article['file']];schema=json.loads(doc.schemas[0]);require(schema.get('genre')=='Horror fiction',f'{article["file"]}: fiction label missing')
+ require(schema.get('dateModified')==article['updated'],f'{article["file"]}: incorrect modification date')
+
+for series in json.loads((ROOT/'data/series.json').read_text()):
+ path='series/'+series['slug']+'.html';require(path in docs,'Missing series page '+path)
+ if path not in docs:continue
+ schema=json.loads(docs[path].schemas[0]);items=schema.get('mainEntity',{}).get('itemListElement',[])
+ require([x.get('url') for x in items]==[BASE+'watch/'+id+'.html' for id in series['parts']],path+': chapter order mismatch')
+ require([x.get('position') for x in items]==list(range(1,len(series['parts'])+1)),path+': incorrect chapter positions')
+ for id in series['parts']+[series['complete']]:
+  require(id in videos,'Series references missing video '+id)
+  current=[a.get('href') for tag,a in docs['watch/'+id+'.html'].nodes if a.get('aria-current')=='page' and a.get('href','').startswith(PREFIX+'watch/')]
+  require(current==[PREFIX+'watch/'+id+'.html'],'Series navigation has an incorrect current chapter '+id)
+saved=docs.get('watch-later.html')
+require(saved is not None,'Missing saved-video page')
+if saved:require({a['data-saved-template'] for t,a in saved.nodes if 'data-saved-template' in a}==set(videos),'Watch-later templates differ from catalog')
+
+for css in (ROOT/'assets').glob('*.css'):
+ for target in re.findall(r'url\([\'\"]?([^\)\'\"]+)',css.read_text()):
+  if target.startswith('data:'):continue
+  require((css.parent/target).is_file(),f'{css.name}: missing CSS resource {target}')
 
 # Validate the two curated home sections against the canonical metadata order.
 home=(ROOT/'index.html').read_text()
