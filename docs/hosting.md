@@ -27,4 +27,4 @@ GitHub Pages controls HTTP response headers. A meta policy cannot supply `frame-
 
 ## Privacy and measurement
 
-The prior `darkecho-analytics-choice-v1` preference is retained. Rejection prevents loading Google Analytics; custom interaction events are sent only after consent. Revocation disables the property, removes the known site Analytics cookies, and reloads to remove the active tag. Video watch pages load a YouTube frame independently of this choice, as explained in the privacy policy.
+The prior `darkecho-analytics-choice-v1` preference is retained. Rejection prevents loading Google Analytics; custom interaction events are sent only after consent. Revocation disables the property, removes the known site Analytics cookies, and reloads to remove the active tag. The change is synchronized to other open site tabs. Video watch pages load a YouTube frame independently of this choice, as explained in the privacy policy.

@@ -23,5 +23,13 @@
   panel.addEventListener('click',event=>{const button=event.target.closest('button[data-choice]');if(!button)return;const wasAllowed=decision==='yes';decision=button.dataset.choice;try{localStorage.setItem(key,decision);}catch(_){}panel.hidden=true;if(decision==='yes')start();else if(wasAllowed&&loaded){window['ga-disable-'+measurement]=true;clearCookies();location.reload();return;}if(previousFocus?.isConnected)previousFocus.focus();});
   document.addEventListener('click',event=>{const button=event.target.closest?.('[data-consent-manage],#de-privacy-manage');if(!button)return;previousFocus=button;panel.hidden=false;panel.querySelector('button').focus();});
   document.querySelectorAll('[data-consent-manage],#de-privacy-manage').forEach(button=>{button.setAttribute('aria-controls',panel.id);button.hidden=false;});
+  window.addEventListener('storage',event=>{
+    if(event.key!==key&&event.key!==null)return;
+    const value=event.key===null?null:event.newValue,next=value==='yes'||value==='no'?value:null;
+    if(next===decision)return;
+    const wasAllowed=decision==='yes';decision=next;panel.hidden=decision!==null;
+    if(decision==='yes')start();
+    else if(wasAllowed&&loaded){window['ga-disable-'+measurement]=true;clearCookies();location.reload();}
+  });
   if(decision==='yes')start();
 })();
