@@ -1,3 +1,4 @@
+# Project-path copy. Host robots rules must be served from /robots.txt.
 User-agent: *
 Allow: /
 

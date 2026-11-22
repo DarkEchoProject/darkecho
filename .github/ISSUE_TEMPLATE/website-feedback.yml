@@ -1,0 +1,23 @@
+name: Website feedback
+description: Report a page, video link, playback problem, or website suggestion.
+title: "Website feedback: "
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page or video
+      description: Paste the exact page link or video title.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include what you clicked and what you expected to see.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      placeholder: For example, Chrome on Android or Firefox on Windows.
