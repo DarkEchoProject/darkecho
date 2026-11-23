@@ -116,6 +116,24 @@ for article in json.loads((ROOT/'data/articles.json').read_text()):
  doc=docs[article['file']];schema=json.loads(doc.schemas[0]);require(schema.get('genre')=='Horror fiction',f'{article["file"]}: fiction label missing')
  require(schema.get('dateModified')==article['updated'],f'{article["file"]}: incorrect modification date')
 
+# Research files retain their external publisher identity and cited evidence.
+for case in json.loads((ROOT/'data/mysteries.json').read_text()):
+ path='mysteries/'+case['slug']+'.html'
+ require(path in docs,'Missing mystery file '+path)
+ if path not in docs:continue
+ doc=docs[path];schema=json.loads(doc.schemas[0])
+ require(schema.get('@type')=='Article' and schema.get('articleSection')=='Internet mystery analysis',path+': research file mislabelled')
+ require(schema.get('genre')!='Horror fiction',path+': source check labelled as invented fiction')
+ require(schema.get('dateModified')==case['updated'],path+': incorrect source-check date')
+ source_urls=[source['url'] for source in case['sources']]
+ require(schema.get('citation')==source_urls,path+': structured citations differ from source record')
+ hrefs={a.get('href') for tag,a in doc.nodes if tag=='a'}
+ require(set(source_urls)<=hrefs,path+': a source link is missing')
+ require({'source-'+source['id'] for source in case['sources']}<=set(doc.ids),path+': missing cited source anchors')
+ frames=[a.get('src') for tag,a in doc.nodes if tag=='iframe']
+ require(frames==['https://www.youtube-nocookie.com/embed/'+case['video']['id']+'?rel=0'],path+': incorrect publisher video or unexpected player')
+ require(schema.get('about',{}).get('creator',{}).get('name')==case['video']['creator'],path+': publisher attribution mismatch')
+
 for series in json.loads((ROOT/'data/series.json').read_text()):
  path='series/'+series['slug']+'.html';require(path in docs,'Missing series page '+path)
  if path not in docs:continue

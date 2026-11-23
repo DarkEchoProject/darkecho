@@ -1,0 +1,154 @@
+[
+  {
+    "slug": "11b-x-1371",
+    "number": "001",
+    "title": "11B-X-1371: Was It Really a Dark Web Video?",
+    "deck": "A masked figure, a mailed disc, and a creator who stepped forward. Follow the public evidence behind an unsettling internet puzzle.",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "checked": "2026-11-23",
+    "verdict": "The public record supports an authored art puzzle. A dark-web origin is not established by the sources reviewed here.",
+    "video": {
+      "id": "quyXS4a0JGQ",
+      "title": "11B X 1371",
+      "creator": "Parker Wright",
+      "creatorUrl": "https://www.youtube.com/@parkerwarnerwright",
+      "uploadDate": "2015-09-30",
+      "seconds": 120,
+      "contentNote": "Flashing imagery, unsettling themes, and abrasive audio. Playback is optional; you can read the complete source check without watching."
+    },
+    "sources": [
+      {
+        "id": "upload",
+        "label": "Parker Wright — public YouTube upload",
+        "url": "https://www.youtube.com/watch?v=quyXS4a0JGQ",
+        "date": "2015-09-30",
+        "kind": "Publisher record",
+        "note": "The named channel, upload date, and original player. This dates this upload, not every earlier copy."
+      },
+      {
+        "id": "recipient",
+        "label": "GadgetZZ — the recipient's original account",
+        "url": "https://gadgetzz.com/2015/10/12/this-creepy-puzzle-arrived-in-our-mail/",
+        "date": "2015-10-12",
+        "kind": "First-hand recipient account",
+        "note": "The recipient describes a disc mailed from Poland and asks readers to examine its puzzle. The page includes later updates."
+      },
+      {
+        "id": "attribution",
+        "label": "GadgetZZ — examining the creator's claim",
+        "url": "https://gadgetzz.com/2015/12/17/is-this-the-creator-of-11bx1371/",
+        "date": "2015-12-17",
+        "kind": "Contemporary follow-up",
+        "note": "Reports supporting details and remaining uncertainties rather than treating every offered item as independently verified."
+      },
+      {
+        "id": "interview",
+        "label": "The Daily Dot — interview with Parker Warner Wright",
+        "url": "https://dailydot.com/11b-x-1371-11b-3-1369-parker-wright",
+        "date": "2016-01-19",
+        "kind": "Interview and original reporting",
+        "note": "Wright describes the project as art and gives his account of its initial distribution. Those statements are attributed to him."
+      }
+    ],
+    "evidence": [
+      {
+        "claim": "A public copy exists under the creator's name",
+        "status": "Documented",
+        "detail": "The linked Parker Wright upload is dated September 30, 2015. The player below uses that upload.",
+        "sources": ["upload"]
+      },
+      {
+        "claim": "A technology site received a physical disc",
+        "status": "First-hand account",
+        "detail": "GadgetZZ published its recipient account on October 12, 2015. Publication date and delivery date are different claims.",
+        "sources": ["recipient"]
+      },
+      {
+        "claim": "Parker Warner Wright described the video as his art",
+        "status": "Attributed and reported",
+        "detail": "Contemporary follow-up and an interview identify the creator and discuss the work. Attribution does not settle the meaning of every clue.",
+        "sources": ["attribution", "interview"]
+      },
+      {
+        "claim": "The video originated on the dark web",
+        "status": "Not established",
+        "detail": "These sources do not establish a dated original onion-site publication. This is a limit of the reviewed evidence, not proof that no mirror ever existed.",
+        "sources": ["upload", "recipient", "interview"]
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2015-09-30",
+        "label": "A public upload",
+        "text": "The linked Parker Wright video is published on YouTube.",
+        "sources": ["upload"]
+      },
+      {
+        "date": "2015-10-12",
+        "label": "The mailed disc is reported",
+        "text": "GadgetZZ publishes its account and invites readers to investigate the puzzle.",
+        "sources": ["recipient"]
+      },
+      {
+        "date": "2015-12-17",
+        "label": "The creator claim is examined",
+        "text": "GadgetZZ reviews supporting details, including props and control of the public upload.",
+        "sources": ["attribution"]
+      },
+      {
+        "date": "2016-01-19",
+        "label": "The creator is interviewed",
+        "text": "The Daily Dot publishes its conversation with Wright about the art project and its distribution.",
+        "sources": ["interview"]
+      }
+    ],
+    "sections": [
+      {
+        "id": "the-hook",
+        "title": "A frightening image is only the beginning",
+        "paragraphs": [
+          "A figure in a beaked mask, a rough interior, and a flashing light: the details described in the original GadgetZZ account offer the ingredients of a memorable internet mystery. The site treated the disc as a puzzle and invited readers to help investigate it. That invitation matters. The story arrived as something to examine, not as an established account of a crime.",
+          "Our question is narrower than whether the video feels disturbing: what evidence supports its supposed place of origin? A frightening style cannot answer that. A creator, a recipient, a date, or an original publication can give us something to check. Start with those records before letting the atmosphere decide the explanation."
+        ],
+        "sources": ["recipient"]
+      },
+      {
+        "id": "public-trail",
+        "title": "The trail is visible on the ordinary web",
+        "paragraphs": [
+          "The Parker Wright YouTube upload linked here is dated September 30, 2015. It is a public publisher record, not a copy uploaded by Dark Echo. This date belongs to that particular upload. Calling it the first appearance anywhere would require evidence about every earlier distribution route, which a single upload page cannot provide.",
+          "The later interview adds another account: Wright told The Daily Dot that he had initially circulated the work on May 9, 2015, using physical discs in Poland and a post on 4chan. This is the creator's reported account, not a date independently recovered by this website. It supplies a concrete alternative to an unsupported story about a secret original server."
+        ],
+        "sources": ["upload", "interview"]
+      },
+      {
+        "id": "creator",
+        "title": "What changed when a creator stepped forward?",
+        "paragraphs": [
+          "GadgetZZ's December follow-up considered several details offered in support of Wright's authorship. They included the mask and gloves, technical information about the light, and a change to the description of the existing YouTube upload. The report also identified items it had not verified. That distinction is useful: several pieces can support an attribution without making every accompanying statement certain.",
+          "In the January interview, Wright discussed the videos as art and described plans for a larger project. That provides context for an intentionally constructed puzzle. It does not oblige a viewer to accept every proposed interpretation of its symbols. Knowing who made a work and knowing exactly what its maker intended are separate questions."
+        ],
+        "sources": ["attribution", "interview"]
+      },
+      {
+        "id": "source-check",
+        "title": "What would establish a dark-web origin?",
+        "paragraphs": [
+          "For this file, a useful origin record would identify a specific original publication, provide a date that can be checked, and explain how that publication connects to the copy being discussed. A caption on a later compilation is not that record. Nor does an unknown sender automatically establish where a work was first published.",
+          "The sources reviewed here document a public upload, a recipient's account, and a creator discussing his work. They do not establish an original onion-site release. We therefore leave that origin claim unverified. This conclusion is deliberately limited: it says what these records support, without claiming to prove where every copy has ever traveled."
+        ],
+        "sources": ["upload", "recipient", "interview"]
+      },
+      {
+        "id": "viewing",
+        "title": "Watch, then separate the questions",
+        "paragraphs": [
+          "If you choose to play the video, begin with a low volume and pay attention to the viewing note above the player. You can skip playback and still follow the evidence on this page. The linked historical reports discuss disturbing material, so exploring every external link is not necessary to understand the source check.",
+          "Afterward, ask three different questions: what did the upload show, what do the records establish, and what are you interpreting? Keeping them separate leaves room for an unsettling experience and an honest explanation. For invented encounters without a real-world origin claim, continue to the Dark Echo reading room below."
+        ],
+        "sources": []
+      }
+    ]
+  }
+]

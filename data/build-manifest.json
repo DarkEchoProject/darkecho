@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-23.2",
+  "version": "2026-11-23.3",
   "catalogUpdated": "2026-11-22",
   "generated": [
     {
@@ -66,6 +66,16 @@
       "path": "true-horror-stories.html",
       "index": true,
       "modified": "2026-11-22"
+    },
+    {
+      "path": "mysteries.html",
+      "index": true,
+      "modified": "2026-11-23"
+    },
+    {
+      "path": "mysteries/11b-x-1371.html",
+      "index": true,
+      "modified": "2026-11-23"
     },
     {
       "path": "watch/--TBJ8EJ1HM.html",
