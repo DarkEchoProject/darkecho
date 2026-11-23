@@ -48,3 +48,9 @@ See `docs/hosting.md` for host-root robots and HTTP-header limitations, and `doc
 - Content and ordinary links are server-rendered. Menus remain visible without JavaScript; enhanced controls are hidden until initialized. All archive cards remain available in the HTML.
 
 When content changes, maintain `contentUpdatedAt` and `revision` in `data/site.json`. Update an article's own `updated` date only when that article changes. Thumbnail view counts remain dated to `data/videos.json` rather than presented as live totals.
+
+## Written fiction
+
+The reading room contains complete short stories and the earlier flash-fiction collections. Add a dated entry to `data/articles.json`; use `standalone: true` for one complete story, a short `category` for its card, and titled `sections` with plain-text paragraphs. The `image` field references an existing video-catalog image for atmosphere, and `related` links to those videos without presenting the prose as their transcript or adaptation.
+
+The build sorts stories by publication date (preserving source order within a date), shows the newest three on the home page, calculates reading times at 200 words per minute, and connects each story to the next three available stories. Story URLs, dates, and sitemap entries are generated from the same source. The November 23, 2026 launch adds six complete stories, each approximately 1,000–1,200 words. There is no scheduled publishing job or advertising integration; adding either requires its own configuration.
