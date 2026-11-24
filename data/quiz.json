@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "updated": "2026-11-25",
+  "questions": [
+    {
+      "id": "backrooms-date",
+      "case": "backrooms-found-footage",
+      "section": "two-dates",
+      "answer": false,
+      "en": {
+        "claim": "The 1996 date in the Backrooms description is the date of its YouTube upload.",
+        "explanation": "The reviewed upload is dated January 7, 2022. September 23, 1996 belongs to the work’s presentation. The two dates support different statements."
+      },
+      "ar": {
+        "claim": "تاريخ 1996 في وصف Backrooms هو تاريخ رفعه على يوتيوب.",
+        "explanation": "تاريخ النسخة التي نراجعها هو 7 يناير 2022. أما 23 سبتمبر 1996 فهو ضمن تقديم العمل الخيالي. لا يشير التاريخان إلى الشيء نفسه."
+      }
+    },
+    {
+      "id": "house-publisher",
+      "case": "this-house-has-people-in-it",
+      "section": "publisher",
+      "answer": true,
+      "en": {
+        "claim": "Adult Swim is an identifiable publisher of This House Has People in It.",
+        "explanation": "Adult Swim hosts the reviewed upload and lists the work in its Infomercials archive. That is a publication record, rather than an anonymous claim attached to a repost."
+      },
+      "ar": {
+        "claim": "Adult Swim ناشر معروف لفيديو This House Has People in It.",
+        "explanation": "تنشر Adult Swim النسخة التي نراجعها، وتدرج العمل ضمن أرشيف Infomercials. هذا سجل نشر يمكن الرجوع إليه، بخلاف تعليق مجهول على نسخة معاد نشرها."
+      }
+    },
+    {
+      "id": "house-account",
+      "case": "this-house-has-people-in-it",
+      "section": "evidence",
+      "answer": false,
+      "en": {
+        "claim": "An account number in the description proves the footage is a genuine surveillance leak.",
+        "explanation": "A number can be part of a fictional presentation. The publisher and production context identify a constructed horror work; the number does not independently authenticate a real household incident."
+      },
+      "ar": {
+        "claim": "وجود رقم حساب في الوصف يثبت أن الفيديو تسريب حقيقي من كاميرات مراقبة.",
+        "explanation": "يمكن أن يكون الرقم جزءًا من عرض خيالي. يضع الناشر وسياق الإنتاج هذا الفيديو ضمن عمل رعب مصمّم؛ ولا يثبت الرقم وحده وقوع حادثة حقيقية في منزل."
+      }
+    },
+    {
+      "id": "11b-creator",
+      "case": "11b-x-1371",
+      "section": "creator",
+      "answer": true,
+      "en": {
+        "claim": "A creator publicly discussed 11B-X-1371 as an art project.",
+        "explanation": "The reviewed follow-up and interview identify Parker Warner Wright and discuss the work as art. Establishing that attribution does not solve the meaning of every symbol."
+      },
+      "ar": {
+        "claim": "تحدث صانع معروف علنًا عن 11B-X-1371 بوصفه مشروعًا فنيًا.",
+        "explanation": "تتناول المتابعة والمقابلة اللتان نراجعهما باركر وارنر رايت والعمل بوصفه فنًا. إثبات هذه النسبة لا يحسم معنى كل رمز داخل الفيديو."
+      }
+    },
+    {
+      "id": "dark-web-caption",
+      "case": "11b-x-1371",
+      "section": "source-check",
+      "answer": false,
+      "en": {
+        "claim": "A caption saying “from the dark web” is enough to establish an onion-site origin.",
+        "explanation": "An origin claim needs a traceable record connecting the relevant publication, date and copy. A later caption alone does not supply that record."
+      },
+      "ar": {
+        "claim": "تكفي عبارة «من الدارك ويب» لإثبات أن أصل الفيديو موقع onion.",
+        "explanation": "يحتاج ادعاء الأصل إلى سجل يمكن تتبعه يربط النسخة بالنشر والتاريخ المقصودين. لا يقدم تعليق أُضيف لاحقًا هذا الدليل وحده."
+      }
+    }
+  ]
+}

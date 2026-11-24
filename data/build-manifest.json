@@ -1,26 +1,26 @@
 {
-  "version": "2026-11-24.1",
+  "version": "2026-11-25.1",
   "catalogUpdated": "2026-11-22",
   "generated": [
     {
       "path": "index.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "more-videos.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "earn-with-nasser.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "blog.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "stories/the-floor-between-four-and-five.html",
@@ -70,507 +70,557 @@
     {
       "path": "mysteries.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "mysteries/this-house-has-people-in-it.html",
       "index": true,
-      "modified": "2026-11-24"
+      "modified": "2026-11-25"
+    },
+    {
+      "path": "ar/mysteries/this-house-has-people-in-it.html",
+      "index": true,
+      "modified": "2026-11-25"
     },
     {
       "path": "mysteries/backrooms-found-footage.html",
       "index": true,
-      "modified": "2026-11-24"
+      "modified": "2026-11-25"
+    },
+    {
+      "path": "ar/mysteries/backrooms-found-footage.html",
+      "index": true,
+      "modified": "2026-11-25"
     },
     {
       "path": "mysteries/11b-x-1371.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
+    },
+    {
+      "path": "ar/mysteries/11b-x-1371.html",
+      "index": true,
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/--TBJ8EJ1HM.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/-2VGaxeq8zA.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/-LZY6crClR0.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/0YfcJeIHd9A.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/2nCszNsRBsM.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/42erdKx_N7I.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/4_3H1pjPu8Q.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/4e_pa7POCEk.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/7LuK1caeanw.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/7M6zdIySnEs.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/7YwMMB5Cc8Y.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/83NIGGgCB7o.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/87XKdBJIkAw.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/8PfpHxgsjVA.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/8qQxgZ0_axw.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/9-eUUTSE-5w.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/9baS1itvwu8.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/9zhcaXx8LCo.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/BOHnGpaQAkY.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/Cmmnq0NCu3k.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/ETVOJC6vYts.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/Fw7_pMoEcVA.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/G3XHAMBy8D0.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/G7WpKyIxQu0.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/HOeNaXWg8f0.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/I_xC9SUTWnY.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/IsCfJS52nOA.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/J5vfvbEPiCY.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/Lbf0j1pBSdY.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/LxWWWepq9zc.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/M9hIVn1L1Cg.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/MH29ANEKVPY.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/MuGz3YKRYNk.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/NqRuB-Pz7fo.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/ObW6vSLAtaw.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/PeDgnvKeHYs.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/QEy_ACgH6Zg.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/QbnpYS3NJ-E.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/R3lPH4xyXaI.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/R_58nGWFVos.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/S8-8GRXz27g.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/SX8m_2hCqmI.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/SaUl2if8YfI.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/Tp8nJznNSzI.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/TvC8RgpE078.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/UU3ew3Ss2t4.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/VCLlE96FUHc.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/Vf_pYevF5ps.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/VrWjIg1w3aA.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/VtIh2Ey78iQ.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/W1nKmSh0b5w.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/WIAZRtMuYDQ.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/Wfr-FO9OZtI.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/XAteuxj6iJI.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/XF_lLVtNFPU.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/XLxOJPfpdwo.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/Y9KqzvqRlhE.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/YwFdnbYCaR0.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/bEQxz_S_ifE.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/bJo0D6XAOfM.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/br22Nx3bKYU.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/bs3_coxdBKY.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/c7j8EESTQk0.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/cY0FgKS6iPM.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/d-5WMLEz-kc.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/e97B1H2h6ek.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/egZghd9D9WE.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/iF4QBUDNDBw.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/iaHtkAjTxlE.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/jGpYckVP650.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/k1FzFxkUnK0.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/kBNQLEyPBRg.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/kGAShG1Pj8s.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/kWhtG0XC8nI.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/mDuJv9XN8CU.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/mMOdxgcmJis.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/nOskUJEcKgc.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/o2tCyL8vypk.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/pkxsSTwy3LM.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/ppGvfSAikkE.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/pqTXXN1ofms.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/q1Dq7ktTorE.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/qggSBIcvd8M.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/r5Ymx3bTsYE.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/unmOs1LnVt0.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/wO5y7__jyKM.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/wP3dfZ4YpBs.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/wP7FKsIlcOM.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch/zC8KfaunjDE.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "series.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "series/inside-the-wall.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "series/the-reflection.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "watch-later.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "about.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "contact.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "privacy.html",
       "index": true,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
     },
     {
       "path": "404.html",
       "index": false,
-      "modified": "2026-11-23"
+      "modified": "2026-11-25"
+    },
+    {
+      "path": "guides.html",
+      "index": true,
+      "modified": "2026-11-25"
+    },
+    {
+      "path": "guides/what-is-analog-horror.html",
+      "index": true,
+      "modified": "2026-11-25"
+    },
+    {
+      "path": "guides/what-is-an-arg.html",
+      "index": true,
+      "modified": "2026-11-25"
+    },
+    {
+      "path": "guides/check-a-viral-video-source.html",
+      "index": true,
+      "modified": "2026-11-25"
+    },
+    {
+      "path": "ar/index.html",
+      "index": true,
+      "modified": "2026-11-25"
+    },
+    {
+      "path": "quiz.html",
+      "index": true,
+      "modified": "2026-11-25"
+    },
+    {
+      "path": "ar/quiz.html",
+      "index": true,
+      "modified": "2026-11-25"
     }
   ]
 }

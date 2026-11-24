@@ -2,6 +2,7 @@
 (() => {
   'use strict';
   const catalog=window.DarkEchoCatalog;
+  const arabic=document.documentElement.lang==='ar';
   document.documentElement.classList.add('js');
   const menuButton=document.querySelector('.menu-toggle'),menu=document.getElementById('site-nav'),more=document.querySelector('.nav-more');
   if(menuButton)menuButton.hidden=false;
@@ -84,10 +85,26 @@
     button.addEventListener('click',async()=>{
       try{
         if(!navigator.clipboard?.writeText)throw new Error('Clipboard unavailable');
-        await navigator.clipboard.writeText(button.dataset.copyLink);announce('Page link copied.');
+        await navigator.clipboard.writeText(button.dataset.copyLink);announce(arabic?'نُسخ رابط الصفحة.':'Page link copied.');
       }catch(_){
         const fallback=button.closest('[data-share]').querySelector('.copy-fallback');fallback.hidden=false;
-        const input=fallback.querySelector('input');input.focus();input.select();announce('Select and copy the page link shown below.');
+        const input=fallback.querySelector('input');input.focus();input.select();announce(arabic?'حدّد رابط الصفحة الظاهر أدناه وانسخه.':'Select and copy the page link shown below.');
+      }
+    });
+  }
+
+  for(const button of document.querySelectorAll('[data-native-share]')){
+    if(typeof navigator.share!=='function')continue;
+    button.hidden=false;
+    button.addEventListener('click',async()=>{
+      const url=document.querySelector('link[rel=canonical]')?.href;
+      if(!url)return;
+      try{await navigator.share({title:document.title,url});}
+      catch(error){
+        if(error.name==='AbortError')return;
+        const fallback=button.closest('[data-share]').querySelector('.copy-fallback');fallback.hidden=false;
+        const field=fallback.querySelector('input');field.focus();field.select();
+        announce(arabic?'حدّد الرابط وانسخه للمشاركة.':'Select and copy the link to share it.');
       }
     });
   }

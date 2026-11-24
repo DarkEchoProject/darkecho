@@ -1,0 +1,254 @@
+[
+  {
+    "slug": "what-is-analog-horror",
+    "title": "What Is Analog Horror? A Guide to the Uneasy Signal",
+    "category": "Formats and storytelling",
+    "published": "2026-11-25",
+    "updated": "2026-11-25",
+    "deck": "Old broadcasts, institutional voices, and images that seem to have survived the wrong recording. Learn how to read the format without confusing its fiction with evidence.",
+    "answer": "Analog horror uses the appearance and conventions of older recorded media to tell unsettling stories. The aged presentation is a creative device; it is not proof that the events or recording history are real.",
+    "practice": "On your next viewing, write down the voice the work asks you to trust, the first detail that unsettles that trust, and the separate record identifying who published it.",
+    "related": [
+      "backrooms-found-footage",
+      "this-house-has-people-in-it"
+    ],
+    "sources": [
+      {
+        "id": "production",
+        "label": "Kris Straub — making Contingency for Local 58",
+        "url": "https://www.patreon.com/krisstraub/posts/new-horror-on-58-4114380",
+        "kind": "Creator’s production note",
+        "note": "Straub describes creating the aged graphics and recording effects. These are production choices, not evidence of an authentic historical broadcast.",
+        "date": "2016-01-13"
+      },
+      {
+        "id": "interview",
+        "label": "FANGORIA — interview with Local 58 creator Kris Straub",
+        "url": "https://www.fangoria.com/local-58-season-3-shudder-exclusive-kris-straub-interview/",
+        "kind": "Direct creator interview",
+        "note": "Straub discusses broadcast-era uncertainty and encountering programming without a full context. Published November 19; updated November 23, 2026.",
+        "date": "2026-11-19"
+      }
+    ],
+    "sections": [
+      {
+        "id": "a-useful-definition",
+        "title": "Start with the form, not a claim of authenticity",
+        "paragraphs": [
+          "For this guide, think of analog horror as horror that borrows the visual and narrative language of older media. A television announcement, an instructional tape, or an apparently recovered recording can supply a frame for the story. The audience is invited to meet it as a piece of media with a supposed history.",
+          "This working definition is useful because it leaves room for different kinds of stories. The important question is what the presentation asks you to believe or expect. A work can evoke older recording equipment without having been made on that equipment. In his production note for Local 58's Contingency, Kris Straub explains making the aged graphics and effects deliberately."
+        ],
+        "sources": [
+          "production"
+        ]
+      },
+      {
+        "id": "borrowed-authority",
+        "title": "Why a familiar voice can become unsettling",
+        "paragraphs": [
+          "A useful way to read the format is to ask who seems to be speaking. An announcer, a station ident, or an official-looking message can make an instruction feel routine before its content becomes strange. Notice the moment when the form remains calm but the message no longer fits the situation you expected.",
+          "That is an interpretive tool, not a rule that every work must follow. In a direct interview, Straub discusses the uncertainty of encountering television without complete context. You can use that idea as a viewing question: what would this fragment feel like if you did not know who selected it or what came before it?"
+        ],
+        "sources": [
+          "interview"
+        ]
+      },
+      {
+        "id": "texture-and-meaning",
+        "title": "Distortion is a storytelling choice",
+        "paragraphs": [
+          "Try describing the effect before explaining it. Is text difficult to read? Does a voice appear separated from its source? Does a break interrupt information you wanted? These observations are more useful than immediately calling every imperfection a hidden code.",
+          "You can then test a reading. Perhaps the interruption withholds something important, or perhaps the familiar format makes an impossible message more uncomfortable. Keep the interpretation beside the observation that prompted it. When you cannot connect them clearly, leave the explanation provisional rather than adding more lore to make it fit."
+        ],
+        "sources": []
+      },
+      {
+        "id": "nearby-formats",
+        "title": "Analog horror, found footage, and ARGs",
+        "paragraphs": [
+          "These labels ask different questions. Analog horror describes a kind of presentation. Found footage describes the fiction that a recording has been discovered or recovered. An alternate reality game, or ARG, concerns a participatory clue trail. One work may use more than one approach, but a grainy image alone does not establish all three.",
+          "For example, our Backrooms file starts with a particular upload and its dates, while the This House Has People in It file examines a surveillance presentation and its wider fictional context. Read each file on its own terms. Calling both unsettling is reasonable; assuming they share a universe or one explanation would need separate support."
+        ],
+        "sources": []
+      },
+      {
+        "id": "watching-notes",
+        "title": "A small viewing notebook",
+        "paragraphs": [
+          "Use three short columns: the detail, your interpretation, and the source you would need to check it. A date printed within a story belongs in the first column. A theory about when the video was actually made belongs in the second until you have a publication or production record.",
+          "On a second viewing, look for something that might challenge your first explanation. If your reading can accommodate every possible detail without changing, ask what would make it wrong. You do not need to decode every frame to have a satisfying encounter with the work. A precise question is often a better ending than a confident but unsupported answer."
+        ],
+        "sources": []
+      }
+    ]
+  },
+  {
+    "slug": "what-is-an-arg",
+    "title": "What Is an ARG? A Guide to Fictional Clue Trails",
+    "category": "Participatory mysteries",
+    "published": "2026-11-25",
+    "updated": "2026-11-25",
+    "deck": "Understand alternate reality games, keep a useful clue log, and separate a story-world document from evidence about the world outside it.",
+    "answer": "An alternate reality game uses a story and clues that participants investigate, often across different media. It can ask an audience to help make progress; it is not the same thing as augmented reality or simply an unexplained video.",
+    "practice": "Choose one clearly identified fictional project. Record its entry point, one clue and the step connecting it to the next page. Mark anything you cannot trace as a theory rather than silently adding it to the story.",
+    "related": [
+      "this-house-has-people-in-it",
+      "11b-x-1371"
+    ],
+    "sources": [
+      {
+        "id": "whitepaper",
+        "label": "IGDA ARG SIG — 2006 Alternate Reality Games White Paper",
+        "url": "https://www.christydena.com/wp-content/uploads/2007/11/igda-alternaterealitygames-whitepaper-2006.pdf",
+        "kind": "Industry white paper, hosted by contributor Christy Dena",
+        "note": "Historical introduction to ARG design, participation and cross-media storytelling. Used for foundational concepts, not current platform instructions.",
+        "checked": "2026-11-25"
+      },
+      {
+        "id": "creator",
+        "label": "Kris Straub — project listing",
+        "url": "https://www.krisstraub.com/",
+        "kind": "Creator’s project page",
+        "note": "Lists Local58TV as a YouTube and ARG project; the page is a creator attribution record, separate from the fictional television-station presentation.",
+        "checked": "2026-11-25"
+      }
+    ],
+    "sections": [
+      {
+        "id": "definition",
+        "title": "An investigation designed as a story",
+        "paragraphs": [
+          "ARG stands for alternate reality game. It is a form of participatory storytelling that can spread clues and narrative material across websites, recordings, messages and other media. Participants do some of the connecting: finding an entry point, comparing records and following a designed trail. The IGDA ARG SIG's 2006 white paper is a historical introduction to these practices.",
+          "The initials are easy to confuse with augmented reality. That is a different idea. An ARG does not need an overlay on a phone camera to give its audience an investigation. Nor does every mysterious upload become an ARG just because people gather to discuss it. Look for the specific invitation to participate and the material the project actually supplies."
+        ],
+        "sources": [
+          "whitepaper"
+        ]
+      },
+      {
+        "id": "entry-point",
+        "title": "What counts as an entry point?",
+        "paragraphs": [
+          "An entry point is the piece through which you first meet a project: perhaps a video, a public page, or a document linked from the creator's own material. Start by recording that address and the date you encountered it. This gives you a route back when later discoveries make the original context harder to remember.",
+          "Keep the publisher and the fictional speaker separate. A page can be presented as a station archive or company report while being part of a creator's project. For instance, Straub's own project listing identifies Local58TV directly. A creator-side record helps you locate the work without treating every claim made inside its story as a real institutional statement."
+        ],
+        "sources": [
+          "creator"
+        ]
+      },
+      {
+        "id": "a-clue-log",
+        "title": "A clue log that another person can follow",
+        "paragraphs": [
+          "For each step, record what you found, where it appeared and exactly how it led onward. If the step involves changing text, write down the method so another participant can repeat it. Keep a screenshot or a short description for your own notes, but retain the link and context as well. A cropped image can lose the details needed to retrace a step.",
+          "Then add a separate theory column. A connection between two names might be a productive hypothesis, while a link supplied by the project is a different kind of record. Keeping both visible lets the group discuss interpretations without turning the most popular suggestion into an established fact."
+        ],
+        "sources": []
+      },
+      {
+        "id": "a-useful-boundary",
+        "title": "Stay within the project’s invitation",
+        "paragraphs": [
+          "Use the material the identified project makes available. A mystery is not a reason to access someone else's account, expose private details, or involve an unrelated person. When a trail seems to point outside the project, pause and ask what connects that destination to the work. A similar name or visual resemblance is not a sufficient bridge.",
+          "You can also stop without completing the trail. An unsolved clue does not create an obligation to contact a stranger or spend money. These are practical boundaries for a satisfying hobby: the investigation should remain something you choose, with evidence that can be discussed openly among participants."
+        ],
+        "sources": []
+      },
+      {
+        "id": "categories",
+        "title": "A puzzle, a theory, and a record",
+        "paragraphs": [
+          "Our 11B-X-1371 file is a useful place to practise separating a production record from proposed meanings. The This House Has People in It file offers another question: what belongs to the short and what belongs to its companion fiction? Neither exercise requires declaring that every unsettling work uses the same game structure.",
+          "Before presenting a solution, ask whether you can show each step, whether someone else can reproduce it, and which parts depend on interpretation. A clear account of an unfinished investigation can be more useful than a complete-looking answer built from guesses. The goal is to make the trail legible, not to make uncertainty disappear."
+        ],
+        "sources": []
+      }
+    ]
+  },
+  {
+    "slug": "check-a-viral-video-source",
+    "title": "How to Check Where a Viral Video Came From",
+    "category": "Source-checking methods",
+    "published": "2026-11-25",
+    "updated": "2026-11-25",
+    "deck": "A practical workflow for separating the recording, its upload, and the story attached to it—without treating a frightening caption as evidence.",
+    "answer": "Start with one precise claim, identify the earliest relevant publisher record you can find, and compare its date and context with the repost. An upload date does not by itself establish when or where the events were filmed.",
+    "practice": "Write a five-line source note: the claim, the reviewed link, the uploader, the publication date and the remaining uncertainty. If the fifth line is empty, check whether you have silently assumed something.",
+    "related": [
+      "backrooms-found-footage",
+      "11b-x-1371",
+      "this-house-has-people-in-it"
+    ],
+    "sources": [
+      {
+        "id": "handbook",
+        "label": "Verification Handbook — Verifying Video",
+        "url": "https://datajournalism.com/read/handbook/verification-1/verifying-video/5-verifying-video",
+        "kind": "European Journalism Centre handbook",
+        "note": "Historical guide to provenance and corroboration. We use its verification principles rather than reproducing old platform-interface instructions.",
+        "checked": "2026-11-25"
+      },
+      {
+        "id": "upload",
+        "label": "Kane Pixels — The Backrooms (Found Footage)",
+        "url": "https://www.youtube.com/watch?v=H4dGpz6cnHo",
+        "kind": "Publisher record",
+        "note": "A concrete example of an upload date and a separate date used within a fictional presentation.",
+        "date": "2022-01-07"
+      }
+    ],
+    "sections": [
+      {
+        "id": "one-claim",
+        "title": "Choose one claim you can actually test",
+        "paragraphs": [
+          "A caption such as 'the most disturbing video ever found' combines an opinion with an implied origin story. Split it into narrower questions. Who published this copy? Does the linked source identify a maker? Is a claimed recording date supported by something outside the frame? You can investigate those questions without deciding how frightening the clip feels.",
+          "Write the claim down before searching. Otherwise it is easy to find an interesting fact and mistake it for an answer to a different question. Confirming that a video existed by a certain date does not automatically identify its first publication, its filming location or every person shown in it."
+        ],
+        "sources": []
+      },
+      {
+        "id": "find-the-record",
+        "title": "Follow the upload back to a publisher",
+        "paragraphs": [
+          "The Verification Handbook treats source and context as central parts of checking user-generated video. A useful starting point is the account behind the reviewed copy and any link connecting it to an identified publisher. Compare titles and descriptions, and look for an earlier relevant upload or an accompanying production record. Record the exact copy you reviewed.",
+          "An account name is a lead, not a complete conclusion. Ask whether the publisher describes its role: maker, broadcaster, recipient or later compiler. If you can only establish a repost, say so. That limitation is more informative than silently promoting the account into the original creator."
+        ],
+        "sources": [
+          "handbook"
+        ]
+      },
+      {
+        "id": "separate-dates",
+        "title": "Keep three dates apart",
+        "paragraphs": [
+          "For a useful note, separate the date inside the story, the date of the reviewed upload and any established production or recording date. They may coincide, but do not merge them by default. This distinction is particularly important when a work is presented as an old recording.",
+          "The linked Backrooms upload gives a simple example: January 7, 2022 identifies the publication record, while September 23, 1996 appears in its presentation. The two dates can both belong in your notes without establishing that an authentic 1996 tape was recovered. The claim about the tape would need its own support."
+        ],
+        "sources": [
+          "upload"
+        ]
+      },
+      {
+        "id": "test-the-context",
+        "title": "Use comparisons to challenge the story",
+        "paragraphs": [
+          "Look for material that could test the proposed context, rather than collecting copies that repeat it. A creator's production account, an identifiable broadcaster's archive or independent reporting may address different parts of the claim. Treat a repeated caption as a repeated caption until you find a record behind it.",
+          "The handbook describes checking details such as source, date and location with corroborating information. For a horror work, the relevant comparison may be a publisher page or a creator interview rather than an attempt to locate a fictional building. First decide what the evidence can reasonably answer; then look for information that could challenge your preferred explanation."
+        ],
+        "sources": [
+          "handbook"
+        ]
+      },
+      {
+        "id": "write-a-verdict",
+        "title": "A useful conclusion can include uncertainty",
+        "paragraphs": [
+          "Use a conclusion small enough for the evidence you have. You may establish who published a reviewed copy while leaving its earlier circulation unresolved. You may identify a fictional production while leaving the interpretation of its final image open. Those are meaningful results, not failures to solve the whole internet.",
+          "For your final source note, connect each conclusion to its record and give readers a route to check it. If you later find stronger evidence, update the relevant claim and its date. A transparent correction adds more value than keeping an old confident statement because it made a better headline. Our mystery files use this approach by placing the verdict, timeline and sources on the same page."
+        ],
+        "sources": []
+      }
+    ]
+  }
+]

@@ -5,6 +5,6 @@
   "scripts": {
     "dev": "python3 scripts/serve.py",
     "build": "python3 scripts/build.py",
-    "test": "python3 scripts/check.py && python3 scripts/test_catalog.py && node --test scripts/test-browser-helpers.cjs"
+    "test": "python3 scripts/check.py && python3 scripts/test_catalog.py && node --test scripts/test-browser-helpers.cjs scripts/test-quiz.cjs"
   }
 }

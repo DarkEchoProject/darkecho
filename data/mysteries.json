@@ -6,7 +6,7 @@
     "title": "This House Has People in It: The Story Behind the Surveillance Footage",
     "deck": "A family home, a motionless figure on the kitchen floor, and cameras that seem to explain very little. Trace the production behind Adult Swim's unsettling short.",
     "published": "2026-11-24",
-    "updated": "2026-11-24",
+    "updated": "2026-11-25",
     "checked": "2026-11-24",
     "verdict": "This is a constructed horror work published by Adult Swim. Its surveillance-company presentation belongs to the fiction, rather than documenting a verified household incident.",
     "video": {
@@ -156,6 +156,31 @@
           "creators",
           "episode"
         ]
+      },
+      {
+        "id": "ending-interpretation",
+        "title": "Reading the ending: observation is not understanding",
+        "paragraphs": [
+          "One way to read the surveillance premise is as a failure of attention. A record can contain a frightening event without the people around it agreeing on what matters. Under this interpretation, the unease comes from the gap between something being visible and someone giving it an adequate response. It is a reading of the form, rather than a diagnosis of the fictional family.",
+          "A second reading concerns control. Security footage suggests that someone has an overview, yet a camera angle is only a selected view. When you reach the ending, ask whether you have gained an explanation or merely acquired another piece of the record. An unresolved finish can preserve that distinction. Neither reading establishes a secret real-world incident or a single solution approved by the creators."
+        ],
+        "sources": [
+          "upload"
+        ],
+        "interpretation": true
+      },
+      {
+        "id": "clues-and-symbols",
+        "title": "The account number, the floor, and the missing context",
+        "paragraphs": [
+          "The account number and the report-like description encourage you to treat the scene as a file. Try reversing that expectation: what information would a genuinely useful report need, beyond a number? You might want a reliable explanation of who assembled it, why these moments were chosen, and what happened outside the recorded view. The absence of those answers is part of how this presentation creates uncertainty.",
+          "The kitchen-floor incident named in the publisher's description can be read as a disruption of an ordinary domestic space. That symbolic reading does not require a medical explanation, and it should not be turned into a claim about a real condition. Keep a proposed meaning beside the specific detail that prompted it. If the interpretation needs a fact from the companion fiction, identify that source instead of silently treating it as something the short itself proved."
+        ],
+        "sources": [
+          "upload",
+          "episode"
+        ],
+        "interpretation": true
       }
     ]
   },
@@ -166,7 +191,7 @@
     "title": "The Backrooms Found Footage: Why the Lost-Tape Illusion Works",
     "deck": "A 1996 date, an impossible-looking location, and a public upload from 2022. Follow the creator's account of how the Backrooms became a convincing piece of found-footage horror.",
     "published": "2026-11-24",
-    "updated": "2026-11-24",
+    "updated": "2026-11-25",
     "checked": "2026-11-24",
     "verdict": "Kane Pixels' short is an authored horror work. The 1996 date belongs to its presentation; the linked public upload is from January 2022, and its maker has described creating the environments digitally.",
     "video": {
@@ -320,6 +345,30 @@
         "sources": [
           "upload"
         ]
+      },
+      {
+        "id": "ending-interpretation",
+        "title": "Reading the ending: the camera is not an explanation",
+        "paragraphs": [
+          "Found-footage storytelling encourages a question that ordinary film presentation often leaves aside: how did this recording reach the viewer? For the Backrooms short, it is useful to hold that story question apart from the publication record. A gap in the fictional chain of custody can make the experience unsettling; it does not make the real upload an authenticated recovered tape.",
+          "There are at least two ways to approach an unresolved ending. You can read it through the character's uncertainty, asking what can be understood from a limited viewpoint. Or you can read it through the recording, asking what a surviving image can leave out. These are critical interpretations to test against your own viewing. They are not a claim to know the fate of every character or a creator-confirmed answer to the wider series."
+        ],
+        "sources": [
+          "upload"
+        ],
+        "interpretation": true
+      },
+      {
+        "id": "clues-and-symbols",
+        "title": "What a date and an ordinary-looking space can suggest",
+        "paragraphs": [
+          "The description's 1996 date supplies a period setting, while the 2022 upload supplies a publication date. As a storytelling choice, that distance can invite the viewer to imagine an earlier recording resurfacing. The effect comes from the relationship between those records; the older number does not authenticate the imagined history.",
+          "Likewise, a familiar-looking interior can be read as a promise of ordinary rules. Disorientation becomes interesting when that promise seems insufficient. This is a way to discuss the work's visual idea without presenting a floor plan, a fan-created entity name, or a theory from another adaptation as established canon. When comparing interpretations, first identify which upload or episode each person is discussing."
+        ],
+        "sources": [
+          "upload"
+        ],
+        "interpretation": true
       }
     ]
   },
@@ -329,7 +378,7 @@
     "title": "11B-X-1371: Was It Really a Dark Web Video?",
     "deck": "A masked figure, a mailed disc, and a creator who stepped forward. Follow the public evidence behind an unsettling internet puzzle.",
     "published": "2026-11-23",
-    "updated": "2026-11-23",
+    "updated": "2026-11-25",
     "checked": "2026-11-23",
     "verdict": "The public record supports an authored art puzzle. A dark-web origin is not established by the sources reviewed here.",
     "video": {
@@ -503,6 +552,31 @@
           "Afterward, ask three different questions: what did the upload show, what do the records establish, and what are you interpreting? Keeping them separate leaves room for an unsettling experience and an honest explanation. For invented encounters without a real-world origin claim, continue to the Dark Echo reading room below."
         ],
         "sources": []
+      },
+      {
+        "id": "ending-interpretation",
+        "title": "Reading the ending: an invitation to interpret",
+        "paragraphs": [
+          "A puzzle-shaped work can end before its audience has agreed on what it means. One productive reading is that the uncertainty is itself part of the encounter: the viewer has been asked to look for intention in a limited set of details. Another reading treats the distribution and the later authorship discussion as part of the work's effect. These interpretations can coexist without turning the video into evidence of an actual threat.",
+          "The creator attribution gives us a production context, not a universal answer key. Keep your proposed ending explanation attached to the detail you are interpreting. If the explanation relies on a later interview, call it an attributed account. If it relies on your response to the imagery, call it a reading. That makes a discussion more useful than declaring every remaining ambiguity solved."
+        ],
+        "sources": [
+          "interview"
+        ],
+        "interpretation": true
+      },
+      {
+        "id": "clues-and-symbols",
+        "title": "A symbol, a decoding, and a meaning are different claims",
+        "paragraphs": [
+          "The beaked mask is an observable element of the work. What a viewer associates with it is an interpretation. The same distinction helps with any proposed coded message: first record the exact visible or audible material, then document the procedure used to transform it, and only then discuss the suggested meaning. A result that changes whenever the rules change is difficult for someone else to reproduce.",
+          "The original recipient and later follow-up remain useful starting records, but a claim from a discussion thread should not inherit their authority merely by appearing beside them. You can enjoy the puzzle while keeping a short uncertainty list: what was directly observed, which transformation was reproducible, and which conclusion still depends on an assumption. Our source check does not claim a complete decoding of every element."
+        ],
+        "sources": [
+          "recipient",
+          "attribution"
+        ],
+        "interpretation": true
       }
     ]
   }

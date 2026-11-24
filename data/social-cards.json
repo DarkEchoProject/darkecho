@@ -1,0 +1,106 @@
+{
+  "mysteries/this-house-has-people-in-it.html": {
+    "path": "assets/social/mystery-this-house-has-people-in-it-en.png",
+    "digest": "07dea43c2e6909fb90f6965c994125344a91ec5943909799a4735e2563ed0d7e",
+    "sha256": "77415499f823351d99a52b6422cb2d61e9d50ef6e576d45b1275a19a2b3cd80c",
+    "width": 1200,
+    "height": 630,
+    "lang": "en"
+  },
+  "ar/mysteries/this-house-has-people-in-it.html": {
+    "path": "assets/social/mystery-this-house-has-people-in-it-ar.png",
+    "digest": "771d8fbd47d1f3531978b00c0956c43d9797933ea9d1bb91306b863c4869d2de",
+    "sha256": "1faa43cd2ba5cd7c9636bc8c92f039c487ba41096dc0cb3dfd262c437353e3e1",
+    "width": 1200,
+    "height": 630,
+    "lang": "ar"
+  },
+  "mysteries/backrooms-found-footage.html": {
+    "path": "assets/social/mystery-backrooms-found-footage-en.png",
+    "digest": "3c079a8b9d1920cfb030eeaa0e9c05500a2be76f5cd79970b447eafebffda656",
+    "sha256": "d639517f0d02463d713beb7d2eb2390f36807e1ab945038161c6e01e39615da5",
+    "width": 1200,
+    "height": 630,
+    "lang": "en"
+  },
+  "ar/mysteries/backrooms-found-footage.html": {
+    "path": "assets/social/mystery-backrooms-found-footage-ar.png",
+    "digest": "553b8c15132923dacc5ce73a5d8d677b7b1f6c8d396519f7b167ecaffda3c363",
+    "sha256": "a3e1e8216e745c16fc1d0fe4dd99e814dd128faf25eddd936dcc2ef3f47934fb",
+    "width": 1200,
+    "height": 630,
+    "lang": "ar"
+  },
+  "mysteries/11b-x-1371.html": {
+    "path": "assets/social/mystery-11b-x-1371-en.png",
+    "digest": "2ad8b8c6e1232aba72ca80e7ebe65d65b467c83158570fc76c509294849127fa",
+    "sha256": "95a8730864255f054c0923c998b42977b19720b9dba814e4aed862478285e5b7",
+    "width": 1200,
+    "height": 630,
+    "lang": "en"
+  },
+  "ar/mysteries/11b-x-1371.html": {
+    "path": "assets/social/mystery-11b-x-1371-ar.png",
+    "digest": "4b71f5da994e7170a0c1fdd1dd834e2881293878f700781ade6b11982e0c4a23",
+    "sha256": "1afd1d0c5240d3c3019bf1385659e460b6035aa685d209068e2e9c3df6ab7b4f",
+    "width": 1200,
+    "height": 630,
+    "lang": "ar"
+  },
+  "guides/what-is-analog-horror.html": {
+    "path": "assets/social/guide-what-is-analog-horror.png",
+    "digest": "1e61ffa291df01a62bd5d4a9de24c9270a65c2dba060eb4ee44f2fdc6bd67d2f",
+    "sha256": "3a69a66005b511ec24d456fc65a4851c164a78ce3828e9260de6ea96a9c6c420",
+    "width": 1200,
+    "height": 630,
+    "lang": "en"
+  },
+  "guides/what-is-an-arg.html": {
+    "path": "assets/social/guide-what-is-an-arg.png",
+    "digest": "da0af475b05aef38a94454a030fdf1c756423ee1e85416efd063902a49ba1c3e",
+    "sha256": "01addb01be43ae4b45873f75496cb2467acfc97e585a58a96eb3cb74a51ac3f9",
+    "width": 1200,
+    "height": 630,
+    "lang": "en"
+  },
+  "guides/check-a-viral-video-source.html": {
+    "path": "assets/social/guide-check-a-viral-video-source.png",
+    "digest": "24796d765c2a80d920f13b8356497784ff28bd5f05ac79c44106bb27fdebc341",
+    "sha256": "7299e85dc254c7e9bec79fa175677bf34a240017cdc5b45d96e21fa450876abe",
+    "width": 1200,
+    "height": 630,
+    "lang": "en"
+  },
+  "quiz.html": {
+    "path": "assets/social/quiz-en.png",
+    "digest": "d22edd845c30c292b9d26e25e5d533ba64a648afafc7b27d58ca840a2b58eb14",
+    "sha256": "95462b7c8c76861382bb28bb0f652d285ecbfa61000288302dbd4f0f831e6560",
+    "width": 1200,
+    "height": 630,
+    "lang": "en"
+  },
+  "ar/quiz.html": {
+    "path": "assets/social/quiz-ar.png",
+    "digest": "c38e00fc8f69528d391ac213e7ca6291441ec86d7efd65d1bfb478bea0fdc883",
+    "sha256": "b18a08cdf96761b224314ef013e812ec41bc3037409c988038a5f8457063207c",
+    "width": 1200,
+    "height": 630,
+    "lang": "ar"
+  },
+  "guides.html": {
+    "path": "assets/social/guides.png",
+    "digest": "9194bd78303b362b63c7feac1ffcbe1478944da437dad7fdba414e490ca6f92e",
+    "sha256": "8b69832a8db91430610fdd88e2a4acaac11d4053e518ec8007b28f7074a9f2dd",
+    "width": 1200,
+    "height": 630,
+    "lang": "en"
+  },
+  "ar/index.html": {
+    "path": "assets/social/arabic.png",
+    "digest": "05e243102f20bba4a1bd066bfa4000632c4dda443d0289155a4c9798a3105b48",
+    "sha256": "433a811f78efb31f4851b105cce4a8aea024a2e467b363a69257e47616ccc2ea",
+    "width": 1200,
+    "height": 630,
+    "lang": "ar"
+  }
+}

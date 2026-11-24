@@ -2,10 +2,11 @@
 """Validate generated links, media identity, structured data and index boundaries."""
 from pathlib import Path
 from html.parser import HTMLParser
-from urllib.parse import urlsplit,unquote
+from urllib.parse import urlsplit,unquote,parse_qs
 from collections import Counter
 import base64,hashlib,json,re,xml.etree.ElementTree as ET
 from catalog import validate_catalog
+from social_cards import png_size
 
 ROOT=Path(__file__).resolve().parents[1]
 BASE=json.loads((ROOT/'data/site.json').read_text())['baseUrl']
@@ -160,6 +161,61 @@ for section,key in [('latest','uploadDate'),('most-watched','views')]:
  actual=re.findall(r'data-video-id="([A-Za-z0-9_-]{11})"',fragment)
  expected=[v['id'] for v in sorted((v for v in videos.values() if v['channel']=='darkecho'),key=lambda v:v[key],reverse=True)[:6]]
  require(actual==expected,f'Home {section} section violates its sorting rule')
+
+# New growth pages must have their own usable share image and reciprocal language links.
+social=json.loads((ROOT/'data/social-cards.json').read_text(encoding='utf-8'))
+require(len({item['path'] for item in social.values()})==len(social),'Sharing images must be unique per page/language')
+for path,item in social.items():
+ require(path in docs,'Sharing image points to a missing page: '+path)
+ file=ROOT/item['path']
+ require(file.is_file(),'Missing sharing image: '+item['path'])
+ if file.is_file():
+  require(png_size(file)==(1200,630),'Incorrect sharing image dimensions: '+item['path'])
+  require(hashlib.sha256(file.read_bytes()).hexdigest()==item['sha256'],'Sharing image digest mismatch: '+item['path'])
+ if path in docs:
+  metas={a.get('name') or a.get('property'):a.get('content') for tag,a in docs[path].nodes if tag=='meta'}
+  require(metas.get('og:image')==BASE+item['path'] and metas.get('twitter:image')==BASE+item['path'],path+': incorrect sharing preview')
+  require(metas.get('og:image:width')=='1200' and metas.get('og:image:height')=='630',path+': missing preview dimensions')
+for path,doc in docs.items():
+ htmlnode=next((a for t,a in doc.nodes if t=='html'),{})
+ if path.startswith('ar/'):
+  require(htmlnode.get('lang')=='ar' and htmlnode.get('dir')=='rtl',path+': Arabic language/direction missing')
+  require(json.loads(doc.schemas[0]).get('inLanguage')=='ar',path+': incorrect schema language')
+ alternates={a.get('hreflang'):a.get('href') for t,a in doc.nodes if t=='link' and a.get('rel')=='alternate'}
+ for lang,url in alternates.items():
+  target=unquote(urlsplit(url).path[len(PREFIX):])
+  require(target in docs,path+': alternate language page missing')
+  if target in docs and lang!='x-default':
+   other={a.get('hreflang'):a.get('href') for t,a in docs[target].nodes if t=='link' and a.get('rel')=='alternate'}
+   require(other.get(htmlnode.get('lang'))==BASE+('' if path=='index.html' else path),path+': language links are not reciprocal')
+ for t,a in doc.nodes:
+  href=a.get('href','');host=urlsplit(href).netloc
+  current_url=BASE+('' if path=='index.html' else path)
+  if host=='wa.me':require(current_url in parse_qs(urlsplit(href).query).get('text',[''])[0].splitlines(),path+': WhatsApp does not share the current page link')
+  if host=='t.me' and urlsplit(href).path=='/share/url':require(parse_qs(urlsplit(href).query).get('url',[None])[0]==current_url,path+': Telegram has incorrect page URL')
+translations=json.loads((ROOT/'data/mysteries-ar.json').read_text(encoding='utf-8'))
+for case in json.loads((ROOT/'data/mysteries.json').read_text(encoding='utf-8')):
+ path='mysteries/'+case['slug']+'.html'
+ require(sum('interpretation-note' in a.get('class','').split() for t,a in docs[path].nodes)==sum(bool(s.get('interpretation')) for s in case['sections']),path+': interpretation labels differ from source')
+ if case['slug'] in translations:
+  arpath='ar/'+path;arschema=json.loads(docs[arpath].schemas[0])
+  require(arschema.get('translationOfWork',{}).get('url')==BASE+path,arpath+': translation points to wrong original')
+  require(arschema.get('about')==json.loads(docs[path].schemas[0]).get('about'),arpath+': translated video attribution changed')
+  require({s['id'] for s in case['sections']}<={a.get('id') for t,a in docs[arpath].nodes},arpath+': a translated section is missing')
+quiz=json.loads((ROOT/'data/quiz.json').read_text(encoding='utf-8'))
+for path in ['quiz.html','ar/quiz.html']:
+ doc=docs[path]
+ questions=[a for t,a in doc.nodes if t=='fieldset' and 'data-quiz-question' in a]
+ require(len(questions)==5,path+': expected five questions')
+ require([q.get('data-answer') for q in questions]==[str(q['answer']).lower() for q in quiz['questions']],path+': answer keys differ from source')
+ require(all('hidden' not in q for q in questions),path+': questions missing without JavaScript')
+ require(sum('data-quiz-nojs' in a for t,a in doc.nodes)==5,path+': no-JavaScript explanations missing')
+ for script in ['assets/quiz-tools.js','assets/quiz.js']:
+  require(any(t=='script' and a.get('src','').split('?')[0]==PREFIX+script for t,a in doc.nodes),path+': quiz dependency missing')
+for guide in json.loads((ROOT/'data/guides.json').read_text(encoding='utf-8')):
+ path='guides/'+guide['slug']+'.html';doc=docs[path];schema=json.loads(doc.schemas[0])
+ require(schema.get('citation')==[s['url'] for s in guide['sources']],path+': guide references differ from source')
+ require(schema.get('wordCount',0)>=450,path+': guide is incomplete')
 
 if errors:
  for error in errors:print('FAIL:',error)
