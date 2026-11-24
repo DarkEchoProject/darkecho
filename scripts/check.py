@@ -132,7 +132,7 @@ for case in json.loads((ROOT/'data/mysteries.json').read_text()):
  require({'source-'+source['id'] for source in case['sources']}<=set(doc.ids),path+': missing cited source anchors')
  frames=[a.get('src') for tag,a in doc.nodes if tag=='iframe']
  require(frames==['https://www.youtube-nocookie.com/embed/'+case['video']['id']+'?rel=0'],path+': incorrect publisher video or unexpected player')
- require(schema.get('about',{}).get('creator',{}).get('name')==case['video']['creator'],path+': publisher attribution mismatch')
+ require(schema.get('about',{}).get('publisher',{}).get('name')==case['video']['creator'],path+': publisher attribution mismatch')
 
 for series in json.loads((ROOT/'data/series.json').read_text()):
  path='series/'+series['slug']+'.html';require(path in docs,'Missing series page '+path)

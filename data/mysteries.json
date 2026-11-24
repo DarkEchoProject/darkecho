@@ -1,5 +1,329 @@
 [
   {
+    "slug": "this-house-has-people-in-it",
+    "number": "003",
+    "displayCode": "HOUSE 00437",
+    "title": "This House Has People in It: The Story Behind the Surveillance Footage",
+    "deck": "A family home, a motionless figure on the kitchen floor, and cameras that seem to explain very little. Trace the production behind Adult Swim's unsettling short.",
+    "published": "2026-11-24",
+    "updated": "2026-11-24",
+    "checked": "2026-11-24",
+    "verdict": "This is a constructed horror work published by Adult Swim. Its surveillance-company presentation belongs to the fiction, rather than documenting a verified household incident.",
+    "video": {
+      "id": "x-pj8OtyO2I",
+      "title": "This House Has People in It",
+      "creator": "Adult Swim",
+      "publisherType": "Organization",
+      "creatorUrl": "https://www.youtube.com/@adultswim",
+      "uploadDate": "2016-03-15",
+      "seconds": 715,
+      "contentNote": "Fictional horror, distressing situations, and strong language. The publisher's episode page lists TV-14 L. Playback is optional; the source check can be read on its own."
+    },
+    "sources": [
+      {
+        "id": "upload",
+        "label": "Adult Swim — the publisher's YouTube upload",
+        "url": "https://www.youtube.com/watch?v=x-pj8OtyO2I",
+        "date": "2016-03-15",
+        "kind": "Publisher record",
+        "note": "Identifies the uploader and dates this particular public copy. Its description uses an account number and surveillance-report language."
+      },
+      {
+        "id": "episode",
+        "label": "Adult Swim — the Infomercials episode page",
+        "url": "https://www.adultswim.com/videos/infomercials/this-house-has-people-in-it",
+        "checked": "2026-11-24",
+        "kind": "Undated publisher listing",
+        "note": "Lists the work within Infomercials, with its account-number description and TV rating. The archive grouping is not used as an upload timestamp; the date above comes from YouTube."
+      },
+      {
+        "id": "creators",
+        "label": "Observer — interview with the creators",
+        "url": "https://observer.com/2016/03/this-house-has-people-in-it-inside-adult-swims-latest-horror-masterpiece/",
+        "date": "2016-03-17",
+        "kind": "Creator interview and original reporting",
+        "note": "Interviews Alan Resnick, Robby Rackleff, and Dina Kelberman about the production and its expanded story. The article was later updated on March 21, 2016."
+      }
+    ],
+    "evidence": [
+      {
+        "claim": "The footage has an identifiable publisher",
+        "status": "Documented",
+        "detail": "Adult Swim hosts the linked upload and lists the same title on its own episode page.",
+        "sources": [
+          "upload",
+          "episode"
+        ]
+      },
+      {
+        "claim": "The family and cameras are part of a production",
+        "status": "Creator account",
+        "detail": "The creators discuss developing the security-camera premise in a production interview.",
+        "sources": [
+          "creators"
+        ]
+      },
+      {
+        "claim": "The account number authenticates a real surveillance leak",
+        "status": "Unsupported inference",
+        "detail": "The account-number framing appears in the publisher's own description. That presentation does not independently authenticate a real incident.",
+        "sources": [
+          "upload",
+          "episode"
+        ]
+      },
+      {
+        "claim": "Upload dates and archive headings are separate records",
+        "status": "Date boundary",
+        "detail": "This file dates the specific YouTube upload. The episode listing is treated as a separate, undated publisher page.",
+        "sources": [
+          "upload",
+          "episode"
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2016-03-15",
+        "label": "The publisher's upload",
+        "text": "The linked video appears on Adult Swim's YouTube channel.",
+        "sources": [
+          "upload"
+        ]
+      },
+      {
+        "date": "2016-03-17",
+        "label": "The creators discuss the work",
+        "text": "Observer publishes its interview about the production and the story extending beyond the short.",
+        "sources": [
+          "creators"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "id": "the-house",
+        "title": "An ordinary description with something missing",
+        "paragraphs": [
+          "Adult Swim introduces the video as an event from account 00437, involving a subject lying on a kitchen floor. The phrasing supplies an administrative frame before it supplies a person. Someone has numbered the household and its occupants, but the description leaves the viewer to wonder what happened and why it is being recorded.",
+          "As a piece of horror framing, that distance can be more unsettling than a dramatic warning. A numbered incident suggests that a system has already absorbed whatever the camera sees. Our interpretation is that this creates a useful tension: the language sounds routine while the situation invites alarm. The number itself provides no independent proof of a real case."
+        ],
+        "sources": [
+          "upload",
+          "episode"
+        ]
+      },
+      {
+        "id": "publisher",
+        "title": "Follow the publisher before following the rumor",
+        "paragraphs": [
+          "The video is published on Adult Swim's channel, and the network's own website lists it as an Infomercials episode. Those are concrete publication records. They give the work a context that disappears when a later repost consists only of a frightening excerpt, a cropped title, or an ominous caption.",
+          "The date in this file refers specifically to the YouTube upload: March 15, 2016. Website archive headings are a different kind of record and should not silently replace an upload timestamp. This distinction matters whenever a mystery is assembled from pages that were organized or updated at different times."
+        ],
+        "sources": [
+          "upload",
+          "episode"
+        ]
+      },
+      {
+        "id": "making-the-footage",
+        "title": "What the creators said about the cameras",
+        "paragraphs": [
+          "In Observer's interview, the makers describe developing a story about a normal family seen through security cameras. Alan Resnick discusses deliberately working with rough, low-quality imagery. The interview also addresses material that extends the story beyond the central video. These are production explanations, attributed to the people discussing their work.",
+          "For a viewer, the interesting question becomes how that presentation changes a scene. Imagine the difference between a camera that moves toward the important detail and a fixed view that leaves you searching for it. One directs attention openly; the other can make looking feel like your responsibility. That comparison is our critical reading of the format, rather than a claim that an unattended recording proves its own authenticity."
+        ],
+        "sources": [
+          "creators"
+        ]
+      },
+      {
+        "id": "watching-without-a-solution",
+        "title": "A first viewing does not need a complete solution",
+        "paragraphs": [
+          "Begin with the main upload if you want to experience the work before reading interpretations. Watch where your attention goes: toward the person, the edges of the room, the behavior of other people, or an apparently unimportant background detail. You do not need a theory for every object to notice how the framing makes you look.",
+          "Afterward, separate an observation from an explanation. A figure's position is something you can point to; what it symbolizes may be an interpretation. A publisher's identity can be checked against records; the emotional meaning of a scene cannot be settled by an account number. Keeping those questions apart leaves room for both an effective scare and a careful discussion."
+        ],
+        "sources": []
+      },
+      {
+        "id": "the-companion-story",
+        "title": "The story outside the video",
+        "paragraphs": [
+          "The original creators' interview describes additional story material presented through a surveillance-company website. That is context about the work's designed presentation. It should not be mistaken for evidence that the supposed company independently documented the fictional events.",
+          "For this source check, the durable starting points are the named publisher and the dated interview linked below. An old address or a later fan explanation needs its own context before it can carry the same weight. The central record already answers the essential provenance question: this footage belongs to an identifiable creative production, while its unanswered story questions remain part of the experience."
+        ],
+        "sources": [
+          "creators",
+          "episode"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "backrooms-found-footage",
+    "number": "002",
+    "displayCode": "THE BACKROOMS",
+    "title": "The Backrooms Found Footage: Why the Lost-Tape Illusion Works",
+    "deck": "A 1996 date, an impossible-looking location, and a public upload from 2022. Follow the creator's account of how the Backrooms became a convincing piece of found-footage horror.",
+    "published": "2026-11-24",
+    "updated": "2026-11-24",
+    "checked": "2026-11-24",
+    "verdict": "Kane Pixels' short is an authored horror work. The 1996 date belongs to its presentation; the linked public upload is from January 2022, and its maker has described creating the environments digitally.",
+    "video": {
+      "id": "H4dGpz6cnHo",
+      "title": "The Backrooms (Found Footage)",
+      "creator": "Kane Pixels",
+      "creatorUrl": "https://www.youtube.com/@kanepixels",
+      "uploadDate": "2022-01-07",
+      "seconds": 554,
+      "contentNote": "Fictional horror, unsettling environments, and tense scenes. You can read the production and source check without playing the video."
+    },
+    "sources": [
+      {
+        "id": "upload",
+        "label": "Kane Pixels — The Backrooms (Found Footage)",
+        "url": "https://www.youtube.com/watch?v=H4dGpz6cnHo",
+        "date": "2022-01-07",
+        "kind": "Creator's public upload",
+        "note": "Identifies the channel and publication date. Its description begins with September 23, 1996, a different date used in the work's presentation."
+      },
+      {
+        "id": "creator",
+        "label": "A24 — Kane Parsons and James Wan in conversation",
+        "url": "https://a24films.com/notes/2026/05/thirty-thousand-square-feet-with-kane-parsons-james-wan",
+        "date": "2026-05-06",
+        "kind": "Published creator conversation and transcript",
+        "note": "Parsons describes building environments in Blender and making the opening. Later discussion of the feature film is distinguished from the earlier online short."
+      },
+      {
+        "id": "profile",
+        "label": "Esquire — interview with Kane Parsons",
+        "url": "https://www.esquire.com/entertainment/movies/a71230484/kane-parsons-backrooms-interview/",
+        "date": "2026-05-07",
+        "kind": "Creator interview and original reporting",
+        "note": "Provides additional reporting on the short's digital production and the creator's transition to a feature."
+      }
+    ],
+    "evidence": [
+      {
+        "claim": "The linked upload was published in 1996",
+        "status": "Incorrect for this upload",
+        "detail": "The publication record is January 7, 2022. September 23, 1996 appears in the description and serves the work's fictional framing.",
+        "sources": [
+          "upload"
+        ]
+      },
+      {
+        "claim": "The environments have a documented creative origin",
+        "status": "Creator account",
+        "detail": "Parsons describes constructing environments in Blender in his A24 conversation. Esquire also reports on the short's production.",
+        "sources": [
+          "creator",
+          "profile"
+        ]
+      },
+      {
+        "claim": "The worn image proves the material is an old recovered tape",
+        "status": "Unsupported inference",
+        "detail": "An aged presentation is a visual characteristic. Establishing an archival origin would require a separate provenance record.",
+        "sources": [
+          "upload",
+          "creator"
+        ]
+      },
+      {
+        "claim": "All versions share one canon",
+        "status": "Not established",
+        "detail": "Parsons identifies his work as an adaptation of a broader idea.",
+        "sources": [
+          "creator"
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2022-01-07",
+        "label": "The online short is published",
+        "text": "The linked found-footage video appears on the Kane Pixels channel.",
+        "sources": [
+          "upload"
+        ]
+      },
+      {
+        "date": "2026-05-06",
+        "label": "The creator discusses its construction",
+        "text": "A24 publishes the creator's production discussion.",
+        "sources": [
+          "creator"
+        ]
+      },
+      {
+        "date": "2026-05-07",
+        "label": "Further production reporting",
+        "text": "Esquire publishes a creator interview covering the earlier digital work and the later feature.",
+        "sources": [
+          "profile"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "id": "two-dates",
+        "title": "The first clue is the pair of dates",
+        "paragraphs": [
+          "The description of the Kane Pixels upload opens with September 23, 1996. The video's publication record says January 7, 2022. Those dates do different jobs. One helps establish the world of the work; the other dates the particular public upload you can inspect. Combining them into a claim about an authenticated 1996 recording would skip the evidence needed to connect those two things.",
+          "This is a useful place to begin because a timestamp feels precise. Precision, however, is a property of the label. To establish the age of a recording, we would need a record of the recording itself. The upload description should be read alongside the filmmaker's account, rather than promoted into an independent certificate of origin."
+        ],
+        "sources": [
+          "upload"
+        ]
+      },
+      {
+        "id": "making-the-place",
+        "title": "A place that was built for the camera",
+        "paragraphs": [
+          "In A24's published conversation, Kane Parsons describes making Backrooms environments in Blender and moving a camera through them. He also explains that the opening was filmed separately with school friends on a phone and processed through a VCR. These are his accounts of making the short, not a reconstruction of its production performed by Dark Echo.",
+          "That account gives the illusion an interesting foundation: the image can suggest an accidental record even while the environment has been deliberately designed. Our reading is that the tension comes from this mismatch. The viewer is invited to follow a camera as though it has stumbled into a place, while the artist controls what that place allows the camera to reveal."
+        ],
+        "sources": [
+          "creator"
+        ]
+      },
+      {
+        "id": "the-lost-tape-effect",
+        "title": "Why an imperfect image can feel persuasive",
+        "paragraphs": [
+          "As a viewing experiment, imagine an unfamiliar corridor presented in two ways. In one version, the image is clean and the camera behaves like a guided tour. In the other, the view is limited and the recording seems to have a history of its own. Even without changing the corridor, the second presentation can encourage a different question: who was carrying this camera, and what happened to them?",
+          "This is a critical interpretation of the found-footage device, not proof of an actual disappearance. Image texture can help a story suggest age or vulnerability. It cannot supply a missing chain of custody. Recognizing the craft allows us to discuss what the illusion achieves without assigning the events a real-world origin they have not established."
+        ],
+        "sources": []
+      },
+      {
+        "id": "one-adaptation",
+        "title": "Keep this adaptation separate from the wider mythology",
+        "paragraphs": [
+          "Parsons describes his Backrooms as one adaptation among many contributions. For this file, a claim about the short is checked against this version; a fan theory can describe a different interpretation.",
+          "A later Esquire interview also discusses the short's digital production. That supplies further production context, rather than evidence of a real recovered location. The online short, the later feature, and the wider mythology can be discussed together, but their records should not be blended into one supposedly complete account."
+        ],
+        "sources": [
+          "creator",
+          "profile"
+        ]
+      },
+      {
+        "id": "watching-the-short",
+        "title": "What to notice on your own viewing",
+        "paragraphs": [
+          "If you choose to watch, notice the information a camera gives you about a place. Can you work out its layout? Does a familiar shape make you assume a familiar purpose? What changes when the camera turns away from an area you were still trying to understand? These are questions about how a scene is presented, and you can explore them without needing a definitive theory of the entire fictional world.",
+          "Then return to the two dates. The description can locate the story in an earlier time, while the public record and creator interviews explain the work's actual production context. That distinction preserves what makes the short interesting: an authored illusion convincing enough to make an ordinary-looking image feel like a fragment of a much larger, stranger place."
+        ],
+        "sources": [
+          "upload"
+        ]
+      }
+    ]
+  },
+  {
     "slug": "11b-x-1371",
     "number": "001",
     "title": "11B-X-1371: Was It Really a Dark Web Video?",
@@ -56,25 +380,36 @@
         "claim": "A public copy exists under the creator's name",
         "status": "Documented",
         "detail": "The linked Parker Wright upload is dated September 30, 2015. The embedded player uses that upload.",
-        "sources": ["upload"]
+        "sources": [
+          "upload"
+        ]
       },
       {
         "claim": "A technology site received a physical disc",
         "status": "First-hand account",
         "detail": "GadgetZZ published its recipient account on October 12, 2015. Publication date and delivery date are different claims.",
-        "sources": ["recipient"]
+        "sources": [
+          "recipient"
+        ]
       },
       {
         "claim": "Parker Warner Wright described the video as his art",
         "status": "Attributed and reported",
         "detail": "Contemporary follow-up and an interview identify the creator and discuss the work. Attribution does not settle the meaning of every clue.",
-        "sources": ["attribution", "interview"]
+        "sources": [
+          "attribution",
+          "interview"
+        ]
       },
       {
         "claim": "The video originated on the dark web",
         "status": "Not established",
         "detail": "These sources do not establish a dated original onion-site publication. This is a limit of the reviewed evidence, not proof that no mirror ever existed.",
-        "sources": ["upload", "recipient", "interview"]
+        "sources": [
+          "upload",
+          "recipient",
+          "interview"
+        ]
       }
     ],
     "timeline": [
@@ -82,25 +417,33 @@
         "date": "2015-09-30",
         "label": "A public upload",
         "text": "The linked Parker Wright video is published on YouTube.",
-        "sources": ["upload"]
+        "sources": [
+          "upload"
+        ]
       },
       {
         "date": "2015-10-12",
         "label": "The mailed disc is reported",
         "text": "GadgetZZ publishes its account and invites readers to investigate the puzzle.",
-        "sources": ["recipient"]
+        "sources": [
+          "recipient"
+        ]
       },
       {
         "date": "2015-12-17",
         "label": "The creator claim is examined",
         "text": "GadgetZZ reviews supporting details, including props and control of the public upload.",
-        "sources": ["attribution"]
+        "sources": [
+          "attribution"
+        ]
       },
       {
         "date": "2016-01-19",
         "label": "The creator is interviewed",
         "text": "The Daily Dot publishes its conversation with Wright about the art project and its distribution.",
-        "sources": ["interview"]
+        "sources": [
+          "interview"
+        ]
       }
     ],
     "sections": [
@@ -111,7 +454,9 @@
           "A figure in a beaked mask, a rough interior, and a flashing light: the details described in the original GadgetZZ account offer the ingredients of a memorable internet mystery. The site treated the disc as a puzzle and invited readers to help investigate it. That invitation matters. The story arrived as something to examine, not as an established account of a crime.",
           "Our question is narrower than whether the video feels disturbing: what evidence supports its supposed place of origin? A frightening style cannot answer that. A creator, a recipient, a date, or an original publication can give us something to check. Start with those records before letting the atmosphere decide the explanation."
         ],
-        "sources": ["recipient"]
+        "sources": [
+          "recipient"
+        ]
       },
       {
         "id": "public-trail",
@@ -120,7 +465,10 @@
           "The Parker Wright YouTube upload linked here is dated September 30, 2015. It is a public publisher record, not a copy uploaded by Dark Echo. This date belongs to that particular upload. Calling it the first appearance anywhere would require evidence about every earlier distribution route, which a single upload page cannot provide.",
           "The later interview adds another account: Wright told The Daily Dot that he had initially circulated the work on May 9, 2015, using physical discs in Poland and a post on 4chan. This is the creator's reported account, not a date independently recovered by this website. It supplies a concrete alternative to an unsupported story about a secret original server."
         ],
-        "sources": ["upload", "interview"]
+        "sources": [
+          "upload",
+          "interview"
+        ]
       },
       {
         "id": "creator",
@@ -129,7 +477,10 @@
           "GadgetZZ's December follow-up considered several details offered in support of Wright's authorship. They included the mask and gloves, technical information about the light, and a change to the description of the existing YouTube upload. The report also identified items it had not verified. That distinction is useful: several pieces can support an attribution without making every accompanying statement certain.",
           "In the January interview, Wright discussed the videos as art and described plans for a larger project. That provides context for an intentionally constructed puzzle. It does not oblige a viewer to accept every proposed interpretation of its symbols. Knowing who made a work and knowing exactly what its maker intended are separate questions."
         ],
-        "sources": ["attribution", "interview"]
+        "sources": [
+          "attribution",
+          "interview"
+        ]
       },
       {
         "id": "source-check",
@@ -138,7 +489,11 @@
           "For this file, a useful origin record would identify a specific original publication, provide a date that can be checked, and explain how that publication connects to the copy being discussed. A caption on a later compilation is not that record. Nor does an unknown sender automatically establish where a work was first published.",
           "The sources reviewed here document a public upload, a recipient's account, and a creator discussing his work. They do not establish an original onion-site release. We therefore leave that origin claim unverified. This conclusion is deliberately limited: it says what these records support, without claiming to prove where every copy has ever traveled."
         ],
-        "sources": ["upload", "recipient", "interview"]
+        "sources": [
+          "upload",
+          "recipient",
+          "interview"
+        ]
       },
       {
         "id": "viewing",
