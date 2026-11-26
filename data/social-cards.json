@@ -1,4 +1,12 @@
 {
+  "mysteries/local58-fastest-available-route.html": {
+    "path": "assets/social/mystery-local58-fastest-available-route-en.png",
+    "digest": "c2b5f76fcbcf59fe673c3cfbee73985fb50240b7cc345c53b315e7aeb416310b",
+    "sha256": "e50986742820d15e7cd43499cd9fe2b9eee9f8afa1ec276271868366c48dfa4f",
+    "width": 1200,
+    "height": 630,
+    "lang": "en"
+  },
   "mysteries/this-house-has-people-in-it.html": {
     "path": "assets/social/mystery-this-house-has-people-in-it-en.png",
     "digest": "07dea43c2e6909fb90f6965c994125344a91ec5943909799a4735e2563ed0d7e",

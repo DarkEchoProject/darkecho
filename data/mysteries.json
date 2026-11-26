@@ -1,5 +1,200 @@
 [
   {
+    "slug": "local58-fastest-available-route",
+    "number": "004",
+    "displayCode": "LOCAL58 · FASTEST ROUTE",
+    "title": "LOCAL58's Fastest Available Route: When the GPS Becomes the Threat",
+    "shareTitle": "LOCAL58: When the GPS Becomes the Threat",
+    "deck": "A night drive, a calm navigation voice, and instructions that stop sounding helpful. Follow the credits and the unsettling logic of LOCAL58's GPS horror short.",
+    "published": "2026-11-26",
+    "updated": "2026-11-26",
+    "checked": "2026-11-26",
+    "verdict": "This is an authored LOCAL58 horror short. Its publisher credits Kris Straub and an idea by Mikey Neumann. The records reviewed here do not establish a real navigation incident or an original dark-web release.",
+    "video": {
+      "id": "jh09uIN6tl0",
+      "title": "ＬＯＣＡＬ５８ＴＶ -  You Are On The Fastest Available Route",
+      "creator": "LOCAL58TV",
+      "publisherType": "Organization",
+      "creatorUrl": "https://www.youtube.com/@LOCAL58TV",
+      "uploadDate": "2017-10-31",
+      "seconds": 219,
+      "contentNote": "Fictional nighttime peril, a pursuit, abrupt loud sounds, and flashing or distorted images. The analysis below contains spoilers. Playback is optional; begin at a low volume."
+    },
+    "sources": [
+      {
+        "id": "upload",
+        "label": "LOCAL58TV — You Are On The Fastest Available Route",
+        "url": "https://www.youtube.com/watch?v=jh09uIN6tl0",
+        "date": "2017-10-31",
+        "kind": "Publisher upload and production credits",
+        "note": "The reviewed edition, its publisher, and its credits. The upload date identifies this copy; it is not a claim about the earliest release on any channel."
+      },
+      {
+        "id": "creator",
+        "label": "Kris Straub — the creator's project directory",
+        "url": "https://www.krisstraub.com/",
+        "checked": "2026-11-26",
+        "kind": "Creator-maintained project listing",
+        "note": "Lists Local58TV among Straub's current projects and describes its YouTube and ARG format. This undated page is labelled with our access date."
+      },
+      {
+        "id": "interview",
+        "label": "FANGORIA — BJ Colangelo interviews Kris Straub about LOCAL58",
+        "url": "https://www.fangoria.com/local-58-season-3-shudder-exclusive-kris-straub-interview/",
+        "date": "2026-11-19",
+        "kind": "Direct creator interview",
+        "note": "Published November 19 and updated November 23, 2026. Straub discusses uncertainty and the experience of encountering broadcasts without context. We use that series-level context, not as an episode-specific answer key."
+      }
+    ],
+    "evidence": [
+      {
+        "claim": "The linked film has identifiable production credits",
+        "status": "Documented by the publisher",
+        "detail": "The description credits Straub with writing and editing, and Neumann with the underlying idea.",
+        "sources": [
+          "upload"
+        ]
+      },
+      {
+        "claim": "The footage is an authenticated record of an actual GPS attack",
+        "status": "Not established",
+        "detail": "The publisher describes a production combining stock and original footage. Creator records identify LOCAL58 as an entertainment project.",
+        "sources": [
+          "upload",
+          "creator"
+        ]
+      },
+      {
+        "claim": "October 31, 2017 dates the reviewed upload",
+        "status": "Documented for this edition",
+        "detail": "This is the date attached to the LOCAL58TV upload used by our player. A different release or an in-story timestamp requires its own record.",
+        "sources": [
+          "upload"
+        ]
+      },
+      {
+        "claim": "The maker has discussed the series' use of uncertainty",
+        "status": "Directly attributed",
+        "detail": "Straub discusses the effect of encountering unexplained broadcasts in his FANGORIA interview. This does not settle every reading of this short.",
+        "sources": [
+          "interview"
+        ]
+      },
+      {
+        "claim": "The video is a verified leak from an onion site",
+        "status": "Not established",
+        "detail": "These records provide a public publisher and a production context, not a dated original onion-site publication.",
+        "sources": [
+          "upload",
+          "creator"
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2017-10-31",
+        "label": "The reviewed publisher upload",
+        "text": "LOCAL58TV publishes the edition embedded in this file. This is an upload milestone, not a claim about every earlier distribution route.",
+        "sources": [
+          "upload"
+        ]
+      },
+      {
+        "date": "2026-11-19",
+        "label": "Straub discusses uncertainty in LOCAL58",
+        "text": "FANGORIA publishes a direct interview about the series. Its broader production context is distinct from the fictional events of an episode.",
+        "sources": [
+          "interview"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "id": "read-the-credits",
+        "title": "Begin with the credits, not a location hunt",
+        "paragraphs": [
+          "The premise is immediately readable: a driver follows a navigation voice during a night journey. Before treating the recording as evidence of a real encounter, open the publisher description. It names a writer and editor, identifies the person behind the idea, and describes the footage and audio as production materials. These are useful records precisely because they sit outside the fictional recording.",
+          "Straub's own project directory supplies another connection to LOCAL58. That does not explain every detail on screen, but it changes the investigation. We can examine how an authored work creates an impression of discovery without inventing a missing-person case, a real driver, or a location that the reviewed records do not authenticate. The uncertainty inside the story and the attribution outside it can both remain visible."
+        ],
+        "sources": [
+          "upload",
+          "creator"
+        ]
+      },
+      {
+        "id": "date-the-edition",
+        "title": "Keep the upload record separate from the recording frame",
+        "paragraphs": [
+          "The public edition linked here is dated October 31, 2017. That is the date we use beside the player. We do not promote it into a claim that nobody could have seen another edition earlier. Nor would a date written inside a fictional recording independently establish when its production footage was captured.",
+          "For a useful source note, record the channel, the video ID, and the date attached to that particular upload. Then keep any dates asserted within the story in a separate column. A later reupload, a review, and an original production can share a title while representing different events. This file identifies the version it discusses instead of trying to compress those events into a single origin date."
+        ],
+        "sources": [
+          "upload"
+        ]
+      },
+      {
+        "id": "the-calm-voice",
+        "title": "Why the calm voice gets a head start",
+        "interpretation": true,
+        "paragraphs": [
+          "A navigation system normally earns attention by being unremarkable. Its short instructions reduce a complicated environment to the next manageable action. Our reading is that the film borrows this relationship before testing it. The voice does not need to become theatrically sinister: the growing distance between confident delivery and questionable guidance is enough to make an ordinary instruction feel hostile.",
+          "This creates a useful distinction between consistency and trustworthiness. A system can sound equally assured when it is helping and when its goal no longer matches yours. Notice when you begin questioning the guidance. Is it a change in the sound, a conflict with what you can see, or your realization that a familiar interface can keep its manners while losing its purpose? These are questions for a close reading, not findings about real navigation software."
+        ],
+        "sources": []
+      },
+      {
+        "id": "a-limited-frame",
+        "title": "The camera is a viewpoint, not an explanation",
+        "interpretation": true,
+        "paragraphs": [
+          "The dashcam arrangement gives us a road ahead and much less access to the person making decisions. We cannot simply turn the frame around and ask the driver what they think. That limitation can make the audience into an uneasy passenger: able to question an instruction, but unable to interrupt the journey. A narrow view also leaves room for the viewer to imagine more than the image establishes.",
+          "Try separating what the camera makes available from what you supply. A noise can suggest an unseen presence without supplying its biography. An interruption can remove information without proving who caused it. The technique becomes more interesting when we resist converting every missing detail into a settled piece of lore. What remains outside the frame is part of the storytelling, rather than permission to invent a documented explanation."
+        ],
+        "sources": []
+      },
+      {
+        "id": "an-incomplete-promise",
+        "title": "The promise of speed leaves something out",
+        "interpretation": true,
+        "paragraphs": [
+          "The title offers a narrow reassurance. Speed sounds like a benefit, but it says little about whether a destination is desirable or whose interests the journey serves. We read the horror as a growing disagreement about the objective. A procedure may appear successful according to its own terms while becoming unacceptable to the person relying on it. That is an interpretation of the film's setup, not a technical diagnosis.",
+          "This reading also explains why repeating a familiar instruction can become more disturbing than introducing an unfamiliar monster. A promise that initially organized the journey may later conceal the absence of another promise the driver assumed was included. On a second viewing, notice the expectations you added yourself. Which were actually stated, and which came from the everyday confidence you brought to the idea of being guided?"
+        ],
+        "sources": []
+      },
+      {
+        "id": "ending-interpretation",
+        "title": "Reading the ending: a journey and a record can end differently",
+        "interpretation": true,
+        "paragraphs": [
+          "The final movement turns reassurance into a threat. Our interpretation focuses on the difference between completing a route and protecting its traveler. An arrival announcement can close a procedure without giving the audience the resolution they want. From the passenger position, the question is whether the journey can be escaped; from the system position, it is whether the route has reached its objective.",
+          "That contrast is enough to discuss the ending without assigning a definitive identity to the threat or importing a complete cosmology from another episode. Treat any larger connection as a proposal that needs its own evidence. A short can make a familiar action feel irreversibly wrong while leaving the mechanism unexplained. This is our critical reading, rather than a solution supplied by the creator."
+        ],
+        "sources": []
+      },
+      {
+        "id": "creator-context",
+        "title": "What the creator interview adds",
+        "paragraphs": [
+          "In his November 2026 FANGORIA interview with BJ Colangelo, Straub discusses the unsettling experience of encountering broadcasts without enough context to understand why they were made or why they were being shown. His comments concern LOCAL58 more broadly. They help establish an artistic interest in uncertainty; they are not a statement decoding this particular navigation story.",
+          "Our application of that context is deliberately limited. The short asks the audience to interpret an apparently ordinary media object before they have a comfortable explanation for it. Knowing its production context lets us appreciate that construction. It also leaves room to disagree about the best reading. A maker discussing a general approach does not automatically endorse each theory that later viewers attach to an individual scene."
+        ],
+        "sources": [
+          "interview"
+        ]
+      },
+      {
+        "id": "two-pass-viewing",
+        "title": "Try a two-pass viewing notebook",
+        "paragraphs": [
+          "On a first pass, write down the moment when the guidance stops feeling helpful. Describe the cue as precisely as you can, then note the conclusion you drew from it. On a second pass, ask whether the cue establishes that conclusion or merely makes it plausible. Do not increase the volume to compensate for uncertainty; the viewing note applies throughout.",
+          "Keep three headings in your notes: observation, publisher record, and interpretation. The first concerns the work you watched, the second its verifiable production trail, and the third your explanation. This makes it easier to discuss an effective scare without presenting its fictional recording as evidence of an actual event. Use the related files below to compare other ways that an authored film borrows the appearance of a recovered record."
+        ],
+        "sources": []
+      }
+    ]
+  },
+  {
     "slug": "this-house-has-people-in-it",
     "number": "003",
     "displayCode": "HOUSE 00437",
