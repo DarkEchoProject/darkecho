@@ -1,4 +1,12 @@
 {
+  "mysteries/portrait-of-god.html": {
+    "path": "assets/social/mystery-portrait-of-god-en.png",
+    "digest": "8019802d5d8a5169360c39c160b49936488a2f60407ae76863cd6d2a6c97ed3a",
+    "sha256": "467914b8ccd49fca11b0cf777b8d1e07c2027b56a093fde649f5b8dd990e82aa",
+    "width": 1200,
+    "height": 630,
+    "lang": "en"
+  },
   "mysteries/local58-fastest-available-route.html": {
     "path": "assets/social/mystery-local58-fastest-available-route-en.png",
     "digest": "c2b5f76fcbcf59fe673c3cfbee73985fb50240b7cc345c53b315e7aeb416310b",

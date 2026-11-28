@@ -1,5 +1,239 @@
 [
   {
+    "slug": "portrait-of-god",
+    "number": "005",
+    "displayCode": "PORTRAIT · THE UNSEEN FIGURE",
+    "title": "Portrait of God: The Horror of Seeing What Others Cannot",
+    "shareTitle": "Portrait of God: What Do You See?",
+    "deck": "A dark painting, a student presentation, and a figure that refuses to stay on the screen. Explore Dylan Clark's short through its original upload and maker interviews.",
+    "published": "2026-11-28",
+    "updated": "2026-11-28",
+    "checked": "2026-11-28",
+    "verdict": "Portrait of God is a fictional horror short written and directed by Dylan Clark. Its public upload, production featurette, and interviews establish an authored film, not a documented supernatural encounter or a verified dark-web discovery.",
+    "video": {
+      "id": "BI9fKfX5V68",
+      "title": "Portrait of God (Short Horror Film)",
+      "creator": "Dylan Clark",
+      "publisherType": "Person",
+      "creatorUrl": "https://www.youtube.com/@dylanclark",
+      "uploadDate": "2022-08-28",
+      "seconds": 450,
+      "contentNote": "Fictional religious horror, a disturbing creature, sustained dread, loud sounds, and brief blood imagery. The discussion includes ending spoilers. Playback is optional; use a comfortable volume."
+    },
+    "sources": [
+      {
+        "id": "upload",
+        "label": "Dylan Clark — Portrait of God (Short Horror Film)",
+        "url": "https://www.youtube.com/watch?v=BI9fKfX5V68",
+        "date": "2022-08-28",
+        "kind": "Original filmmaker upload and credits",
+        "note": "The reviewed 7:30 edition, its channel, premise, and collaborator credits. This date identifies the linked upload."
+      },
+      {
+        "id": "production",
+        "label": "The Ithacan — Jess Williams interviews the production team",
+        "url": "https://theithacan.org/46768/life-culture/lc-features/short-horror-film-spooks-1-million-on-youtube/",
+        "date": "2023-03-08",
+        "kind": "Original reporting and participant interviews",
+        "note": "The web article is dated March 8; the print issue is dated March 9. Production recollections are attributed to participants."
+      },
+      {
+        "id": "making",
+        "label": "Dylan Clark — The Making of \"Portrait of God\"",
+        "url": "https://www.youtube.com/watch?v=GLDitKQDjUg",
+        "date": "2023-06-21",
+        "kind": "Filmmaker-published production featurette",
+        "note": "A separate 14:47 video from the same channel, explicitly presented as a making-of. It is linked as production context, not embedded as the film."
+      },
+      {
+        "id": "interview",
+        "label": "New 32 Productions — Molly Stein-Seroussi interviews Dylan Clark",
+        "url": "https://www.new32productions.com/an-interview-with-dylan-clark/",
+        "date": "2023-10-03",
+        "kind": "Direct filmmaker interview",
+        "note": "Clark describes the available room, the creature effects, and a planned transition that changed in the finished film."
+      },
+      {
+        "id": "profile",
+        "label": "Dylan Clark — FilmFreeway filmmaker profile",
+        "url": "https://filmfreeway.com/DylanClark",
+        "checked": "2026-11-28",
+        "kind": "Undated filmmaker profile and filmography",
+        "note": "Lists the short among Clark's writing and directing credits and links to his YouTube channel. The date shown is our access date."
+      }
+    ],
+    "evidence": [
+      {
+        "claim": "The embedded film comes from its filmmaker",
+        "status": "Documented publication trail",
+        "detail": "The Dylan Clark upload matches the short named in his filmography; participant reporting also links to it.",
+        "sources": [
+          "upload",
+          "profile",
+          "production"
+        ]
+      },
+      {
+        "claim": "The dark room was a production resource",
+        "status": "Participant account",
+        "detail": "The Ithacan reports a five-day studio shoot in spring 2022, followed by summer post-production.",
+        "sources": [
+          "production"
+        ]
+      },
+      {
+        "claim": "The figure has an explained effects process",
+        "status": "Filmmaker account",
+        "detail": "Clark describes a purchased mask combined with digital alterations in the New 32 interview.",
+        "sources": [
+          "interview"
+        ]
+      },
+      {
+        "claim": "A discarded idea supplies the finished ending's answer",
+        "status": "Interpretation requires care",
+        "detail": "The interview distinguishes an intended transition from the result. A plan is not a frame in the released film.",
+        "sources": [
+          "interview"
+        ]
+      },
+      {
+        "claim": "The painting records a real supernatural encounter or onion-site leak",
+        "status": "Not established",
+        "detail": "The reviewed sources document a creative production. None supplies a verified real incident or an original onion-site publication.",
+        "sources": [
+          "upload",
+          "making",
+          "production"
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2022-08-28",
+        "label": "The linked short reaches YouTube",
+        "text": "Clark publishes the 7:30 edition used by this file's player.",
+        "sources": [
+          "upload"
+        ]
+      },
+      {
+        "date": "2023-03-08",
+        "label": "The production team discusses the shoot",
+        "text": "The Ithacan publishes its web report, including accounts from Clark and assistant director Surina Belk-Gupta.",
+        "sources": [
+          "production"
+        ]
+      },
+      {
+        "date": "2023-06-21",
+        "label": "A making-of joins the film",
+        "text": "Clark publishes a separate production featurette on the same channel.",
+        "sources": [
+          "making"
+        ]
+      },
+      {
+        "date": "2023-10-03",
+        "label": "A written interview adds effects and script context",
+        "text": "New 32 publishes its conversation with the filmmaker.",
+        "sources": [
+          "interview"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "id": "a-presentation-in-the-dark",
+        "title": "A presentation with an unsettling question",
+        "paragraphs": [
+          "A young woman prepares a presentation about a painting. The publisher's premise makes her religious belief part of that encounter. It is an intimate starting point: someone is trying to explain an image, and looking becomes the problem. The story asks what happens when an artwork offers an experience its observer cannot comfortably account for.",
+          "Before chasing a supposed real painting or an anonymous origin story, identify the edition. The player above uses Dylan Clark's August 28, 2022 upload, titled Portrait of God (Short Horror Film), running seven minutes and thirty seconds. His description credits Sydney Brumfield as the lead actress and Ryan Shreves as composer. These are production records surrounding a fictional encounter."
+        ],
+        "sources": [
+          "upload"
+        ]
+      },
+      {
+        "id": "a-traceable-maker",
+        "title": "The public trail leads to a filmmaker",
+        "paragraphs": [
+          "Clark's FilmFreeway profile lists Portrait of God under both writing and directing, dates the work to 2022, and links to his YouTube presence. Alongside the original upload is a later video explicitly titled The Making of \"Portrait of God\". The second video has its own publication date, June 21, 2023. Keeping the two records separate prevents a production explainer from being mistaken for the original release.",
+          "This trail is useful even if you prefer to watch without learning how the effects work. A named maker, collaborators, a filmography, and a production featurette give the short an inspectable context. They let the mystery stay inside the work, where an unsettling image can invite competing readings without becoming an unsupported report about its viewers."
+        ],
+        "sources": [
+          "profile",
+          "making"
+        ]
+      },
+      {
+        "id": "the-room-came-first",
+        "title": "The room came before the mythology",
+        "paragraphs": [
+          "Jess Williams' March 8, 2023 report for The Ithacan places the shoot in Ithaca College's Park School. Clark describes developing the idea around an available room, its projector, and black curtains. The report dates filming to five days during spring finals week in 2022, with post-production over the summer. Assistant director Surina Belk-Gupta discusses the freedom of making a personal project outside a class assignment.",
+          "That account suggests a useful viewing question: how many of the film's possibilities come from ordinary equipment? A projector directs attention toward a surface. Curtains remove surrounding detail. Together, they create a space where the visible image and the unseen room can compete for importance. This connection between the reported resources and their dramatic potential is our reading of the setup."
+        ],
+        "sources": [
+          "production"
+        ]
+      },
+      {
+        "id": "an-effect-with-a-history",
+        "title": "The figure has a production history",
+        "paragraphs": [
+          "Clark describes combining a purchased mask with digital changes in New 32's interview. That is his account of a constructed effect, rather than evidence that the image captured something unplanned.",
+          "Knowing the materials can deepen a scare. Imagine designing a threat for a brightly lit room, then designing one that will be glimpsed against darkness. The second design can rely on a carefully chosen outline and the viewer's uncertainty about what surrounds it. A practical object and a digital adjustment can collaborate in creating that uncertainty. The production explanation describes a method; the emotional effect still depends on the encounter with the finished work."
+        ],
+        "sources": [
+          "interview"
+        ]
+      },
+      {
+        "id": "when-the-screen-stops-containing-it",
+        "title": "Why raising the screen changes the question",
+        "interpretation": true,
+        "paragraphs": [
+          "Clark singles out the raised-screen moment in his New 32 interview: the figure remains visible after the surface is removed. Our reading is that this challenges a boundary the audience has been relying on. A screen offers a reassuring container for an image. Once that container stops explaining what is visible, the room itself becomes difficult to read.",
+          "The scare therefore has a spatial logic as well as a creature design. Before the boundary fails, a viewer can ask what the picture represents. Afterward, the more urgent question is where the picture ends. This shift lets an ordinary presentation tool become the hinge of the story. On a second viewing, notice how much confidence you placed in the idea of a surface that safely separates an image from its observer."
+        ],
+        "sources": [
+          "interview"
+        ]
+      },
+      {
+        "id": "seeing-is-an-incomplete-answer",
+        "title": "Seeing can answer one question and open another",
+        "interpretation": true,
+        "paragraphs": [
+          "A useful way to approach the painting is to separate recognition from understanding. Recognizing a figure may answer whether something can be seen. It does much less to explain its identity, its intentions, or the relationship between the observer and the image. Our interpretation is that the film makes that gap frightening: increased visibility need not deliver increased safety.",
+          "The title adds another pressure. It supplies an enormous claim before the audience has enough information to evaluate it. Try mentally removing the title and asking what the available details establish by themselves. Then restore it and notice the associations it encourages. This is a critical exercise about the authority of a label. It does not turn the short into evidence for a theological position, and it leaves room for viewers to disagree about the figure's meaning."
+        ],
+        "sources": []
+      },
+      {
+        "id": "reading-the-ending",
+        "title": "Reading the ending: keep an abandoned idea in its place",
+        "interpretation": true,
+        "paragraphs": [
+          "The New 32 interview includes a valuable limit on interpretation. Clark describes an intended connection between a light within the figure and the projector, then explains that the planned transition did not translate as intended. That is a statement about the making of the ending. It does not place the abandoned version inside the released cut.",
+          "For our reading, the ending's interest lies in how an extraordinary encounter can remain attached to ordinary equipment. Does returning to a familiar visual reference restore certainty, or merely give the viewer another image to interpret? Keep both possibilities available until you can name the detail that favors one. A maker can explain a production decision without prescribing a complete account of the fictional experience. That distinction protects the ending's ambiguity while giving the interview its proper evidential weight."
+        ],
+        "sources": [
+          "interview"
+        ]
+      },
+      {
+        "id": "a-viewing-map",
+        "title": "Make a viewing map instead of a universal solution",
+        "paragraphs": [
+          "For a first viewing, let the short play without pausing to search for explanations. If you return to it, draw three simple headings: image, room, and observer. Under image, note what the presentation appears to contain. Under room, record what becomes available outside that frame. Under observer, describe the character's response without immediately deciding what caused it. The aim is to notice when your explanation changes.",
+          "Afterward, add a fourth heading for production records. Put the credited filmmaker, the dated upload, and the attributed interview statements there. Compare your interpretation with those records without expecting them to remove every ambiguity. The related files below offer useful contrasts: a navigation interface that guides a journey, and surveillance cameras that turn a home into a record. Each organizes attention differently; this short makes the act of looking feel like the dangerous experiment."
+        ],
+        "sources": []
+      }
+    ]
+  },
+  {
     "slug": "local58-fastest-available-route",
     "number": "004",
     "displayCode": "LOCAL58 · FASTEST ROUTE",
